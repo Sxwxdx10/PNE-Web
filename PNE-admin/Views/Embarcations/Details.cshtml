@@ -1,0 +1,44 @@
+﻿@model PNE_core.Models.Embarcation
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Embarcation</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Marque)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Marque)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Longueur)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Longueur)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Photo)
+        </dd>
+    </dl>
+</div>
+<div> 
+    <a asp-controller="Notedossiers" asp-action="Index" asp-route-id="@Model.IdEmbarcation">Voir les notes</a>
+    <a asp-action="Edit" asp-route-id="@Model?.IdEmbarcation">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,200 @@
+\doxysection{PNE\+\_\+core.\+Services.\+Certification\+Service Class Reference}
+\hypertarget{class_p_n_e__core_1_1_services_1_1_certification_service}{}\label{class_p_n_e__core_1_1_services_1_1_certification_service}\index{PNE\_core.Services.CertificationService@{PNE\_core.Services.CertificationService}}
+Inheritance diagram for PNE\+\_\+core.\+Services.\+Certification\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_p_n_e__core_1_1_services_1_1_certification_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_certification_service_a8c49a41af589bf803c472f488ee60b6e}\label{class_p_n_e__core_1_1_services_1_1_certification_service_a8c49a41af589bf803c472f488ee60b6e} 
+{\bfseries Certification\+Service} (\mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_pne_db_context}{IPne\+Db\+Context}} db)
+\item 
+async Task \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_certification_service_a1e73980a5c08c8060712e731773428b1}{Certify\+User}} (string code\+Certification, string Id\+Utilisateur)
+\begin{DoxyCompactList}\small\item\em permet de donner une certification a un user, la certification doit exister d\textquotesingle{}avance \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_certification_service_a41d9d02c7795e62b1fb83873ed7de65c}{Create\+Async}} (\mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_certification}{Certification}} entity)
+\begin{DoxyCompactList}\small\item\em creer une nouvelle certification \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_certification_service_a5ac087307afa80defd630c0790cbf609}{Delete\+Async}} (string id)
+\begin{DoxyCompactList}\small\item\em retirer une certification \end{DoxyCompactList}\item 
+async Task$<$ List$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_certification}{Certification}} $>$ $>$ \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_certification_service_a78a50a92167756b477882f684eaf8607}{Get\+All\+Async}} ()
+\begin{DoxyCompactList}\small\item\em retourne un List$<$\+Certification$>$ de toute les certifications dans la bd \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_certification}{Certification}}?$>$ \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_certification_service_a46654fede6443e7702bc7904fbd1ec5d}{Get\+By\+Id\+Async}} (string id)
+\begin{DoxyCompactList}\small\item\em chercher la certification avec l\textquotesingle{}id specifie \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_certification}{Certification}}?$>$ \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_certification_service_acfd462e5e0a6814e0671a76018bf1672}{Get\+For\+Detail\+Async}} (string id)
+\begin{DoxyCompactList}\small\item\em (incomplet) retourne la certification dans un certain \doxylink{namespace_p_n_e__core_1_1_d_t_o}{DTO} selon l\textquotesingle{}id specifie \end{DoxyCompactList}\item 
+async Task$<$ bool $>$ \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_certification_service_aa8079c897dc635e4bebf47dfa12cde71}{Is\+Exist}} (string id)
+\begin{DoxyCompactList}\small\item\em verifie si la certification existe \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_certification_service_a893704dcd8e4d01ec41b951897510a95}{Update\+Async}} (\mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_certification}{Certification}} entity)
+\begin{DoxyCompactList}\small\item\em update le data de la certification, prend l\textquotesingle{}id et change le reste \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_pne_services}{PNE\+\_\+core.\+Services.\+Interfaces.\+IPne\+Services$<$ Certification $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ T?$>$ {\bfseries Get\+By\+Id\+Async} (string id)
+\item 
+Task$<$ List$<$ T $>$ $>$ {\bfseries Get\+All\+Async} ()
+\item 
+Task$<$ T?$>$ {\bfseries Get\+For\+Detail\+Async} (string id)
+\item 
+Task {\bfseries Create\+Async} (T entity)
+\item 
+Task {\bfseries Update\+Async} (T entity)
+\item 
+Task {\bfseries Delete\+Async} (string id)
+\item 
+Task$<$ bool $>$ {\bfseries Is\+Exist} (string id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_certification_service_a1e73980a5c08c8060712e731773428b1}\index{PNE\_core.Services.CertificationService@{PNE\_core.Services.CertificationService}!CertifyUser@{CertifyUser}}
+\index{CertifyUser@{CertifyUser}!PNE\_core.Services.CertificationService@{PNE\_core.Services.CertificationService}}
+\doxysubsubsection{\texorpdfstring{CertifyUser()}{CertifyUser()}}
+{\footnotesize\ttfamily \label{class_p_n_e__core_1_1_services_1_1_certification_service_a1e73980a5c08c8060712e731773428b1} 
+async Task PNE\+\_\+core.\+Services.\+Certification\+Service.\+Certify\+User (\begin{DoxyParamCaption}\item[{string}]{code\+Certification}{, }\item[{string}]{Id\+Utilisateur}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+permet de donner une certification a un user, la certification doit exister d\textquotesingle{}avance 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code\+Certification} & code de la certification a ajouter\\
+\hline
+{\em Id\+Utilisateur} & utilisateur qui recoit la certification\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rien si tout vas bien, Invalid\+Operation\+Exception sinon
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_certification_service}{PNE\+\_\+core.\+Services.\+Interfaces.\+ICertification\+Service}}.
+
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_certification_service_a41d9d02c7795e62b1fb83873ed7de65c}\index{PNE\_core.Services.CertificationService@{PNE\_core.Services.CertificationService}!CreateAsync@{CreateAsync}}
+\index{CreateAsync@{CreateAsync}!PNE\_core.Services.CertificationService@{PNE\_core.Services.CertificationService}}
+\doxysubsubsection{\texorpdfstring{CreateAsync()}{CreateAsync()}}
+{\footnotesize\ttfamily \label{class_p_n_e__core_1_1_services_1_1_certification_service_a41d9d02c7795e62b1fb83873ed7de65c} 
+async Task PNE\+\_\+core.\+Services.\+Certification\+Service.\+Create\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_certification}{Certification}}}]{entity}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+creer une nouvelle certification 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & la certification a ajouter, sans id ni lien vers les users\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_certification_service_a5ac087307afa80defd630c0790cbf609}\index{PNE\_core.Services.CertificationService@{PNE\_core.Services.CertificationService}!DeleteAsync@{DeleteAsync}}
+\index{DeleteAsync@{DeleteAsync}!PNE\_core.Services.CertificationService@{PNE\_core.Services.CertificationService}}
+\doxysubsubsection{\texorpdfstring{DeleteAsync()}{DeleteAsync()}}
+{\footnotesize\ttfamily \label{class_p_n_e__core_1_1_services_1_1_certification_service_a5ac087307afa80defd630c0790cbf609} 
+async Task PNE\+\_\+core.\+Services.\+Certification\+Service.\+Delete\+Async (\begin{DoxyParamCaption}\item[{string}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+retirer une certification 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & id de la certification a retirer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_certification_service_a78a50a92167756b477882f684eaf8607}\index{PNE\_core.Services.CertificationService@{PNE\_core.Services.CertificationService}!GetAllAsync@{GetAllAsync}}
+\index{GetAllAsync@{GetAllAsync}!PNE\_core.Services.CertificationService@{PNE\_core.Services.CertificationService}}
+\doxysubsubsection{\texorpdfstring{GetAllAsync()}{GetAllAsync()}}
+{\footnotesize\ttfamily \label{class_p_n_e__core_1_1_services_1_1_certification_service_a78a50a92167756b477882f684eaf8607} 
+async Task$<$ List$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_certification}{Certification}} $>$ $>$ PNE\+\_\+core.\+Services.\+Certification\+Service.\+Get\+All\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+retourne un List$<$\+Certification$>$ de toute les certifications dans la bd 
+
+\begin{DoxyReturn}{Returns}
+liste des certifications
+\end{DoxyReturn}
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_certification_service_a46654fede6443e7702bc7904fbd1ec5d}\index{PNE\_core.Services.CertificationService@{PNE\_core.Services.CertificationService}!GetByIdAsync@{GetByIdAsync}}
+\index{GetByIdAsync@{GetByIdAsync}!PNE\_core.Services.CertificationService@{PNE\_core.Services.CertificationService}}
+\doxysubsubsection{\texorpdfstring{GetByIdAsync()}{GetByIdAsync()}}
+{\footnotesize\ttfamily \label{class_p_n_e__core_1_1_services_1_1_certification_service_a46654fede6443e7702bc7904fbd1ec5d} 
+async Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_certification}{Certification}}?$>$ PNE\+\_\+core.\+Services.\+Certification\+Service.\+Get\+By\+Id\+Async (\begin{DoxyParamCaption}\item[{string}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+chercher la certification avec l\textquotesingle{}id specifie 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_certification_service_acfd462e5e0a6814e0671a76018bf1672}\index{PNE\_core.Services.CertificationService@{PNE\_core.Services.CertificationService}!GetForDetailAsync@{GetForDetailAsync}}
+\index{GetForDetailAsync@{GetForDetailAsync}!PNE\_core.Services.CertificationService@{PNE\_core.Services.CertificationService}}
+\doxysubsubsection{\texorpdfstring{GetForDetailAsync()}{GetForDetailAsync()}}
+{\footnotesize\ttfamily \label{class_p_n_e__core_1_1_services_1_1_certification_service_acfd462e5e0a6814e0671a76018bf1672} 
+async Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_certification}{Certification}}?$>$ PNE\+\_\+core.\+Services.\+Certification\+Service.\+Get\+For\+Detail\+Async (\begin{DoxyParamCaption}\item[{string}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+(incomplet) retourne la certification dans un certain \doxylink{namespace_p_n_e__core_1_1_d_t_o}{DTO} selon l\textquotesingle{}id specifie 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_certification_service_aa8079c897dc635e4bebf47dfa12cde71}\index{PNE\_core.Services.CertificationService@{PNE\_core.Services.CertificationService}!IsExist@{IsExist}}
+\index{IsExist@{IsExist}!PNE\_core.Services.CertificationService@{PNE\_core.Services.CertificationService}}
+\doxysubsubsection{\texorpdfstring{IsExist()}{IsExist()}}
+{\footnotesize\ttfamily \label{class_p_n_e__core_1_1_services_1_1_certification_service_aa8079c897dc635e4bebf47dfa12cde71} 
+async Task$<$ bool $>$ PNE\+\_\+core.\+Services.\+Certification\+Service.\+Is\+Exist (\begin{DoxyParamCaption}\item[{string}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+verifie si la certification existe 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si elle existe, false sinon
+\end{DoxyReturn}
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_certification_service_a893704dcd8e4d01ec41b951897510a95}\index{PNE\_core.Services.CertificationService@{PNE\_core.Services.CertificationService}!UpdateAsync@{UpdateAsync}}
+\index{UpdateAsync@{UpdateAsync}!PNE\_core.Services.CertificationService@{PNE\_core.Services.CertificationService}}
+\doxysubsubsection{\texorpdfstring{UpdateAsync()}{UpdateAsync()}}
+{\footnotesize\ttfamily \label{class_p_n_e__core_1_1_services_1_1_certification_service_a893704dcd8e4d01ec41b951897510a95} 
+async Task PNE\+\_\+core.\+Services.\+Certification\+Service.\+Update\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_certification}{Certification}}}]{entity}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+update le data de la certification, prend l\textquotesingle{}id et change le reste 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & la certification avec l\textquotesingle{}id voulue et le reste du data a changer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/maxim/\+Desktop/\+Prog uni/\+Uni 2/\+Projet nautique/pne-\/admin/src/\+PNE-\/core/\+Services/Certification\+Service.\+cs\end{DoxyCompactItemize}

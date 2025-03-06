@@ -1,0 +1,72 @@
+\doxysection{PNE\+\_\+core.\+Services.\+Note\+Dossier\+Service Class Reference}
+\hypertarget{class_p_n_e__core_1_1_services_1_1_note_dossier_service}{}\label{class_p_n_e__core_1_1_services_1_1_note_dossier_service}\index{PNE\_core.Services.NoteDossierService@{PNE\_core.Services.NoteDossierService}}
+Inheritance diagram for PNE\+\_\+core.\+Services.\+Note\+Dossier\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_p_n_e__core_1_1_services_1_1_note_dossier_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_note_dossier_service_a082cf1f930f12b397d3ae9b75f01ae48}\label{class_p_n_e__core_1_1_services_1_1_note_dossier_service_a082cf1f930f12b397d3ae9b75f01ae48} 
+{\bfseries Note\+Dossier\+Service} (\mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_pne_db_context}{IPne\+Db\+Context}} db)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_note_dossier_service_ac920261e4f3e8ae704803d93bf2297f6}\label{class_p_n_e__core_1_1_services_1_1_note_dossier_service_ac920261e4f3e8ae704803d93bf2297f6} 
+async Task {\bfseries Create\+Async} (\mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_notedossier}{Notedossier}} entity)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_note_dossier_service_af53991483a6be01b8c26b11dfb1e269a}\label{class_p_n_e__core_1_1_services_1_1_note_dossier_service_af53991483a6be01b8c26b11dfb1e269a} 
+async Task {\bfseries Delete\+Async} (string id)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_note_dossier_service_a33a24d8d80492a50cf6af4f1523de79a}\label{class_p_n_e__core_1_1_services_1_1_note_dossier_service_a33a24d8d80492a50cf6af4f1523de79a} 
+async Task$<$ List$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_notedossier}{Notedossier}} $>$ $>$ {\bfseries Get\+All\+Async} ()
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_note_dossier_service_a12f9273eb7903270003d02a6f73f3119}\label{class_p_n_e__core_1_1_services_1_1_note_dossier_service_a12f9273eb7903270003d02a6f73f3119} 
+async Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_notedossier}{Notedossier}}?$>$ {\bfseries Get\+By\+Id\+Async} (string id)
+\item 
+async Task$<$ List$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_notedossier}{Notedossier}} $>$ $>$ \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_note_dossier_service_aab6607c39f08ce18fe774a893e85a6c2}{Get\+Notes\+By\+Embarcation\+Id\+Async}} (string id)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_note_dossier_service_aadf2b05c33f6abfa2c5a261edd22d810}\label{class_p_n_e__core_1_1_services_1_1_note_dossier_service_aadf2b05c33f6abfa2c5a261edd22d810} 
+async Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_notedossier}{Notedossier}}?$>$ {\bfseries Get\+For\+Detail\+Async} (string id)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_note_dossier_service_af22c8739620b9cb56a3240d6fcea1780}\label{class_p_n_e__core_1_1_services_1_1_note_dossier_service_af22c8739620b9cb56a3240d6fcea1780} 
+async Task$<$ bool $>$ {\bfseries Is\+Exist} (string id)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_note_dossier_service_aeaeb9ac21f6acc2e64dca8b95693a625}\label{class_p_n_e__core_1_1_services_1_1_note_dossier_service_aeaeb9ac21f6acc2e64dca8b95693a625} 
+async Task {\bfseries Update\+Async} (\mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_notedossier}{Notedossier}} entity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_pne_services}{PNE\+\_\+core.\+Services.\+Interfaces.\+IPne\+Services$<$ Notedossier $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ T?$>$ {\bfseries Get\+By\+Id\+Async} (string id)
+\item 
+Task$<$ List$<$ T $>$ $>$ {\bfseries Get\+All\+Async} ()
+\item 
+Task$<$ T?$>$ {\bfseries Get\+For\+Detail\+Async} (string id)
+\item 
+Task {\bfseries Create\+Async} (T entity)
+\item 
+Task {\bfseries Update\+Async} (T entity)
+\item 
+Task {\bfseries Delete\+Async} (string id)
+\item 
+Task$<$ bool $>$ {\bfseries Is\+Exist} (string id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_note_dossier_service_aab6607c39f08ce18fe774a893e85a6c2}\index{PNE\_core.Services.NoteDossierService@{PNE\_core.Services.NoteDossierService}!GetNotesByEmbarcationIdAsync@{GetNotesByEmbarcationIdAsync}}
+\index{GetNotesByEmbarcationIdAsync@{GetNotesByEmbarcationIdAsync}!PNE\_core.Services.NoteDossierService@{PNE\_core.Services.NoteDossierService}}
+\doxysubsubsection{\texorpdfstring{GetNotesByEmbarcationIdAsync()}{GetNotesByEmbarcationIdAsync()}}
+{\footnotesize\ttfamily \label{class_p_n_e__core_1_1_services_1_1_note_dossier_service_aab6607c39f08ce18fe774a893e85a6c2} 
+async Task$<$ List$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_notedossier}{Notedossier}} $>$ $>$ PNE\+\_\+core.\+Services.\+Note\+Dossier\+Service.\+Get\+Notes\+By\+Embarcation\+Id\+Async (\begin{DoxyParamCaption}\item[{string}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_note_dossier_service}{PNE\+\_\+core.\+Services.\+Interfaces.\+INote\+Dossier\+Service}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/maxim/\+Desktop/\+Prog uni/\+Uni 2/\+Projet nautique/pne-\/admin/src/\+PNE-\/core/\+Services/Note\+Dossier\+Service.\+cs\end{DoxyCompactItemize}

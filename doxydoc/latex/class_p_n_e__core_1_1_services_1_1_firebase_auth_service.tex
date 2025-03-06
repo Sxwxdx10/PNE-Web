@@ -1,0 +1,117 @@
+\doxysection{PNE\+\_\+core.\+Services.\+Firebase\+Auth\+Service Class Reference}
+\hypertarget{class_p_n_e__core_1_1_services_1_1_firebase_auth_service}{}\label{class_p_n_e__core_1_1_services_1_1_firebase_auth_service}\index{PNE\_core.Services.FirebaseAuthService@{PNE\_core.Services.FirebaseAuthService}}
+Inheritance diagram for PNE\+\_\+core.\+Services.\+Firebase\+Auth\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_p_n_e__core_1_1_services_1_1_firebase_auth_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_firebase_auth_service_a05d6f022a737f26182c0c36ff57da0b0}\label{class_p_n_e__core_1_1_services_1_1_firebase_auth_service_a05d6f022a737f26182c0c36ff57da0b0} 
+{\bfseries Firebase\+Auth\+Service} (Firebase\+Auth\+Client firebase\+Auth, IConfiguration appconfig)
+\item 
+async Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_user_base_info}{User\+Base\+Info}}?$>$ \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_firebase_auth_service_a51fcba2e04ce08ebc21fd8459495e2c7}{Sign\+Up}} (string email, string password, string? username)
+\begin{DoxyCompactList}\small\item\em signup par email, utile pour quand un admin ajoute un utilisateur dans firebase \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_user_base_info}{User\+Base\+Info}}?$>$ \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_firebase_auth_service_acb5302c6df99c8cac4d3c28e2ec59d64}{Login}} (string email, string password)
+\begin{DoxyCompactList}\small\item\em login un user par son email et mot de passe a firebase \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_user_base_info}{User\+Base\+Info}}?$>$ \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_firebase_auth_service_a5350db96a14a30d211202a9b4f4b8563}{Google\+Login}} (string code)
+\begin{DoxyCompactList}\small\item\em login par google la connexion a firebase par google overide un user qui est register par email \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_firebase_auth_service_a793fc05cd7f2609a33730346074cc9be}{Sign\+Out}} ()
+\begin{DoxyCompactList}\small\item\em signout le user dans firebase, invalid le token \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service}{PNE\+\_\+core.\+Services.\+Interfaces.\+IFirebase\+Auth\+Service}}}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_user_base_info}{User\+Base\+Info}}?$>$ {\bfseries Sign\+Up} (string email, string password, string username)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_firebase_auth_service_a5350db96a14a30d211202a9b4f4b8563}\index{PNE\_core.Services.FirebaseAuthService@{PNE\_core.Services.FirebaseAuthService}!GoogleLogin@{GoogleLogin}}
+\index{GoogleLogin@{GoogleLogin}!PNE\_core.Services.FirebaseAuthService@{PNE\_core.Services.FirebaseAuthService}}
+\doxysubsubsection{\texorpdfstring{GoogleLogin()}{GoogleLogin()}}
+{\footnotesize\ttfamily \label{class_p_n_e__core_1_1_services_1_1_firebase_auth_service_a5350db96a14a30d211202a9b4f4b8563} 
+async Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_user_base_info}{User\+Base\+Info}}?$>$ PNE\+\_\+core.\+Services.\+Firebase\+Auth\+Service.\+Google\+Login (\begin{DoxyParamCaption}\item[{string}]{code}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+login par google la connexion a firebase par google overide un user qui est register par email 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & code de connexion google\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User\+Base\+Info avec le token et l\textquotesingle{}id dans la db du user
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service}{PNE\+\_\+core.\+Services.\+Interfaces.\+IFirebase\+Auth\+Service}}.
+
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_firebase_auth_service_acb5302c6df99c8cac4d3c28e2ec59d64}\index{PNE\_core.Services.FirebaseAuthService@{PNE\_core.Services.FirebaseAuthService}!Login@{Login}}
+\index{Login@{Login}!PNE\_core.Services.FirebaseAuthService@{PNE\_core.Services.FirebaseAuthService}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily \label{class_p_n_e__core_1_1_services_1_1_firebase_auth_service_acb5302c6df99c8cac4d3c28e2ec59d64} 
+async Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_user_base_info}{User\+Base\+Info}}?$>$ PNE\+\_\+core.\+Services.\+Firebase\+Auth\+Service.\+Login (\begin{DoxyParamCaption}\item[{string}]{email}{, }\item[{string}]{password}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+login un user par son email et mot de passe a firebase 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & \\
+\hline
+{\em password} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User\+Base\+Info avec le token et l\textquotesingle{}id dans la db du user
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service}{PNE\+\_\+core.\+Services.\+Interfaces.\+IFirebase\+Auth\+Service}}.
+
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_firebase_auth_service_a793fc05cd7f2609a33730346074cc9be}\index{PNE\_core.Services.FirebaseAuthService@{PNE\_core.Services.FirebaseAuthService}!SignOut@{SignOut}}
+\index{SignOut@{SignOut}!PNE\_core.Services.FirebaseAuthService@{PNE\_core.Services.FirebaseAuthService}}
+\doxysubsubsection{\texorpdfstring{SignOut()}{SignOut()}}
+{\footnotesize\ttfamily \label{class_p_n_e__core_1_1_services_1_1_firebase_auth_service_a793fc05cd7f2609a33730346074cc9be} 
+void PNE\+\_\+core.\+Services.\+Firebase\+Auth\+Service.\+Sign\+Out (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+signout le user dans firebase, invalid le token 
+
+
+
+Implements \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service}{PNE\+\_\+core.\+Services.\+Interfaces.\+IFirebase\+Auth\+Service}}.
+
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_firebase_auth_service_a51fcba2e04ce08ebc21fd8459495e2c7}\index{PNE\_core.Services.FirebaseAuthService@{PNE\_core.Services.FirebaseAuthService}!SignUp@{SignUp}}
+\index{SignUp@{SignUp}!PNE\_core.Services.FirebaseAuthService@{PNE\_core.Services.FirebaseAuthService}}
+\doxysubsubsection{\texorpdfstring{SignUp()}{SignUp()}}
+{\footnotesize\ttfamily \label{class_p_n_e__core_1_1_services_1_1_firebase_auth_service_a51fcba2e04ce08ebc21fd8459495e2c7} 
+async Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_user_base_info}{User\+Base\+Info}}?$>$ PNE\+\_\+core.\+Services.\+Firebase\+Auth\+Service.\+Sign\+Up (\begin{DoxyParamCaption}\item[{string}]{email}{, }\item[{string}]{password}{, }\item[{string?}]{username}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+signup par email, utile pour quand un admin ajoute un utilisateur dans firebase 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & \\
+\hline
+{\em password} & \\
+\hline
+{\em username} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un User\+Base\+Info qui contient un token et ce qui sera l\textquotesingle{}id du user dans la BD
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/maxim/\+Desktop/\+Prog uni/\+Uni 2/\+Projet nautique/pne-\/admin/src/\+PNE-\/core/\+Services/Firebase\+Auth\+Service.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,79 @@
+﻿@using NuGet.Protocol;
+@{
+    List<string> roles = Context.Session.GetString("userRoles").FromJson<List<string>>();
+}
+
+<div class="text-center">
+    <h1 class="display-4">page d'accueil du portail des users connectes</h1>
+</div>
+
+
+<!--
+    cette partie devra etre mise dans le layout fait pour admin, dans la side bar 
+    on devrait montrer uniquement les roles que le user a
+-->
+<div class="container">
+    @if (roles.Contains("admin"))
+    {
+        <div class="row">
+            <h3>liens admin</h3>
+            <ul style="list-style-type:none;">
+                <li>
+                    <a class="nav-link text-dark" asp-controller="Admin" asp-action="InscriptionGerant">inscrire un gerant de plan d'eau</a>
+                </li>
+                <li>
+                    <a class="nav-link text-dark" asp-controller="Admin" asp-action="ConfirmationEEE">confirmer des EEE</a>
+                </li>
+                <li>
+                    <a class="nav-link text-dark" asp-controller="Admin" asp-action="Planseau">Plans d'eau</a>
+                </li>
+                <li>
+                    <a class="nav-link text-dark" asp-controller="Admin" asp-action="FormationsCertifications">formations et certifications</a>
+                </li>
+            </ul> 
+        </div>
+    }
+    @if (roles.Contains("chercheur"))
+    {
+        <div class="row">
+            <h3>liens pour chercheurs</h3>
+            <ul style="list-style-type:none;">
+                <li>
+                    <a class="nav-link text-dark" asp-controller="Chercheur" asp-action="PlanEau">statistiques des plans d'eau</a>
+                </li>
+                <li>
+                    <a class="nav-link text-dark" asp-controller="Chercheur" asp-action="DeplacementsEmbarcations">déplacements des embarcations</a>
+                </li>
+            </ul>
+        </div>
+    }
+    @if (roles.Contains("gerant"))
+    {
+        <div class="row">
+            <h3>liens Gérant</h3>
+            <ul style="list-style-type:none;">
+                <li>
+                    <a class="nav-link text-dark" asp-controller="Gerant" asp-action="InscriptionEmployes">Mes employes</a>
+                </li>
+                <li>
+                    <a class="nav-link text-dark" asp-controller="Gerant" asp-action="GestionPlanEau">Mon plan d'eau</a>
+                </li>
+                <li>
+                    <a class="nav-link text-dark" asp-controller="Gerant" asp-action="MiseAEau">Mise a l'eau</a>
+                    @if (TempData["Erreur"] != null)
+                    {
+                        <div class="alert alert-danger">
+                            @TempData["Erreur"]
+                        </div>
+                    }
+                </li>
+                <li>
+                    <a class="nav-link text-dark" asp-controller="Gerant" asp-action="SignalisationEEE">Signaler une EEE</a>
+                </li>
+                <li>
+                    <a class="nav-link text-dark" asp-controller="Gerant" asp-action="Stats">Statistiques</a>
+                </li>
+            </ul>
+        </div>
+    }
+</div>

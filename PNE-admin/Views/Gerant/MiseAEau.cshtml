@@ -1,0 +1,53 @@
+﻿@model PNE_core.Models.Miseaeau
+
+@{
+    ViewData["Title"] = "Mise a l'eau";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Ajouter une mise à eau</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="MiseAEau" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @if (TempData["ErreurMiseEau"] != null)
+            {
+                <div class="alert alert-danger">
+                    @TempData["ErreurMiseEau"]
+                </div>
+            }
+            <div class="form-group mb-2">
+                <label asp-for="@Model.IdEmbarcation" class="control-label"></label>
+                <input asp-for="@Model.IdEmbarcation" class="form-control" type="text" />
+                <span asp-validation-for="@Model.IdEmbarcation" class="text-danger"></span>
+            </div>
+            @if (ViewData["planeau"] != null)
+            {
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IdPlanEau, htmlAttributes: new { @class = "control-label" })
+                    @Html.DropDownListFor(model => model.IdPlanEau, (SelectList)ViewData["planeau"], "Sélectionner un plan d'eau", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.IdPlanEau, "", new { @class = "text-danger" })
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-warning">Vous n'avez pas de plan d'eau</div>
+            }
+            <div class="form-group">
+                <input type="submit" value="Mettre à l'eau" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="AccueilAdmin" asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

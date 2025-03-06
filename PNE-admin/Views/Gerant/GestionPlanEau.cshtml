@@ -1,0 +1,52 @@
+﻿@model PNE_core.Models.Planeau
+@{
+    var point = Model.Emplacement; 
+}
+
+<style>
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
+<script>
+    function initMap() {
+        var centerPoint = { lat: @point.X.ToString(System.Globalization.CultureInfo.InvariantCulture), lng: @point.Y.ToString(System.Globalization.CultureInfo.InvariantCulture) };
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: centerPoint,
+            mapId: '3fa9003ef29d0abe'
+        });
+
+        const markerElement = document.createElement('div');
+        markerElement.textContent = 'Center Point';
+        markerElement.style.backgroundColor = 'blue';
+        markerElement.style.color = 'white';
+        markerElement.style.padding = '5px';
+
+        var marker = new google.maps.marker.AdvancedMarkerElement({
+            position: centerPoint,
+            map: map,
+            content: markerElement
+        });
+
+        marker.addListener('gmp-click', function () {
+            alert('Marker clicked!');
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvd7KNxhKf1_MBVd8iL0iB0g6zeTwHAvQ&v=beta&libraries=marker&callback=initMap" async defer></script>
+
+<div class="text-center">
+    <h1 class="display-4">page pour Gerer son plan d'eau</h1>
+    <h2>ce sera ici que le gerant de plan d'eau pourra voir,ajouter et gerer ses stations de lavages</h2>
+</div>
+
+<div id="map">c'est la carte</div>
