@@ -1,0 +1,60 @@
+\doxysection{PNE\+\_\+admin.\+Controllers.\+Admin\+Controller Class Reference}
+\hypertarget{class_p_n_e__admin_1_1_controllers_1_1_admin_controller}{}\label{class_p_n_e__admin_1_1_controllers_1_1_admin_controller}\index{PNE\_admin.Controllers.AdminController@{PNE\_admin.Controllers.AdminController}}
+Inheritance diagram for PNE\+\_\+admin.\+Controllers.\+Admin\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_p_n_e__admin_1_1_controllers_1_1_admin_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_p_n_e__admin_1_1_controllers_1_1_admin_controller_a15e2ad19d9cf3dafa06551d427fdfbf6}\label{class_p_n_e__admin_1_1_controllers_1_1_admin_controller_a15e2ad19d9cf3dafa06551d427fdfbf6} 
+{\bfseries Admin\+Controller} (\mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service}{IFirebase\+Auth\+Service}} auth\+Service, \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_utilisateur_service}{IUtilisateur\+Service}} user\+Service, \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_plan_eau_service}{IPlan\+Eau\+Service}} eau\+Service, \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_certification_service}{ICertification\+Service}} certification\+Service, \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_role_service}{IRole\+Service}} role\+Service)
+\item 
+\Hypertarget{class_p_n_e__admin_1_1_controllers_1_1_admin_controller_a6d60e315ea6ad20574fd1bb458bc020c}\label{class_p_n_e__admin_1_1_controllers_1_1_admin_controller_a6d60e315ea6ad20574fd1bb458bc020c} 
+IAction\+Result {\bfseries Inscription\+Gerant} ()
+\begin{DoxyCompactList}\small\item\em inscription de gerants de plans d\textquotesingle{}eau. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_p_n_e__admin_1_1_controllers_1_1_admin_controller_a80b389ef46ab2fee55b23e2e61bcbec8}{Inscription\+Gerant}} (\mbox{\hyperlink{class_p_n_e__core_1_1_d_t_o_1_1_sign_up_user_d_t_o}{Sign\+Up\+User\+DTO}} user\+DTO)
+\begin{DoxyCompactList}\small\item\em retour de l\textquotesingle{}inscription, ajouter le user en BD et a firebase puis lui assigner le bon role \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_p_n_e__admin_1_1_controllers_1_1_admin_controller_afd79749972f5e093587ea75d77e9fb82}{Confirmation\+EEE}} ()
+\begin{DoxyCompactList}\small\item\em ! les EEE ne sont pas encore implemente, donc ceci ne sert a rien avant que la partie des EEE pour les gerants de plans d\textquotesingle{}eau soit fait ! \end{DoxyCompactList}\item 
+\Hypertarget{class_p_n_e__admin_1_1_controllers_1_1_admin_controller_a3595dc7b0791fe5ca7063014f6510784}\label{class_p_n_e__admin_1_1_controllers_1_1_admin_controller_a3595dc7b0791fe5ca7063014f6510784} 
+async Task$<$ IAction\+Result $>$ {\bfseries Planseau} ()
+\begin{DoxyCompactList}\small\item\em un admin veut pouvoir voir les plans d\textquotesingle{}eau et confirmer un niveau (vert, jaune, rouge) dependament des EEE qu\textquotesingle{}il a evalue il veut aussi pouvoir evaluer les stations de lavages du plan d\textquotesingle{}eau \end{DoxyCompactList}\item 
+\Hypertarget{class_p_n_e__admin_1_1_controllers_1_1_admin_controller_a8de92a5f7181e130182e99b5d15764aa}\label{class_p_n_e__admin_1_1_controllers_1_1_admin_controller_a8de92a5f7181e130182e99b5d15764aa} 
+async Task$<$ IAction\+Result $>$ {\bfseries Formations\+Certifications} ()
+\begin{DoxyCompactList}\small\item\em ici je crois que l\textquotesingle{}on veut pouvoir creer des foramtions et aider les gerants a donner ces formations a confirmer avec le client \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_p_n_e__admin_1_1_controllers_1_1_admin_controller_afd79749972f5e093587ea75d77e9fb82}\index{PNE\_admin.Controllers.AdminController@{PNE\_admin.Controllers.AdminController}!ConfirmationEEE@{ConfirmationEEE}}
+\index{ConfirmationEEE@{ConfirmationEEE}!PNE\_admin.Controllers.AdminController@{PNE\_admin.Controllers.AdminController}}
+\doxysubsubsection{\texorpdfstring{ConfirmationEEE()}{ConfirmationEEE()}}
+{\footnotesize\ttfamily \label{class_p_n_e__admin_1_1_controllers_1_1_admin_controller_afd79749972f5e093587ea75d77e9fb82} 
+async Task$<$ IAction\+Result $>$ PNE\+\_\+admin.\+Controllers.\+Admin\+Controller.\+Confirmation\+EEE (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+! les EEE ne sont pas encore implemente, donc ceci ne sert a rien avant que la partie des EEE pour les gerants de plans d\textquotesingle{}eau soit fait ! 
+
+Les Administrateurs veulent pouvoir confirmer les EEE/\+EAE des plans d\textquotesingle{}eau \Hypertarget{class_p_n_e__admin_1_1_controllers_1_1_admin_controller_a80b389ef46ab2fee55b23e2e61bcbec8}\index{PNE\_admin.Controllers.AdminController@{PNE\_admin.Controllers.AdminController}!InscriptionGerant@{InscriptionGerant}}
+\index{InscriptionGerant@{InscriptionGerant}!PNE\_admin.Controllers.AdminController@{PNE\_admin.Controllers.AdminController}}
+\doxysubsubsection{\texorpdfstring{InscriptionGerant()}{InscriptionGerant()}}
+{\footnotesize\ttfamily \label{class_p_n_e__admin_1_1_controllers_1_1_admin_controller_a80b389ef46ab2fee55b23e2e61bcbec8} 
+async Task$<$ IAction\+Result $>$ PNE\+\_\+admin.\+Controllers.\+Admin\+Controller.\+Inscription\+Gerant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_n_e__core_1_1_d_t_o_1_1_sign_up_user_d_t_o}{Sign\+Up\+User\+DTO}}}]{user\+DTO}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+retour de l\textquotesingle{}inscription, ajouter le user en BD et a firebase puis lui assigner le bon role 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & utilisateur cree par l\textquotesingle{}admin\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/maxim/\+Desktop/\+Prog uni/\+Uni 2/\+Projet nautique/pne-\/admin/src/\+PNE-\/admin/\+Controllers/Admin\+Controller.\+cs\end{DoxyCompactItemize}

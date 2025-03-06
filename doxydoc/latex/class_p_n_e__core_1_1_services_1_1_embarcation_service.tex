@@ -1,0 +1,72 @@
+\doxysection{PNE\+\_\+core.\+Services.\+Embarcation\+Service Class Reference}
+\hypertarget{class_p_n_e__core_1_1_services_1_1_embarcation_service}{}\label{class_p_n_e__core_1_1_services_1_1_embarcation_service}\index{PNE\_core.Services.EmbarcationService@{PNE\_core.Services.EmbarcationService}}
+Inheritance diagram for PNE\+\_\+core.\+Services.\+Embarcation\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_p_n_e__core_1_1_services_1_1_embarcation_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_embarcation_service_ad3407834d208e35b104bb29875b68b31}\label{class_p_n_e__core_1_1_services_1_1_embarcation_service_ad3407834d208e35b104bb29875b68b31} 
+{\bfseries Embarcation\+Service} (\mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_pne_db_context}{IPne\+Db\+Context}} db)
+\item 
+async Task \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_embarcation_service_a786da8d21a721778ab611269cca5b313}{Add\+Utilisateur\+Async}} (string embarcation\+Id, string utilisateur\+Id)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_embarcation_service_aad0e0ba7e843c69ffa76fb346fe1bacd}\label{class_p_n_e__core_1_1_services_1_1_embarcation_service_aad0e0ba7e843c69ffa76fb346fe1bacd} 
+async Task {\bfseries Create\+Async} (\mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_embarcation}{Embarcation}} entity)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_embarcation_service_a72093b67bba87f835090d4341ce40c27}\label{class_p_n_e__core_1_1_services_1_1_embarcation_service_a72093b67bba87f835090d4341ce40c27} 
+async Task {\bfseries Delete\+Async} (string id)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_embarcation_service_a3de637d8b93289fa66cdfef2b1ca2728}\label{class_p_n_e__core_1_1_services_1_1_embarcation_service_a3de637d8b93289fa66cdfef2b1ca2728} 
+async Task$<$ List$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_embarcation}{Embarcation}} $>$ $>$ {\bfseries Get\+All\+Async} ()
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_embarcation_service_a8e3d8b84628e80a797f753ba6fbbc090}\label{class_p_n_e__core_1_1_services_1_1_embarcation_service_a8e3d8b84628e80a797f753ba6fbbc090} 
+async Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_embarcation}{Embarcation}}?$>$ {\bfseries Get\+By\+Id\+Async} (string id)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_embarcation_service_aa92939615ef260620a22a427fad8c55c}\label{class_p_n_e__core_1_1_services_1_1_embarcation_service_aa92939615ef260620a22a427fad8c55c} 
+async Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_embarcation}{Embarcation}}?$>$ {\bfseries Get\+For\+Detail\+Async} (string id)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_embarcation_service_af35dd6c1f96ba7b78d945070c4e44e9a}\label{class_p_n_e__core_1_1_services_1_1_embarcation_service_af35dd6c1f96ba7b78d945070c4e44e9a} 
+async Task$<$ bool $>$ {\bfseries Is\+Exist} (string id)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_embarcation_service_aa525a49cea408a062d2faff88ee9f50c}\label{class_p_n_e__core_1_1_services_1_1_embarcation_service_aa525a49cea408a062d2faff88ee9f50c} 
+async Task {\bfseries Update\+Async} (\mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_embarcation}{Embarcation}} entity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_pne_services}{PNE\+\_\+core.\+Services.\+Interfaces.\+IPne\+Services$<$ Embarcation $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ T?$>$ {\bfseries Get\+By\+Id\+Async} (string id)
+\item 
+Task$<$ List$<$ T $>$ $>$ {\bfseries Get\+All\+Async} ()
+\item 
+Task$<$ T?$>$ {\bfseries Get\+For\+Detail\+Async} (string id)
+\item 
+Task {\bfseries Create\+Async} (T entity)
+\item 
+Task {\bfseries Update\+Async} (T entity)
+\item 
+Task {\bfseries Delete\+Async} (string id)
+\item 
+Task$<$ bool $>$ {\bfseries Is\+Exist} (string id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_embarcation_service_a786da8d21a721778ab611269cca5b313}\index{PNE\_core.Services.EmbarcationService@{PNE\_core.Services.EmbarcationService}!AddUtilisateurAsync@{AddUtilisateurAsync}}
+\index{AddUtilisateurAsync@{AddUtilisateurAsync}!PNE\_core.Services.EmbarcationService@{PNE\_core.Services.EmbarcationService}}
+\doxysubsubsection{\texorpdfstring{AddUtilisateurAsync()}{AddUtilisateurAsync()}}
+{\footnotesize\ttfamily \label{class_p_n_e__core_1_1_services_1_1_embarcation_service_a786da8d21a721778ab611269cca5b313} 
+async Task PNE\+\_\+core.\+Services.\+Embarcation\+Service.\+Add\+Utilisateur\+Async (\begin{DoxyParamCaption}\item[{string}]{embarcation\+Id}{, }\item[{string}]{utilisateur\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_embarcation_service}{PNE\+\_\+core.\+Services.\+Interfaces.\+IEmbarcation\+Service}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/maxim/\+Desktop/\+Prog uni/\+Uni 2/\+Projet nautique/pne-\/admin/src/\+PNE-\/core/\+Services/Embarcation\+Service.\+cs\end{DoxyCompactItemize}

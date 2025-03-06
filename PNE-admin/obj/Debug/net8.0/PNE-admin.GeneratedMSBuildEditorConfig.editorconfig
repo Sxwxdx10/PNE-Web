@@ -1,0 +1,217 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PNE_admin
+build_property.RootNamespace = PNE_admin
+build_property.ProjectDir = C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-admin\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-admin
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/AccueilAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbEFkbWluXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Admin/ConfirmationEEE.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ29uZmlybWF0aW9uRUVFLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Admin/FormationsCertifications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRm9ybWF0aW9uc0NlcnRpZmljYXRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Admin/InscriptionGerant.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5zY3JpcHRpb25HZXJhbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Admin/Planseau.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGxhbnNlYXUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Authentification/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGlmaWNhdGlvblxsb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Authentification/logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGlmaWNhdGlvblxsb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Chercheur/DeplacementsEmbarcations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlcmNoZXVyXERlcGxhY2VtZW50c0VtYmFyY2F0aW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Chercheur/PlanEau.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlcmNoZXVyXFBsYW5FYXUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Embarcations/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1iYXJjYXRpb25zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Embarcations/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1iYXJjYXRpb25zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Embarcations/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1iYXJjYXRpb25zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Embarcations/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1iYXJjYXRpb25zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Embarcations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1iYXJjYXRpb25zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Gerant/GestionPlanEau.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VyYW50XEdlc3Rpb25QbGFuRWF1LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Gerant/InscriptionEmployes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VyYW50XEluc2NyaXB0aW9uRW1wbG95ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Gerant/MiseAEau.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VyYW50XE1pc2VBRWF1LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Gerant/SignalisationEEE.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VyYW50XFNpZ25hbGlzYXRpb25FRUUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Gerant/Stats.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VyYW50XFN0YXRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Notedossiers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZWRvc3NpZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Notedossiers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZWRvc3NpZXJzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Notedossiers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZWRvc3NpZXJzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Notedossiers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZWRvc3NpZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Notedossiers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZWRvc3NpZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Planeaux/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbmVhdXhcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Planeaux/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbmVhdXhcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Planeaux/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbmVhdXhcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Planeaux/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbmVhdXhcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Planeaux/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbmVhdXhcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Shared/unauthorized.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHVuYXV0aG9yaXplZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/StationLavages/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlvbkxhdmFnZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/StationLavages/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlvbkxhdmFnZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/StationLavages/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlvbkxhdmFnZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/StationLavages/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlvbkxhdmFnZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/StationLavages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlvbkxhdmFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Utilisateurs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Utilisateurs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Utilisateurs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Utilisateurs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Utilisateurs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXRpbGlzYXRldXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-iwtcg6t2qt

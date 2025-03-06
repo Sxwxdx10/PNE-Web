@@ -1,0 +1,76 @@
+﻿@model PNE_core.DTO.LoginDto
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="loginCard container">
+    <h2>@ViewData["Title"]</h2>
+    <hr />
+    <div class="row">
+        <div class="col">
+            <!-- login with google -->
+            <button class="login-button padding-button" id="loginButton">
+                <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" width="24" height="24">
+                Connexion avec Google
+            </button>
+        </div>
+        <div class="col-auto">
+            <div class="line"></div>
+        </div>
+        <div class="col">
+            
+            <!-- login with email -->
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group mb-2">
+                    <label asp-for="@Model.Email" class="control-label"></label>
+                    <input asp-for="@Model.Email" class="form-control" type="email" />
+                    <span asp-validation-for="@Model.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-2">
+                    <label asp-for="@Model.Password" class="control-label"></label>
+                    <input asp-for="@Model.Password" class="form-control" type="password" />
+                    <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login" class="btn btn-primary padding-button right-item" />
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function handleCredentialResponse(response) {
+        const idToken = response.code;
+
+        fetch('/auth/googleLogin', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(idToken)
+        }).then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            window.location.href = '/AccueilAdmin/index';
+        })
+            .catch(error => console.error('Error:', error));
+    }
+
+    function openGooglePopup() {
+        google.accounts.oauth2.initCodeClient({
+            client_id: '@ViewData["GoogleClientId"]',
+            scope: 'email profile',
+            ux_mode: 'popup',
+            callback: handleCredentialResponse
+        }).requestCode();
+    }
+
+    document.getElementById('loginButton').addEventListener('click', function () {
+        openGooglePopup();
+    });
+
+</script>

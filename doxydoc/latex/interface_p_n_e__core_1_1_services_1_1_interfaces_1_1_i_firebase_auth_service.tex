@@ -1,0 +1,58 @@
+\doxysection{PNE\+\_\+core.\+Services.\+Interfaces.\+IFirebase\+Auth\+Service Interface Reference}
+\hypertarget{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service}{}\label{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service}\index{PNE\_core.Services.Interfaces.IFirebaseAuthService@{PNE\_core.Services.Interfaces.IFirebaseAuthService}}
+Inheritance diagram for PNE\+\_\+core.\+Services.\+Interfaces.\+IFirebase\+Auth\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service_af3d101ba9281332897c8471aa35b94a2}\label{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service_af3d101ba9281332897c8471aa35b94a2} 
+Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_user_base_info}{User\+Base\+Info}}?$>$ {\bfseries Sign\+Up} (string email, string password, string username)
+\item 
+Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_user_base_info}{User\+Base\+Info}}?$>$ \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service_a6b8aec26aa28f8c72c537479864aa895}{Login}} (string email, string password)
+\item 
+Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_user_base_info}{User\+Base\+Info}}?$>$ \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service_a32680e2a0be7f2783ac6e23a8400dc97}{Google\+Login}} (string id\+Token)
+\item 
+void \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service_a1a8a7bfafbfb3d2ac34ea47714f017ea}{Sign\+Out}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service_a32680e2a0be7f2783ac6e23a8400dc97}\index{PNE\_core.Services.Interfaces.IFirebaseAuthService@{PNE\_core.Services.Interfaces.IFirebaseAuthService}!GoogleLogin@{GoogleLogin}}
+\index{GoogleLogin@{GoogleLogin}!PNE\_core.Services.Interfaces.IFirebaseAuthService@{PNE\_core.Services.Interfaces.IFirebaseAuthService}}
+\doxysubsubsection{\texorpdfstring{GoogleLogin()}{GoogleLogin()}}
+{\footnotesize\ttfamily \label{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service_a32680e2a0be7f2783ac6e23a8400dc97} 
+Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_user_base_info}{User\+Base\+Info}}?$>$ PNE\+\_\+core.\+Services.\+Interfaces.\+IFirebase\+Auth\+Service.\+Google\+Login (\begin{DoxyParamCaption}\item[{string}]{id\+Token}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_firebase_auth_service_a5350db96a14a30d211202a9b4f4b8563}{PNE\+\_\+core.\+Services.\+Firebase\+Auth\+Service}}.
+
+\Hypertarget{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service_a6b8aec26aa28f8c72c537479864aa895}\index{PNE\_core.Services.Interfaces.IFirebaseAuthService@{PNE\_core.Services.Interfaces.IFirebaseAuthService}!Login@{Login}}
+\index{Login@{Login}!PNE\_core.Services.Interfaces.IFirebaseAuthService@{PNE\_core.Services.Interfaces.IFirebaseAuthService}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily \label{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service_a6b8aec26aa28f8c72c537479864aa895} 
+Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_user_base_info}{User\+Base\+Info}}?$>$ PNE\+\_\+core.\+Services.\+Interfaces.\+IFirebase\+Auth\+Service.\+Login (\begin{DoxyParamCaption}\item[{string}]{email}{, }\item[{string}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_firebase_auth_service_acb5302c6df99c8cac4d3c28e2ec59d64}{PNE\+\_\+core.\+Services.\+Firebase\+Auth\+Service}}.
+
+\Hypertarget{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service_a1a8a7bfafbfb3d2ac34ea47714f017ea}\index{PNE\_core.Services.Interfaces.IFirebaseAuthService@{PNE\_core.Services.Interfaces.IFirebaseAuthService}!SignOut@{SignOut}}
+\index{SignOut@{SignOut}!PNE\_core.Services.Interfaces.IFirebaseAuthService@{PNE\_core.Services.Interfaces.IFirebaseAuthService}}
+\doxysubsubsection{\texorpdfstring{SignOut()}{SignOut()}}
+{\footnotesize\ttfamily \label{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_firebase_auth_service_a1a8a7bfafbfb3d2ac34ea47714f017ea} 
+void PNE\+\_\+core.\+Services.\+Interfaces.\+IFirebase\+Auth\+Service.\+Sign\+Out (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_firebase_auth_service_a793fc05cd7f2609a33730346074cc9be}{PNE\+\_\+core.\+Services.\+Firebase\+Auth\+Service}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/maxim/\+Desktop/\+Prog uni/\+Uni 2/\+Projet nautique/pne-\/admin/src/\+PNE-\/core/\+Services/\+Interfaces/IFirebase\+Auth\+Service.\+cs\end{DoxyCompactItemize}

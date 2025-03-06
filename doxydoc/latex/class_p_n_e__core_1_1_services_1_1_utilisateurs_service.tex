@@ -1,0 +1,75 @@
+\doxysection{PNE\+\_\+core.\+Services.\+Utilisateurs\+Service Class Reference}
+\hypertarget{class_p_n_e__core_1_1_services_1_1_utilisateurs_service}{}\label{class_p_n_e__core_1_1_services_1_1_utilisateurs_service}\index{PNE\_core.Services.UtilisateursService@{PNE\_core.Services.UtilisateursService}}
+Inheritance diagram for PNE\+\_\+core.\+Services.\+Utilisateurs\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_p_n_e__core_1_1_services_1_1_utilisateurs_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_ac66833b5ef9ee06bc10768d088f92b93}\label{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_ac66833b5ef9ee06bc10768d088f92b93} 
+{\bfseries Utilisateurs\+Service} (\mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_pne_db_context}{IPne\+Db\+Context}} db)
+\item 
+async Task \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_a01c337a4af5614e362a8c6b67d4a54ff}{Link\+User\+Plan\+Eau}} (string id\+Utilisateur, string Id\+Planeau)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_a7e4064dc22f1516c838fc87b33f614ce}\label{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_a7e4064dc22f1516c838fc87b33f614ce} 
+async Task {\bfseries Remove\+User\+Plan\+Eau} (string id\+Utilisateur, string Id\+Planeau)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_a68b01a505634c24dc8e73fecb8687309}\label{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_a68b01a505634c24dc8e73fecb8687309} 
+async Task {\bfseries Create\+Async} (\mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_utilisateur}{Utilisateur}} entity)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_a30ca41c582f39c7de11e5e16c27c696b}\label{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_a30ca41c582f39c7de11e5e16c27c696b} 
+async Task {\bfseries Delete\+Async} (string id)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_a6d7d8decb0d2316dccaef2670c4d18eb}\label{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_a6d7d8decb0d2316dccaef2670c4d18eb} 
+async Task$<$ List$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_utilisateur}{Utilisateur}} $>$ $>$ {\bfseries Get\+All\+Async} ()
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_af2a0fe23ea0ca96775ecbbc29ce71a6a}\label{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_af2a0fe23ea0ca96775ecbbc29ce71a6a} 
+async Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_utilisateur}{Utilisateur}}?$>$ {\bfseries Get\+By\+Id\+Async} (string id)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_a19ae64b9cca0dea4e1d84bbc53ad74ac}\label{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_a19ae64b9cca0dea4e1d84bbc53ad74ac} 
+async Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_utilisateur}{Utilisateur}}?$>$ {\bfseries Get\+For\+Detail\+Async} (string id)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_a60f123632e57a990c189e38328d9a0fe}\label{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_a60f123632e57a990c189e38328d9a0fe} 
+async Task$<$ bool $>$ {\bfseries Is\+Exist} (string id)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_a69b29794bdc983b9afa359b65047acef}\label{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_a69b29794bdc983b9afa359b65047acef} 
+async Task {\bfseries Update\+Async} (\mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_utilisateur}{Utilisateur}} entity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_pne_services}{PNE\+\_\+core.\+Services.\+Interfaces.\+IPne\+Services$<$ Utilisateur $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ T?$>$ {\bfseries Get\+By\+Id\+Async} (string id)
+\item 
+Task$<$ List$<$ T $>$ $>$ {\bfseries Get\+All\+Async} ()
+\item 
+Task$<$ T?$>$ {\bfseries Get\+For\+Detail\+Async} (string id)
+\item 
+Task {\bfseries Create\+Async} (T entity)
+\item 
+Task {\bfseries Update\+Async} (T entity)
+\item 
+Task {\bfseries Delete\+Async} (string id)
+\item 
+Task$<$ bool $>$ {\bfseries Is\+Exist} (string id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_a01c337a4af5614e362a8c6b67d4a54ff}\index{PNE\_core.Services.UtilisateursService@{PNE\_core.Services.UtilisateursService}!LinkUserPlanEau@{LinkUserPlanEau}}
+\index{LinkUserPlanEau@{LinkUserPlanEau}!PNE\_core.Services.UtilisateursService@{PNE\_core.Services.UtilisateursService}}
+\doxysubsubsection{\texorpdfstring{LinkUserPlanEau()}{LinkUserPlanEau()}}
+{\footnotesize\ttfamily \label{class_p_n_e__core_1_1_services_1_1_utilisateurs_service_a01c337a4af5614e362a8c6b67d4a54ff} 
+async Task PNE\+\_\+core.\+Services.\+Utilisateurs\+Service.\+Link\+User\+Plan\+Eau (\begin{DoxyParamCaption}\item[{string}]{id\+Utilisateur}{, }\item[{string}]{Id\+Planeau}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_utilisateur_service}{PNE\+\_\+core.\+Services.\+Interfaces.\+IUtilisateur\+Service}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/maxim/\+Desktop/\+Prog uni/\+Uni 2/\+Projet nautique/pne-\/admin/src/\+PNE-\/core/\+Services/Utilisateurs\+Service.\+cs\end{DoxyCompactItemize}

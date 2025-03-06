@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "O/4SuUpxnVuzOInUxyFWdAxex1VEj6xrma+s476DNjg=",
+  "Source": "PNE-api",
+  "BasePath": "_content/PNE-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

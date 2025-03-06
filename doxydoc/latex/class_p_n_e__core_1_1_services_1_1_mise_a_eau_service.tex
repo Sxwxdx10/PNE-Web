@@ -1,0 +1,57 @@
+\doxysection{PNE\+\_\+core.\+Services.\+Mise\+AEau\+Service Class Reference}
+\hypertarget{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service}{}\label{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service}\index{PNE\_core.Services.MiseAEauService@{PNE\_core.Services.MiseAEauService}}
+Inheritance diagram for PNE\+\_\+core.\+Services.\+Mise\+AEau\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service_a6c204f7b480caa5afb841f259a5865ec}\label{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service_a6c204f7b480caa5afb841f259a5865ec} 
+{\bfseries Mise\+AEau\+Service} (\mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_pne_db_context}{IPne\+Db\+Context}} db)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service_a0ee02f287797ac03419ab5fcd98af5ad}\label{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service_a0ee02f287797ac03419ab5fcd98af5ad} 
+async Task {\bfseries Create\+Async} (\mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_miseaeau}{Miseaeau}} entity)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service_ac83d2520d974a6a55ad1f956938514da}\label{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service_ac83d2520d974a6a55ad1f956938514da} 
+async Task {\bfseries Delete\+Async} (string id)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service_ad13bc3feed310f0a1d7372ef266ef380}\label{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service_ad13bc3feed310f0a1d7372ef266ef380} 
+async Task$<$ List$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_miseaeau}{Miseaeau}} $>$ $>$ {\bfseries Get\+All\+Async} ()
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service_a3e9999d083ae9033fb6c5483e901230b}\label{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service_a3e9999d083ae9033fb6c5483e901230b} 
+async Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_miseaeau}{Miseaeau}}?$>$ {\bfseries Get\+By\+Id\+Async} (string id)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service_a873633aed86249025ad033748315a05a}\label{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service_a873633aed86249025ad033748315a05a} 
+async Task$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_miseaeau}{Miseaeau}}?$>$ {\bfseries Get\+For\+Detail\+Async} (string id)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service_a87237dbe9a54c92b495e42341fb117f0}\label{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service_a87237dbe9a54c92b495e42341fb117f0} 
+async Task$<$ bool $>$ {\bfseries Is\+Exist} (string id)
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service_a8fafa68227fc915a66887471c117676e}\label{class_p_n_e__core_1_1_services_1_1_mise_a_eau_service_a8fafa68227fc915a66887471c117676e} 
+async Task {\bfseries Update\+Async} (\mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_miseaeau}{Miseaeau}} entity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_pne_services}{PNE\+\_\+core.\+Services.\+Interfaces.\+IPne\+Services$<$ Miseaeau $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ T?$>$ {\bfseries Get\+By\+Id\+Async} (string id)
+\item 
+Task$<$ List$<$ T $>$ $>$ {\bfseries Get\+All\+Async} ()
+\item 
+Task$<$ T?$>$ {\bfseries Get\+For\+Detail\+Async} (string id)
+\item 
+Task {\bfseries Create\+Async} (T entity)
+\item 
+Task {\bfseries Update\+Async} (T entity)
+\item 
+Task {\bfseries Delete\+Async} (string id)
+\item 
+Task$<$ bool $>$ {\bfseries Is\+Exist} (string id)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/maxim/\+Desktop/\+Prog uni/\+Uni 2/\+Projet nautique/pne-\/admin/src/\+PNE-\/core/\+Services/Mise\+AEau\+Service.\+cs\end{DoxyCompactItemize}

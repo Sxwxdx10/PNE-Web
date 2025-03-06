@@ -1,0 +1,58 @@
+\doxysection{PNE\+\_\+core.\+Services.\+Role\+Service Class Reference}
+\hypertarget{class_p_n_e__core_1_1_services_1_1_role_service}{}\label{class_p_n_e__core_1_1_services_1_1_role_service}\index{PNE\_core.Services.RoleService@{PNE\_core.Services.RoleService}}
+Inheritance diagram for PNE\+\_\+core.\+Services.\+Role\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_p_n_e__core_1_1_services_1_1_role_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_role_service_a5100bf063d3933860a8be19cf09baefa}\label{class_p_n_e__core_1_1_services_1_1_role_service_a5100bf063d3933860a8be19cf09baefa} 
+{\bfseries Role\+Service} (\mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_pne_db_context}{IPne\+Db\+Context}} db)
+\item 
+async Task \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_role_service_a3850d161f3d83e3a12f5ec68b954962a}{Add\+User\+Role}} (string id\+Utilisateur, string nom\+Role)
+\item 
+async Task \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_role_service_a372770e2e4cf674a9b4591b05d37d4d3}{Remove\+User\+Role}} (string id\+Utilisateur, string nom\+Role)
+\item 
+async Task$<$ List$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_role}{Role}} $>$?$>$ \mbox{\hyperlink{class_p_n_e__core_1_1_services_1_1_role_service_a026239137322fcbc47938193554a3498}{Get\+User\+Roles}} (string id\+Utilisateur)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_role_service_a3850d161f3d83e3a12f5ec68b954962a}\index{PNE\_core.Services.RoleService@{PNE\_core.Services.RoleService}!AddUserRole@{AddUserRole}}
+\index{AddUserRole@{AddUserRole}!PNE\_core.Services.RoleService@{PNE\_core.Services.RoleService}}
+\doxysubsubsection{\texorpdfstring{AddUserRole()}{AddUserRole()}}
+{\footnotesize\ttfamily \label{class_p_n_e__core_1_1_services_1_1_role_service_a3850d161f3d83e3a12f5ec68b954962a} 
+async Task PNE\+\_\+core.\+Services.\+Role\+Service.\+Add\+User\+Role (\begin{DoxyParamCaption}\item[{string}]{id\+Utilisateur}{, }\item[{string}]{nom\+Role}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_role_service}{PNE\+\_\+core.\+Services.\+Interfaces.\+IRole\+Service}}.
+
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_role_service_a026239137322fcbc47938193554a3498}\index{PNE\_core.Services.RoleService@{PNE\_core.Services.RoleService}!GetUserRoles@{GetUserRoles}}
+\index{GetUserRoles@{GetUserRoles}!PNE\_core.Services.RoleService@{PNE\_core.Services.RoleService}}
+\doxysubsubsection{\texorpdfstring{GetUserRoles()}{GetUserRoles()}}
+{\footnotesize\ttfamily \label{class_p_n_e__core_1_1_services_1_1_role_service_a026239137322fcbc47938193554a3498} 
+async Task$<$ List$<$ \mbox{\hyperlink{class_p_n_e__core_1_1_models_1_1_role}{Role}} $>$?$>$ PNE\+\_\+core.\+Services.\+Role\+Service.\+Get\+User\+Roles (\begin{DoxyParamCaption}\item[{string}]{id\+Utilisateur}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_role_service}{PNE\+\_\+core.\+Services.\+Interfaces.\+IRole\+Service}}.
+
+\Hypertarget{class_p_n_e__core_1_1_services_1_1_role_service_a372770e2e4cf674a9b4591b05d37d4d3}\index{PNE\_core.Services.RoleService@{PNE\_core.Services.RoleService}!RemoveUserRole@{RemoveUserRole}}
+\index{RemoveUserRole@{RemoveUserRole}!PNE\_core.Services.RoleService@{PNE\_core.Services.RoleService}}
+\doxysubsubsection{\texorpdfstring{RemoveUserRole()}{RemoveUserRole()}}
+{\footnotesize\ttfamily \label{class_p_n_e__core_1_1_services_1_1_role_service_a372770e2e4cf674a9b4591b05d37d4d3} 
+async Task PNE\+\_\+core.\+Services.\+Role\+Service.\+Remove\+User\+Role (\begin{DoxyParamCaption}\item[{string}]{id\+Utilisateur}{, }\item[{string}]{nom\+Role}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_p_n_e__core_1_1_services_1_1_interfaces_1_1_i_role_service}{PNE\+\_\+core.\+Services.\+Interfaces.\+IRole\+Service}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/maxim/\+Desktop/\+Prog uni/\+Uni 2/\+Projet nautique/pne-\/admin/src/\+PNE-\/core/\+Services/Role\+Service.\+cs\end{DoxyCompactItemize}
