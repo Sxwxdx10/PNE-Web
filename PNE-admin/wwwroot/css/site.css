@@ -1,5 +1,10 @@
+/*  Importation des polices de la charte visuelle */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Poppins:wght@300;500;700&family=Montserrat:wght@400;600&display=swap');
+
 html {
     font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -8,34 +13,41 @@ html {
     }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-    position: relative;
-    min-height: 100%;
-}
-
 body {
     margin-bottom: 60px;
-    background-color: #F3F4F2
+    background-color: #F6F7E9;
+    font-family: 'Poppins', sans-serif;
 }
 
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #08A2A8;
+}
+
+
 footer {
-    background-color: #222222;
+    background-color: #5E8E86;
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: 10;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
 
 .header {
-    background-color: #222222;
+    background-color: #3F796A;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    padding: 10px;
 }
 
 .text-light-color {
-    color: #D4D6D2;
+    color: #F6F7E9;
 }
 
 .right-item {
@@ -44,30 +56,32 @@ footer {
 
 .login-button {
     display: inline-block;
-    background-color: #ffffff;
-    color: #757575;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background-color: #EECE01;
+    color: #172243;
     font-weight: 500;
     line-height: 36px;
-    border-radius: 3px;
+    border-radius: 8px;
     transition: background-color 0.3s ease;
     cursor: pointer;
-    border: 1px solid #dadce0;
-    font-family: 'Roboto', sans-serif;
+    border: 1px solid #C8D8C9;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
+
+    .login-button:hover {
+        background-color: #08A2A8;
+        color: white;
+    }
+
+    .login-button img {
+        vertical-align: middle;
+        margin-right: 12px;
+    }
 
 .padding-button {
     font-size: 18px;
-    padding: 6px 16px 6px 16px
-}
-
-.login-button:hover {
-    background-color: #f1f1f1;
-}
-
-.login-button img {
-    vertical-align: middle;
-    margin-right: 12px;
+    padding: 6px 16px;
 }
 
 .loginCard {
@@ -77,12 +91,40 @@ footer {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.24);
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
 .line {
     width: 1px;
     height: 100%;
     background-color: #ccc;
+}
+
+.navbar {
+    background-color: #3F796A;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+}
+
+    .navbar a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        margin-right: 15px;
+    }
+
+        .navbar a:hover {
+            color: #EECE01;
+        }
+
+
+.dropdown-item[href$="/Profil"] {
+    color: black !important;
+}
+
+.dropdown-item[href$="/Logout"] {
+    color: red !important;
 }
