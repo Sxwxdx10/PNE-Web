@@ -1,0 +1,22 @@
+﻿<div class="card mb-4 shadow fade-in">
+    <div class="card-header role-header text-white">
+        <h4 class="my-0">Liens Gérant</h4>
+    </div>
+    <div class="card-body">
+        <ul class="list-unstyled">
+            <li><i class="bi bi-people"></i> <a class="nav-link d-inline" asp-controller="Gerant" asp-action="InscriptionEmployes">Mes employés</a></li>
+            <li><i class="bi bi-water"></i> <a class="nav-link d-inline" asp-controller="Gerant" asp-action="GestionPlanEau">Mon plan d'eau</a></li>
+            <li>
+                <i class="bi bi-upload"></i> <a class="nav-link d-inline" asp-controller="Gerant" asp-action="MiseAEau">Mise à l'eau</a>
+                @if (TempData["Erreur"] != null)
+                {
+                    <div class="alert alert-danger mt-2">
+                        @TempData["Erreur"]
+                    </div>
+                }
+            </li>
+            <li><i class="bi bi-exclamation-triangle"></i> <a class="nav-link d-inline" asp-controller="Gerant" asp-action="SignalisationEEE">Signaler une EEE</a></li>
+            <li><i class="bi bi-bar-chart-line"></i> <a class="nav-link d-inline" asp-controller="Gerant" asp-action="Stats">Statistiques</a></li>
+        </ul>
+    </div>
+</div>
