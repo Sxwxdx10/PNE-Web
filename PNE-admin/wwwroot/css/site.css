@@ -69,10 +69,6 @@ h1, h2, h3, h4, h5, h6 {
         margin-right: 15px;
     }
 
-        .navbar a:hover {
-            color: #EECE01;
-        }
-
 /* ==========================================
    FOOTER
 ========================================== */
@@ -100,7 +96,6 @@ footer {
 
 .login-button {
     display: inline-block;
-    background-color: #EECE01;
     color: #172243;
     font-weight: 500;
     border-radius: 8px;
