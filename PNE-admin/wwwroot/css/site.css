@@ -15,10 +15,28 @@ html {
 
 body {
     margin-bottom: 60px;
-    background-color: #F6F7E9;
+    background: linear-gradient(135deg, #F6F7E9 0%, #e3efe8 100%);
     font-family: 'Poppins', sans-serif;
 }
 
+/* Animation douce à l’apparition */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style des boutons et formulaires */
 .btn:focus,
 .btn:active:focus,
 .btn-link.nav-link:focus,
@@ -27,7 +45,7 @@ body {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #08A2A8;
 }
 
-
+/* Footer personnalisé */
 footer {
     background-color: #5E8E86;
     position: absolute;
@@ -39,6 +57,7 @@ footer {
     padding: 10px;
 }
 
+/* Header */
 .header {
     background-color: #3F796A;
     font-family: 'Montserrat', sans-serif;
@@ -54,6 +73,7 @@ footer {
     margin-left: auto;
 }
 
+/* Bouton de login */
 .login-button {
     display: inline-block;
     background-color: #EECE01;
@@ -84,6 +104,7 @@ footer {
     padding: 6px 16px;
 }
 
+/* Carte de connexion */
 .loginCard {
     margin-top: 18%;
     width: 65%;
@@ -103,6 +124,7 @@ footer {
     background-color: #ccc;
 }
 
+/* Navbar */
 .navbar {
     background-color: #3F796A;
     font-family: 'Montserrat', sans-serif;
@@ -120,7 +142,7 @@ footer {
             color: #EECE01;
         }
 
-
+/* Dropdown personnalisé */
 .dropdown-item[href$="/Profil"] {
     color: black !important;
 }
@@ -128,3 +150,62 @@ footer {
 .dropdown-item[href$="/Logout"] {
     color: red !important;
 }
+
+/* === AJOUTS POUR LES CARTES DANS INDEX.CSHTML === */
+
+/* Cartes des rôles */
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+/* Titres de section */
+.card-header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Liens avec icônes */
+.card-body li i {
+    margin-right: 8px;
+    color: #3F796A;
+}
+
+.card-body a.nav-link {
+    display: inline-block;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+    .card-body a.nav-link:hover {
+        color: #08A2A8;
+        text-decoration: underline;
+    }
+
+/* Badge rôle */
+.badge {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    border-radius: 12px;
+}
+
+
+.role-badge {
+    padding: 0.4em 0.75em;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    background-color: #6c757d; /* gris Bootstrap */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-transform: capitalize;
+    transition: background-color 0.3s ease;
+}
+
+    .role-badge:hover {
+        background-color: #5a6268; /* gris foncé au hover */
+    }
