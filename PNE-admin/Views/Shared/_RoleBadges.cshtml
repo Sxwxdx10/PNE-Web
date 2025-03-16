@@ -1,0 +1,8 @@
+﻿@model List<string>
+
+<div class="d-flex flex-wrap gap-2 mt-2">
+    @foreach (var role in Model)
+    {
+        <span class="role-badge bg-secondary text-white fw-semibold">@role</span>
+    }
+</div>

@@ -1,86 +1,40 @@
 ﻿@using NuGet.Protocol;
+
 @{
     List<string> roles = Context.Session.GetString("userRoles").FromJson<List<string>>();
+    string? userName = Context.Session.GetString("username");
 }
 
 <div class="container mt-4 fade-in">
+
     <div class="text-center mb-5">
         <h1 class="display-4">Mes accès</h1>
     </div>
 
-    <!-- Carte des rôles -->
-    <div class="card shadow mb-5">
+    <!-- Badges des rôles -->
+    <div class="card shadow mb-5 fade-in">
         <div class="card-header bg-dark text-white text-center">
             <h4 class="my-0">Vos rôles</h4>
         </div>
         <div class="card-body d-flex justify-content-center flex-wrap gap-3">
-            @foreach (var role in roles)
-            {
-                var roleDisplay = role switch
-                {
-                    "gerant" => "Gérant",
-                    _ => char.ToUpper(role[0]) + role[1..]
-                };
-                <span class="badge bg-secondary fs-5 p-3 rounded-pill text-white shadow-sm">@roleDisplay</span>
-            }
+            <partial name="_RoleBadges" model="roles" />
         </div>
     </div>
 
+    <!-- Liens selon rôles -->
     @if (roles.Contains("admin"))
     {
-        <div class="card mb-4 shadow fade-in">
-            <div class="card-header bg-success text-white">
-                <h4 class="my-0">Liens Administrateur</h4>
-            </div>
-            <div class="card-body">
-                <ul class="list-unstyled">
-                    <li><i class="bi bi-person-plus"></i> <a class="nav-link d-inline" asp-controller="Admin" asp-action="InscriptionGerant">Inscrire un gérant de plan d'eau</a></li>
-                    <li><i class="bi bi-check2-circle"></i> <a class="nav-link d-inline" asp-controller="Admin" asp-action="ConfirmationEEE">Confirmer des EEE</a></li>
-                    <li><i class="bi bi-water"></i> <a class="nav-link d-inline" asp-controller="Admin" asp-action="Planseau">Plans d'eau</a></li>
-                    <li><i class="bi bi-journal-text"></i> <a class="nav-link d-inline" asp-controller="Admin" asp-action="FormationsCertifications">Formations et certifications</a></li>
-                </ul>
-            </div>
-        </div>
+        <partial name="_AdminLinks" />
     }
 
     @if (roles.Contains("chercheur"))
     {
-        <div class="card mb-4 shadow fade-in">
-            <div class="card-header bg-primary text-white">
-                <h4 class="my-0">Liens Chercheur</h4>
-            </div>
-            <div class="card-body">
-                <ul class="list-unstyled">
-                    <li><i class="bi bi-bar-chart"></i> <a class="nav-link d-inline" asp-controller="Chercheur" asp-action="PlanEau">Statistiques des plans d'eau</a></li>
-                    <li><i class="bi bi-geo-alt"></i> <a class="nav-link d-inline" asp-controller="Chercheur" asp-action="DeplacementsEmbarcations">Déplacements des embarcations</a></li>
-                </ul>
-            </div>
-        </div>
+        <partial name="_ChercheurLinks" />
     }
 
     @if (roles.Contains("gerant"))
     {
-        <div class="card mb-4 shadow fade-in">
-            <div class="card-header bg-warning text-dark">
-                <h4 class="my-0">Liens Gérant</h4>
-            </div>
-            <div class="card-body">
-                <ul class="list-unstyled">
-                    <li><i class="bi bi-people"></i> <a class="nav-link d-inline" asp-controller="Gerant" asp-action="InscriptionEmployes">Mes employés</a></li>
-                    <li><i class="bi bi-water"></i> <a class="nav-link d-inline" asp-controller="Gerant" asp-action="GestionPlanEau">Mon plan d'eau</a></li>
-                    <li>
-                        <i class="bi bi-upload"></i> <a class="nav-link d-inline" asp-controller="Gerant" asp-action="MiseAEau">Mise à l'eau</a>
-                        @if (TempData["Erreur"] != null)
-                        {
-                            <div class="alert alert-danger mt-2">
-                                @TempData["Erreur"]
-                            </div>
-                        }
-                    </li>
-                    <li><i class="bi bi-exclamation-triangle"></i> <a class="nav-link d-inline" asp-controller="Gerant" asp-action="SignalisationEEE">Signaler une EEE</a></li>
-                    <li><i class="bi bi-bar-chart-line"></i> <a class="nav-link d-inline" asp-controller="Gerant" asp-action="Stats">Statistiques</a></li>
-                </ul>
-            </div>
-        </div>
+        <partial name="_GerantLinks" />
     }
+
 </div>
