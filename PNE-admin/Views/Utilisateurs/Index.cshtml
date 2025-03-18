@@ -1,42 +1,45 @@
 ﻿@model IEnumerable<PNE_core.Models.Utilisateur>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Utilisateurs";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="mb-0">Liste des utilisateurs</h1>
+    <a asp-action="Create" class="btn btn-outline-secondary">
+        ➕ Créer un utilisateur
+    </a>
+</div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.DisplayName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateCreation)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.DisplayName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateCreation)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-0">
+        <table class="table table-sm mb-0">
+            <thead style="background-color: #f8f9fa;">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.First().DisplayName)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().DateCreation)</th>
+                    <th class="text-end">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.DisplayName)</td>
+                        <td>
+                            <span class="badge" style="background-color: #e0e7ff; color: #374151;">
+                                @item.DateCreation.ToString("dd/MM/yyyy")
+                            </span>
+                        </td>
+                        <td class="text-end">
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary me-1">✏️ Modifier</a>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary me-1">ℹ️ Détails</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">🗑️ Supprimer</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
