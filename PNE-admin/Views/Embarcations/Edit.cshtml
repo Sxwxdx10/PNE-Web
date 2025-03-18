@@ -1,50 +1,52 @@
 ﻿@model PNE_core.Models.Embarcation
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Modifier une embarcation";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Edit</h1>
+<div class="container mt-4">
+    <h2 class="mb-4 text-primary">✏️ Modifier une embarcation</h2>
 
-<h4>Embarcation</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+    <div class="card shadow-sm p-4">
         <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
             <input type="hidden" asp-for="IdEmbarcation" />
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
+
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label fw-bold">Description</label>
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Marque" class="control-label"></label>
+
+            <div class="mb-3">
+                <label asp-for="Marque" class="form-label fw-bold">Marque</label>
                 <input asp-for="Marque" class="form-control" />
                 <span asp-validation-for="Marque" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Longueur" class="control-label"></label>
+
+            <div class="mb-3">
+                <label asp-for="Longueur" class="form-label fw-bold">Longueur</label>
                 <input asp-for="Longueur" class="form-control" />
                 <span asp-validation-for="Longueur" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Photo" class="control-label"></label>
+
+            <div class="mb-3">
+                <label asp-for="Photo" class="form-label fw-bold">Photo</label>
                 <input asp-for="Photo" class="form-control" />
                 <span asp-validation-for="Photo" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+
+            <div class="d-flex gap-3 mt-4">
+                <input type="submit" value="💾 Enregistrer" class="btn btn-success px-4" />
+                <a asp-action="Index" class="btn btn-secondary">⬅ Retour à la liste</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
