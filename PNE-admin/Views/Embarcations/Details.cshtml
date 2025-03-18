@@ -1,44 +1,58 @@
 ﻿@model PNE_core.Models.Embarcation
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Détails de l'embarcation";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+<div class="container mt-4">
+    <h2 class="text-secondary mb-4">🔍 Détails de l'embarcation</h2>
 
-<div>
-    <h4>Embarcation</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Marque)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Marque)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Longueur)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Longueur)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Photo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Photo)
-        </dd>
-    </dl>
-</div>
-<div> 
-    <a asp-controller="Notedossiers" asp-action="Index" asp-route-id="@Model.IdEmbarcation">Voir les notes</a>
-    <a asp-action="Edit" asp-route-id="@Model?.IdEmbarcation">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <div class="card shadow-sm p-4 bg-light border-0">
+        <dl class="row">
+            <dt class="col-sm-3 fw-semibold text-muted">
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt class="col-sm-3 fw-semibold text-muted">
+                @Html.DisplayNameFor(model => model.Marque)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Marque)
+            </dd>
+
+            <dt class="col-sm-3 fw-semibold text-muted">
+                @Html.DisplayNameFor(model => model.Longueur)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Longueur) m
+            </dd>
+
+            <dt class="col-sm-3 fw-semibold text-muted">
+                Photo
+            </dt>
+            <dd class="col-sm-9">
+                @if (!string.IsNullOrEmpty(Model.Photo))
+                {
+                    <img src="@Model.Photo" alt="Photo de l'embarcation" class="img-fluid rounded border" style="max-height: 300px;" />
+                }
+                else
+                {
+                    <span class="text-muted fst-italic">Aucune photo disponible</span>
+                }
+            </dd>
+        </dl>
+
+        <div class="d-flex gap-2 mt-4">
+            <a asp-action="Edit" asp-route-id="@Model.IdEmbarcation" class="btn btn-outline-dark">
+                ✏️ Modifier
+            </a>
+            <a asp-action="Index" class="btn btn-outline-muted">
+                ⬅ Retour à la liste
+            </a>
+        </div>
+    </div>
 </div>
