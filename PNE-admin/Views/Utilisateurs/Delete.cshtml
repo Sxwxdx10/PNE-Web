@@ -1,34 +1,34 @@
 ﻿@model PNE_core.Models.Utilisateur
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Suppression d'utilisateur";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Delete</h1>
+<div class="container">
+    <h2 class="text-danger mb-4">⚠️ Suppression d'un utilisateur</h2>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Utilisateur</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DisplayName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DisplayName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DateCreation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DateCreation)
-        </dd>
-    </dl>
-    
-    <form asp-action="Delete">
+    <div class="alert alert-warning shadow-sm">
+        <h5 class="mb-3">Es-tu sûr de vouloir supprimer cet utilisateur ? Cette action est <strong>irréversible</strong>.</h5>
+        <div class="row">
+            <div class="col-md-8">
+                <dl class="row">
+                    <dt class="col-sm-4 fw-bold">Nom d’affichage :</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.DisplayName)</dd>
+
+                    <dt class="col-sm-4 fw-bold">Date de création :</dt>
+                    <dd class="col-sm-8">@Html.DisplayFor(model => model.DateCreation)</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <form asp-action="Delete" class="mt-4">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+
+        <div class="d-flex gap-3">
+            <input type="submit" value="🗑 Supprimer" class="btn btn-danger px-4" />
+            <a asp-action="Index" class="btn btn-secondary">⬅ Annuler</a>
+        </div>
     </form>
 </div>
