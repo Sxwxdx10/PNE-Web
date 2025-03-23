@@ -1,0 +1,499 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\shared\\_gerantlinks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\shared\\_gerantlinks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\controllers\\gerantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\controllers\\gerantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\controllers\\accueiladmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\controllers\\accueiladmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\controllers\\utilisateurscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\controllers\\utilisateurscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\gerant\\inscriptionemployes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\gerant\\inscriptionemployes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\planeaux\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\planeaux\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\shared\\_chercheurlinks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\shared\\_chercheurlinks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\shared\\_adminlinks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\shared\\_adminlinks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\admin\\inscriptiongerant.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\admin\\inscriptiongerant.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\accueiladmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\accueiladmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-core\\enums\\niveau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\enums\\niveau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-core\\enums\\enumextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\enums\\enumextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-core\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-core\\services\\interfaces\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\services\\interfaces\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC07D866-61DC-42A5-A60D-EE475624B445}|PNE-tests\\PNE-tests.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-tests\\rolestests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC07D866-61DC-42A5-A60D-EE475624B445}|PNE-tests\\PNE-tests.csproj|solutionrelative:pne-tests\\rolestests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDBD7D9B-8FEC-4075-A4ED-3408B09CFD46}|PNE-DataAccess\\PNE-DataAccess.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-dataaccess\\migrations\\20240714160535_dataseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDBD7D9B-8FEC-4075-A4ED-3408B09CFD46}|PNE-DataAccess\\PNE-DataAccess.csproj|solutionrelative:pne-dataaccess\\migrations\\20240714160535_dataseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-core\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-core\\dto\\signupuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\dto\\signupuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-core\\services\\interfaces\\iutilisateurservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\services\\interfaces\\iutilisateurservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-core\\enums\\typelavage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\enums\\typelavage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-core\\enums\\typepneid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\enums\\typepneid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\accueiladmin\\redirectmobileapp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\accueiladmin\\redirectmobileapp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0F55235-698E-44DB-ADB8-E538BC620316}|PNE-api\\PNE-api.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B0F55235-698E-44DB-ADB8-E538BC620316}|PNE-api\\PNE-api.csproj|solutionrelative:pne-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 283,
+          "SelectedChildIndex": 16,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:57:0:{dcc4ea97-1c0c-482b-b205-e541c0df9728}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_ChercheurLinks.cshtml",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Shared\\_ChercheurLinks.cshtml",
+              "RelativeDocumentMoniker": "PNE-admin\\Views\\Shared\\_ChercheurLinks.cshtml",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Shared\\_ChercheurLinks.cshtml",
+              "RelativeToolTip": "PNE-admin\\Views\\Shared\\_ChercheurLinks.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T05:52:04.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "PNE-admin\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "PNE-admin\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T05:43:32.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GerantController.cs",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Controllers\\GerantController.cs",
+              "RelativeDocumentMoniker": "PNE-admin\\Controllers\\GerantController.cs",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Controllers\\GerantController.cs",
+              "RelativeToolTip": "PNE-admin\\Controllers\\GerantController.cs",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAwwMIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T16:56:18.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InscriptionEmployes.cshtml",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Gerant\\InscriptionEmployes.cshtml",
+              "RelativeDocumentMoniker": "PNE-admin\\Views\\Gerant\\InscriptionEmployes.cshtml",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Gerant\\InscriptionEmployes.cshtml",
+              "RelativeToolTip": "PNE-admin\\Views\\Gerant\\InscriptionEmployes.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T04:24:03.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Planeaux\\Create.cshtml",
+              "RelativeDocumentMoniker": "PNE-admin\\Views\\Planeaux\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Planeaux\\Create.cshtml",
+              "RelativeToolTip": "PNE-admin\\Views\\Planeaux\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T05:35:43.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Niveau.cs",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Enums\\Niveau.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Enums\\Niveau.cs",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Enums\\Niveau.cs",
+              "RelativeToolTip": "PNE-core\\Enums\\Niveau.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T05:34:01.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RoleService.cs",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Services\\RoleService.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Services\\RoleService.cs",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Services\\RoleService.cs",
+              "RelativeToolTip": "PNE-core\\Services\\RoleService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAIA0wBcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T05:15:36.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccueilAdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Controllers\\AccueilAdminController.cs",
+              "RelativeDocumentMoniker": "PNE-admin\\Controllers\\AccueilAdminController.cs",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Controllers\\AccueilAdminController.cs",
+              "RelativeToolTip": "PNE-admin\\Controllers\\AccueilAdminController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T05:10:13.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UtilisateursController.cs",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Controllers\\UtilisateursController.cs",
+              "RelativeDocumentMoniker": "PNE-admin\\Controllers\\UtilisateursController.cs",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Controllers\\UtilisateursController.cs",
+              "RelativeToolTip": "PNE-admin\\Controllers\\UtilisateursController.cs",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAgwLIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T05:07:25.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SignUpUserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\DTO\\SignUpUserDTO.cs",
+              "RelativeDocumentMoniker": "PNE-core\\DTO\\SignUpUserDTO.cs",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\DTO\\SignUpUserDTO.cs",
+              "RelativeToolTip": "PNE-core\\DTO\\SignUpUserDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T04:52:26.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_GerantLinks.cshtml",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Shared\\_GerantLinks.cshtml",
+              "RelativeDocumentMoniker": "PNE-admin\\Views\\Shared\\_GerantLinks.cshtml",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Shared\\_GerantLinks.cshtml",
+              "RelativeToolTip": "PNE-admin\\Views\\Shared\\_GerantLinks.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T04:35:39.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_AdminLinks.cshtml",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Shared\\_AdminLinks.cshtml",
+              "RelativeDocumentMoniker": "PNE-admin\\Views\\Shared\\_AdminLinks.cshtml",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Shared\\_AdminLinks.cshtml",
+              "RelativeToolTip": "PNE-admin\\Views\\Shared\\_AdminLinks.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T04:34:37.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "PNE-admin\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "PNE-admin\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T04:00:49.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "20240714160535_DataSeed.cs",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-DataAccess\\Migrations\\20240714160535_DataSeed.cs",
+              "RelativeDocumentMoniker": "PNE-DataAccess\\Migrations\\20240714160535_DataSeed.cs",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-DataAccess\\Migrations\\20240714160535_DataSeed.cs",
+              "RelativeToolTip": "PNE-DataAccess\\Migrations\\20240714160535_DataSeed.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T03:49:35.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TypePneId.cs",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Enums\\TypePneId.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Enums\\TypePneId.cs",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Enums\\TypePneId.cs",
+              "RelativeToolTip": "PNE-core\\Enums\\TypePneId.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T03:48:40.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EnumExtension.cs",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Enums\\EnumExtension.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Enums\\EnumExtension.cs",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Enums\\EnumExtension.cs",
+              "RelativeToolTip": "PNE-core\\Enums\\EnumExtension.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T03:48:37.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "TypeLavage.cs",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Enums\\TypeLavage.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Enums\\TypeLavage.cs",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Enums\\TypeLavage.cs",
+              "RelativeToolTip": "PNE-core\\Enums\\TypeLavage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T03:48:34.828Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Models\\Role.cs",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Models\\Role.cs",
+              "RelativeToolTip": "PNE-core\\Models\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T03:47:12.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RolesTests.cs",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-tests\\RolesTests.cs",
+              "RelativeDocumentMoniker": "PNE-tests\\RolesTests.cs",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-tests\\RolesTests.cs",
+              "RelativeToolTip": "PNE-tests\\RolesTests.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAMwFYAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T03:47:03.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "RedirectMobileApp.cshtml",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\AccueilAdmin\\RedirectMobileApp.cshtml",
+              "RelativeDocumentMoniker": "PNE-admin\\Views\\AccueilAdmin\\RedirectMobileApp.cshtml",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\AccueilAdmin\\RedirectMobileApp.cshtml",
+              "RelativeToolTip": "PNE-admin\\Views\\AccueilAdmin\\RedirectMobileApp.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T03:16:26.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\AccueilAdmin\\Index.cshtml",
+              "RelativeDocumentMoniker": "PNE-admin\\Views\\AccueilAdmin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\AccueilAdmin\\Index.cshtml",
+              "RelativeToolTip": "PNE-admin\\Views\\AccueilAdmin\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T03:14:44.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IRoleService.cs",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Services\\Interfaces\\IRoleService.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Services\\Interfaces\\IRoleService.cs",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Services\\Interfaces\\IRoleService.cs",
+              "RelativeToolTip": "PNE-core\\Services\\Interfaces\\IRoleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T02:53:36.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IUtilisateurService.cs",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Services\\Interfaces\\IUtilisateurService.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Services\\Interfaces\\IUtilisateurService.cs",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Services\\Interfaces\\IUtilisateurService.cs",
+              "RelativeToolTip": "PNE-core\\Services\\Interfaces\\IUtilisateurService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T02:54:34.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-api\\appsettings.json",
+              "RelativeDocumentMoniker": "PNE-api\\appsettings.json",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-api\\appsettings.json",
+              "RelativeToolTip": "PNE-api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-18T23:01:17.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\appsettings.json",
+              "RelativeDocumentMoniker": "PNE-admin\\appsettings.json",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\appsettings.json",
+              "RelativeToolTip": "PNE-admin\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-08T23:12:40.118Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "cfc1f296-4810-401a-98d1-2e0cd3af9587",
+        "Display": 0,
+        "X": -653,
+        "Y": 236,
+        "Width": 1649,
+        "Height": 778,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "PNE-admin\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "PNE-admin\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T04:31:31.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "InscriptionGerant.cshtml",
+              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Admin\\InscriptionGerant.cshtml",
+              "RelativeDocumentMoniker": "PNE-admin\\Views\\Admin\\InscriptionGerant.cshtml",
+              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Admin\\InscriptionGerant.cshtml",
+              "RelativeToolTip": "PNE-admin\\Views\\Admin\\InscriptionGerant.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T04:31:49.267Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

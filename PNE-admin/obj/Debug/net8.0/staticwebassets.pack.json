@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\PNE-admin.vjpzcgrssu.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\Images\\CREE_Logo_blanc.png",
+      "PackagePath": "staticwebassets\\Images\\CREE_Logo_blanc.png"
+    },
+    {
+      "Id": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\Images\\CREE_Logo_noir.png",
+      "PackagePath": "staticwebassets\\Images\\CREE_Logo_noir.png"
+    },
+    {
+      "Id": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\Images\\CREE_Logo_vert.png",
+      "PackagePath": "staticwebassets\\Images\\CREE_Logo_vert.png"
+    },
+    {
       "Id": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

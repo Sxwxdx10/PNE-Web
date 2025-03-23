@@ -520,3 +520,13 @@ C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-admin\obj\Debug\net8.0\refin
 C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-admin\obj\Debug\net8.0\PNE-admin.pdb
 C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-admin\obj\Debug\net8.0\PNE-admin.genruntimeconfig.cache
 C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-admin\obj\Debug\net8.0\ref\PNE-admin.dll
+C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-admin\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-admin\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-admin\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-admin\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-admin\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-admin\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-admin\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-admin\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-admin\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-admin\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll

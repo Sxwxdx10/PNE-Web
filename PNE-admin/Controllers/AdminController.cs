@@ -91,7 +91,7 @@ namespace PNE_admin.Controllers
         }
 
         /// <summary>
-        /// ici je crois que l'on veut pouvoir creer des foramtions et aider les gerants a donner ces formations
+        /// ici je crois que l'on veut pouvoir creer des formations et aider les gerants a donner ces formations
         /// a confirmer avec le client
         /// </summary>
         public async Task<IActionResult> FormationsCertifications()

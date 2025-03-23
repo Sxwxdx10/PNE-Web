@@ -21,6 +21,9 @@ namespace PNE_core.Services
 
         public async Task CreateAsync(Miseaeau entity)
         {
+            if (entity == null)
+                throw new ArgumentNullException(nameof(entity));
+
             _dbSet.Add(entity);
             await _db.SaveChangesAsync();
         }
@@ -57,7 +60,19 @@ namespace PNE_core.Services
 
         public async Task UpdateAsync(Miseaeau entity)
         {
-            _dbSet.Update(entity);
+            if (entity == null)
+                throw new ArgumentNullException(nameof(entity));
+
+            var existingMiseAEau = await _dbSet.FindAsync(entity.IdMiseEau);
+            if (existingMiseAEau != null)
+            {
+                existingMiseAEau.Date = entity.Date;
+                existingMiseAEau.DureeEnJours = entity.DureeEnJours;  // ✅ Update DureeEnJours
+                existingMiseAEau.IdPlanEau = entity.IdPlanEau;
+                existingMiseAEau.IdEmbarcation = entity.IdEmbarcation;
+
+                await _db.SaveChangesAsync();
+            }
             await _db.SaveChangesAsync();
         }
     }
