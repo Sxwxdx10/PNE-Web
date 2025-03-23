@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using PNE_DataAccess;
 using PNE_core.Models;
 using PNE_core.Services.Interfaces;
+using PNE_DataAccess.Services;
+using PNE_DataAccess.Services.Neon;
 
 namespace PNE_admin.Controllers
 {
@@ -16,18 +18,22 @@ namespace PNE_admin.Controllers
         private readonly PneContext _context;
         private readonly IEmbarcationService _services;
         private readonly INoteDossierService _noteDossierService;
+        private readonly EmbarcationNeonService _neonService;
 
-        public EmbarcationsController(PneContext context, IEmbarcationService pneServices, INoteDossierService noteDossierService)
+        public EmbarcationsController(PneContext context, IEmbarcationService pneServices, INoteDossierService noteDossierService, EmbarcationNeonService neonService)
         {
             _context = context;
             _services = pneServices;
             _noteDossierService = noteDossierService;
+            _neonService = neonService;
+
         }
 
         // GET: Embarcations
         public async Task<IActionResult> Index()
         {
-            return View(await _services.GetAllAsync());
+            var embarcations = await _neonService.GetAllAsync();
+            return View(embarcations);
         }
 
         // GET: Embarcations/Details/5

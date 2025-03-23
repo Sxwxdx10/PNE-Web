@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PNE_core.Models;
 
 public partial class Miseaeau
 {
+    [Key]
     public string IdMiseEau { get; set; } = null!;
 
     public DateTime Date { get; set; }

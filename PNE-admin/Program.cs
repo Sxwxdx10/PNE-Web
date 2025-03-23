@@ -13,6 +13,7 @@ using NetTopologySuite.Geometries.Implementation;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.DataProtection;
 using System.Net;
+using PNE_DataAccess.Services.Neon;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -72,6 +73,13 @@ builder.Services.AddDbContext<IPneDbContext, PneContext>(opt =>
         }
     )
 );
+
+builder.Services.AddDbContext<NeonContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("NeonConnection")));
+
+builder.Services.AddScoped<EmbarcationNeonService>();
+
+
 
 builder.Services.AddSingleton(new FirebaseAuthClient(new FirebaseAuthConfig
 {

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-DataAccess\\PNE-DataAccess.csproj": {}
+    "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-DataAccess\\PNE-DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\PNE-core.csproj": {
+    "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\PNE-core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\PNE-core.csproj",
+        "projectUniqueName": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\PNE-core.csproj",
         "projectName": "PNE-core",
-        "projectPath": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\PNE-core.csproj",
-        "packagesPath": "C:\\Users\\Franck\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\obj\\",
+        "projectPath": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\PNE-core.csproj",
+        "packagesPath": "C:\\Users\\yofra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Franck\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yofra\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -87,20 +87,20 @@
         }
       }
     },
-    "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-DataAccess\\PNE-DataAccess.csproj": {
+    "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-DataAccess\\PNE-DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-DataAccess\\PNE-DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-DataAccess\\PNE-DataAccess.csproj",
         "projectName": "PNE-DataAccess",
-        "projectPath": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-DataAccess\\PNE-DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Franck\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-DataAccess\\PNE-DataAccess.csproj",
+        "packagesPath": "C:\\Users\\yofra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Franck\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yofra\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -115,8 +115,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\PNE-core.csproj": {
-                "projectPath": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\PNE-core.csproj"
+              "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\PNE-core.csproj": {
+                "projectPath": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\PNE-core.csproj"
               }
             }
           }

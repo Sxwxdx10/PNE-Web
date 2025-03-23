@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using NetTopologySuite.Geometries;
 using PNE_core.Enums;
@@ -8,8 +9,9 @@ namespace PNE_core.Models;
 
 public partial class Planeau
 {
+    [Key]
     public string? IdPlanEau { get; set; }
-
+    [NotMapped]
     public Point? Emplacement { get; set; }
 
     public string Nom { get; set; } = null!;
