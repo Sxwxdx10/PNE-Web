@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PNE-admin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+daa4e8e535cf779f391d56dc47c9239201e558cb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c7e5ea4bf6c46026d717641e32a077c01dfe3ec")]
 [assembly: System.Reflection.AssemblyProductAttribute("PNE-admin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PNE-admin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

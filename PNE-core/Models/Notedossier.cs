@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PNE_core.Models;
@@ -14,6 +15,7 @@ public partial class Notedossier
 
     public string Note { get; set; } = null!;
 
+    [Key]
     public string? Idnote { get; set; } = null!;
 
     [InverseProperty("Notedossiers")]

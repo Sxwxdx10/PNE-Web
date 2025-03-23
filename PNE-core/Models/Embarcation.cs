@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PNE_core.Models;
 
 public partial class Embarcation
 {
+    [Key]
     public string IdEmbarcation { get; set; } = null!;
 
     public string Description { get; set; } = null!;
@@ -16,7 +18,8 @@ public partial class Embarcation
 
     public string Photo { get; set; } = null!;
 
-    public string codeQR { get; set; }
+    [NotMapped]
+    public string? codeQR { get; set; }
 
     [InverseProperty("IdEmbarcationNavigation")]
     public virtual ICollection<Embarcationutilisateur> Embarcationutilisateurs { get; set; } = new List<Embarcationutilisateur>();

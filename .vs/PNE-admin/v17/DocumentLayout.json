@@ -1,105 +1,233 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\",
+  "WorkspaceRootPath": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\shared\\_gerantlinks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\shared\\_gerantlinks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EDBD7D9B-8FEC-4075-A4ED-3408B09CFD46}|PNE-DataAccess\\PNE-DataAccess.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-dataaccess\\pnecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDBD7D9B-8FEC-4075-A4ED-3408B09CFD46}|PNE-DataAccess\\PNE-DataAccess.csproj|solutionrelative:pne-dataaccess\\pnecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\gerant\\inscriptionemployes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\gerant\\inscriptionemployes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\models\\embarcation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\models\\embarcation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\accueiladmin\\redirectmobileapp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\accueiladmin\\redirectmobileapp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\views\\embarcations\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\embarcations\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\shared\\_chercheurlinks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\shared\\_chercheurlinks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\models\\planeau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\models\\planeau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-core\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\models\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\models\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\controllers\\gerantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\controllers\\gerantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\models\\userbaseinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\models\\userbaseinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\controllers\\accueiladmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\controllers\\accueiladmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\models\\stationlavage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\models\\stationlavage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\controllers\\utilisateurscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\controllers\\utilisateurscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\models\\rolesutilisateurs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\models\\rolesutilisateurs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\planeaux\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\planeaux\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\shared\\_adminlinks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\shared\\_adminlinks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\accueiladmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\accueiladmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-core\\enums\\niveau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\enums\\niveau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-core\\enums\\enumextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\enums\\enumextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-core\\services\\interfaces\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\services\\interfaces\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC07D866-61DC-42A5-A60D-EE475624B445}|PNE-tests\\PNE-tests.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-tests\\rolestests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC07D866-61DC-42A5-A60D-EE475624B445}|PNE-tests\\PNE-tests.csproj|solutionrelative:pne-tests\\rolestests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDBD7D9B-8FEC-4075-A4ED-3408B09CFD46}|PNE-DataAccess\\PNE-DataAccess.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-dataaccess\\migrations\\20240714160535_dataseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDBD7D9B-8FEC-4075-A4ED-3408B09CFD46}|PNE-DataAccess\\PNE-DataAccess.csproj|solutionrelative:pne-dataaccess\\migrations\\20240714160535_dataseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-core\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-core\\dto\\signupuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\dto\\signupuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\models\\employeplaneau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\models\\employeplaneau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-core\\services\\interfaces\\iutilisateurservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\services\\interfaces\\iutilisateurservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\models\\embarcationutilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\models\\embarcationutilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-core\\enums\\typelavage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\enums\\typelavage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\models\\eee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\models\\eee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-core\\enums\\typepneid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\enums\\typepneid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\models\\eeeplaneau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\models\\eeeplaneau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-admin\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\models\\certificationutilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\models\\certificationutilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\models\\certification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\models\\certification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\models\\notedossier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\models\\notedossier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\models\\miseaeau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\models\\miseaeau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\models\\lavage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\models\\lavage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\controllers\\stationlavagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\controllers\\stationlavagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDBD7D9B-8FEC-4075-A4ED-3408B09CFD46}|PNE-DataAccess\\PNE-DataAccess.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-dataaccess\\neoncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDBD7D9B-8FEC-4075-A4ED-3408B09CFD46}|PNE-DataAccess\\PNE-DataAccess.csproj|solutionrelative:pne-dataaccess\\neoncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\controllers\\embarcationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\controllers\\embarcationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\services\\interfaces\\iembarcationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\services\\interfaces\\iembarcationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDBD7D9B-8FEC-4075-A4ED-3408B09CFD46}|PNE-DataAccess\\PNE-DataAccess.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-dataaccess\\services\\neon\\embarcationsneonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDBD7D9B-8FEC-4075-A4ED-3408B09CFD46}|PNE-DataAccess\\PNE-DataAccess.csproj|solutionrelative:pne-dataaccess\\services\\neon\\embarcationsneonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\controllers\\planeauxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\controllers\\planeauxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\services\\planeauservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\services\\planeauservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\views\\gerant\\inscriptionemployes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\gerant\\inscriptionemployes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\services\\interfaces\\ipnedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\services\\interfaces\\ipnedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\services\\certificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\services\\certificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0F55235-698E-44DB-ADB8-E538BC620316}|PNE-api\\PNE-api.csproj|c:\\users\\franck\\downloads\\pne-ete2024-final\\src\\pne-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{EDBD7D9B-8FEC-4075-A4ED-3408B09CFD46}|PNE-DataAccess\\PNE-DataAccess.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-dataaccess\\migrations\\scaffoldmigrationcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDBD7D9B-8FEC-4075-A4ED-3408B09CFD46}|PNE-DataAccess\\PNE-DataAccess.csproj|solutionrelative:pne-dataaccess\\migrations\\scaffoldmigrationcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDBD7D9B-8FEC-4075-A4ED-3408B09CFD46}|PNE-DataAccess\\PNE-DataAccess.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-dataaccess\\migrations\\20250322070531_migrationfinale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDBD7D9B-8FEC-4075-A4ED-3408B09CFD46}|PNE-DataAccess\\PNE-DataAccess.csproj|solutionrelative:pne-dataaccess\\migrations\\20250322070531_migrationfinale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\views\\shared\\_gerantlinks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\shared\\_gerantlinks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\views\\shared\\_chercheurlinks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\shared\\_chercheurlinks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\controllers\\gerantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\controllers\\gerantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\views\\planeaux\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\planeaux\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\enums\\niveau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\enums\\niveau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\controllers\\accueiladmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\controllers\\accueiladmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\controllers\\utilisateurscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\controllers\\utilisateurscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\dto\\signupuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\dto\\signupuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\views\\shared\\_adminlinks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\shared\\_adminlinks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDBD7D9B-8FEC-4075-A4ED-3408B09CFD46}|PNE-DataAccess\\PNE-DataAccess.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-dataaccess\\migrations\\20240714160535_dataseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDBD7D9B-8FEC-4075-A4ED-3408B09CFD46}|PNE-DataAccess\\PNE-DataAccess.csproj|solutionrelative:pne-dataaccess\\migrations\\20240714160535_dataseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\enums\\typepneid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\enums\\typepneid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\enums\\enumextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\enums\\enumextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\enums\\typelavage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\enums\\typelavage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC07D866-61DC-42A5-A60D-EE475624B445}|PNE-tests\\PNE-tests.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-tests\\rolestests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC07D866-61DC-42A5-A60D-EE475624B445}|PNE-tests\\PNE-tests.csproj|solutionrelative:pne-tests\\rolestests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\views\\accueiladmin\\redirectmobileapp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\accueiladmin\\redirectmobileapp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-admin\\views\\accueiladmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAEBF17B-C767-4759-99FB-D6ECFD64D811}|PNE-admin\\PNE-admin.csproj|solutionrelative:pne-admin\\views\\accueiladmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\services\\interfaces\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\services\\interfaces\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-core\\services\\interfaces\\iutilisateurservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{278B6ADE-9113-4B49-B5DB-5CC2291FE2F7}|PNE-core\\PNE-core.csproj|solutionrelative:pne-core\\services\\interfaces\\iutilisateurservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0F55235-698E-44DB-ADB8-E538BC620316}|PNE-api\\PNE-api.csproj|c:\\users\\yofra\\onedrive\\documents\\cours\\projet\\pne-webapp\\pne-database\\pne-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B0F55235-698E-44DB-ADB8-E538BC620316}|PNE-api\\PNE-api.csproj|solutionrelative:pne-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -110,52 +238,443 @@
       "DocumentGroups": [
         {
           "DockedWidth": 283,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 28,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:57:0:{dcc4ea97-1c0c-482b-b205-e541c0df9728}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\Embarcations\\Create.cshtml",
+              "RelativeDocumentMoniker": "PNE-admin\\Views\\Embarcations\\Create.cshtml",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\Embarcations\\Create.cshtml",
+              "RelativeToolTip": "PNE-admin\\Views\\Embarcations\\Create.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAAAqwDAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T07:23:21.425Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_ChercheurLinks.cshtml",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Shared\\_ChercheurLinks.cshtml",
-              "RelativeDocumentMoniker": "PNE-admin\\Views\\Shared\\_ChercheurLinks.cshtml",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Shared\\_ChercheurLinks.cshtml",
-              "RelativeToolTip": "PNE-admin\\Views\\Shared\\_ChercheurLinks.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-22T05:52:04.982Z",
+              "DocumentIndex": 5,
+              "Title": "UserBaseInfo.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\UserBaseInfo.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Models\\UserBaseInfo.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\UserBaseInfo.cs",
+              "RelativeToolTip": "PNE-core\\Models\\UserBaseInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:17:51.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Utilisateur.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\Utilisateur.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Models\\Utilisateur.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\Utilisateur.cs",
+              "RelativeToolTip": "PNE-core\\Models\\Utilisateur.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:17:49.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StationLavage.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\StationLavage.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Models\\StationLavage.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\StationLavage.cs",
+              "RelativeToolTip": "PNE-core\\Models\\StationLavage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:17:47.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RolesUtilisateurs.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\RolesUtilisateurs.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Models\\RolesUtilisateurs.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\RolesUtilisateurs.cs",
+              "RelativeToolTip": "PNE-core\\Models\\RolesUtilisateurs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:17:45.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "PNE-core\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:17:40.322Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "EmployePlaneau.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\EmployePlaneau.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Models\\EmployePlaneau.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\EmployePlaneau.cs",
+              "RelativeToolTip": "PNE-core\\Models\\EmployePlaneau.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:17:38.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Embarcationutilisateur.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\Embarcationutilisateur.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Models\\Embarcationutilisateur.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\Embarcationutilisateur.cs",
+              "RelativeToolTip": "PNE-core\\Models\\Embarcationutilisateur.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:17:33.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Embarcation.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\Embarcation.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Models\\Embarcation.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\Embarcation.cs",
+              "RelativeToolTip": "PNE-core\\Models\\Embarcation.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBQAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:17:16.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EEE.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\EEE.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Models\\EEE.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\EEE.cs",
+              "RelativeToolTip": "PNE-core\\Models\\EEE.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:17:13.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EEEPlanEau.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\EEEPlanEau.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Models\\EEEPlanEau.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\EEEPlanEau.cs",
+              "RelativeToolTip": "PNE-core\\Models\\EEEPlanEau.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:17:11.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CertificationUtilisateur.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\CertificationUtilisateur.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Models\\CertificationUtilisateur.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\CertificationUtilisateur.cs",
+              "RelativeToolTip": "PNE-core\\Models\\CertificationUtilisateur.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:17:05.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Certification.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\Certification.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Models\\Certification.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\Certification.cs",
+              "RelativeToolTip": "PNE-core\\Models\\Certification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:16:58.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Notedossier.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\Notedossier.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Models\\Notedossier.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\Notedossier.cs",
+              "RelativeToolTip": "PNE-core\\Models\\Notedossier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:16:46.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Miseaeau.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\Miseaeau.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Models\\Miseaeau.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\Miseaeau.cs",
+              "RelativeToolTip": "PNE-core\\Models\\Miseaeau.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:15:50.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Lavage.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\Lavage.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Models\\Lavage.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\Lavage.cs",
+              "RelativeToolTip": "PNE-core\\Models\\Lavage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:14:53.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "StationLavagesController.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Controllers\\StationLavagesController.cs",
+              "RelativeDocumentMoniker": "PNE-admin\\Controllers\\StationLavagesController.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Controllers\\StationLavagesController.cs",
+              "RelativeToolTip": "PNE-admin\\Controllers\\StationLavagesController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAA2wDkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T06:54:56.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Planeau.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\Planeau.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Models\\Planeau.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\Planeau.cs",
+              "RelativeToolTip": "PNE-core\\Models\\Planeau.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T06:18:31.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "PlanEauService.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Services\\PlanEauService.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Services\\PlanEauService.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Services\\PlanEauService.cs",
+              "RelativeToolTip": "PNE-core\\Services\\PlanEauService.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T06:16:28.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PlaneauxController.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Controllers\\PlaneauxController.cs",
+              "RelativeDocumentMoniker": "PNE-admin\\Controllers\\PlaneauxController.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Controllers\\PlaneauxController.cs",
+              "RelativeToolTip": "PNE-admin\\Controllers\\PlaneauxController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T06:03:41.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EmbarcationsNeonService.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-DataAccess\\Services\\Neon\\EmbarcationsNeonService.cs",
+              "RelativeDocumentMoniker": "PNE-DataAccess\\Services\\Neon\\EmbarcationsNeonService.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-DataAccess\\Services\\Neon\\EmbarcationsNeonService.cs",
+              "RelativeToolTip": "PNE-DataAccess\\Services\\Neon\\EmbarcationsNeonService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T05:46:21.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IEmbarcationService.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Services\\Interfaces\\IEmbarcationService.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Services\\Interfaces\\IEmbarcationService.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Services\\Interfaces\\IEmbarcationService.cs",
+              "RelativeToolTip": "PNE-core\\Services\\Interfaces\\IEmbarcationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T05:31:03.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "EmbarcationsController.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Controllers\\EmbarcationsController.cs",
+              "RelativeDocumentMoniker": "PNE-admin\\Controllers\\EmbarcationsController.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Controllers\\EmbarcationsController.cs",
+              "RelativeToolTip": "PNE-admin\\Controllers\\EmbarcationsController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwCMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T05:20:41.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IPneDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Services\\Interfaces\\IPneDbContext.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Services\\Interfaces\\IPneDbContext.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Services\\Interfaces\\IPneDbContext.cs",
+              "RelativeToolTip": "PNE-core\\Services\\Interfaces\\IPneDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T05:18:33.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CertificationService.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Services\\CertificationService.cs",
+              "RelativeDocumentMoniker": "PNE-core\\Services\\CertificationService.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Services\\CertificationService.cs",
+              "RelativeToolTip": "PNE-core\\Services\\CertificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T05:17:13.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Program.cs",
+              "RelativeDocumentMoniker": "PNE-admin\\Program.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Program.cs",
+              "RelativeToolTip": "PNE-admin\\Program.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAACEAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T05:10:14.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "PNE-admin\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\appsettings.Development.json",
+              "RelativeToolTip": "PNE-admin\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-23T05:06:00.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "NeonContext.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-DataAccess\\NeonContext.cs",
+              "RelativeDocumentMoniker": "PNE-DataAccess\\NeonContext.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-DataAccess\\NeonContext.cs",
+              "RelativeToolTip": "PNE-DataAccess\\NeonContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T05:02:27.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PneContext.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-DataAccess\\PneContext.cs",
+              "RelativeDocumentMoniker": "PNE-DataAccess\\PneContext.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-DataAccess\\PneContext.cs",
+              "RelativeToolTip": "PNE-DataAccess\\PneContext.cs",
+              "ViewState": "AgIAAE0BAAAAAAAAAAAQwFQBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T05:01:11.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ScaffoldMigrationContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-DataAccess\\Migrations\\ScaffoldMigrationContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "PNE-DataAccess\\Migrations\\ScaffoldMigrationContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-DataAccess\\Migrations\\ScaffoldMigrationContextModelSnapshot.cs",
+              "RelativeToolTip": "PNE-DataAccess\\Migrations\\ScaffoldMigrationContextModelSnapshot.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T02:02:07.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "20250322070531_MigrationFinale.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-DataAccess\\Migrations\\20250322070531_MigrationFinale.cs",
+              "RelativeDocumentMoniker": "PNE-DataAccess\\Migrations\\20250322070531_MigrationFinale.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-DataAccess\\Migrations\\20250322070531_MigrationFinale.cs",
+              "RelativeToolTip": "PNE-DataAccess\\Migrations\\20250322070531_MigrationFinale.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T01:48:41.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "PNE-admin\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Properties\\launchSettings.json",
+              "RelativeToolTip": "PNE-admin\\Properties\\launchSettings.json",
+              "ViewState": "AgIAACYAAAAAAAAAAAAuwDYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-23T01:25:00.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "_ChercheurLinks.cshtml",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\Shared\\_ChercheurLinks.cshtml",
+              "RelativeDocumentMoniker": "PNE-admin\\Views\\Shared\\_ChercheurLinks.cshtml",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\Shared\\_ChercheurLinks.cshtml",
+              "RelativeToolTip": "PNE-admin\\Views\\Shared\\_ChercheurLinks.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T05:52:04.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "PNE-admin\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "PNE-admin\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -163,11 +682,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 38,
               "Title": "GerantController.cs",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Controllers\\GerantController.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Controllers\\GerantController.cs",
               "RelativeDocumentMoniker": "PNE-admin\\Controllers\\GerantController.cs",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Controllers\\GerantController.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Controllers\\GerantController.cs",
               "RelativeToolTip": "PNE-admin\\Controllers\\GerantController.cs",
               "ViewState": "AgIAAK8AAAAAAAAAAAAwwMIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -175,11 +694,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 28,
               "Title": "InscriptionEmployes.cshtml",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Gerant\\InscriptionEmployes.cshtml",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\Gerant\\InscriptionEmployes.cshtml",
               "RelativeDocumentMoniker": "PNE-admin\\Views\\Gerant\\InscriptionEmployes.cshtml",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Gerant\\InscriptionEmployes.cshtml",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\Gerant\\InscriptionEmployes.cshtml",
               "RelativeToolTip": "PNE-admin\\Views\\Gerant\\InscriptionEmployes.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -188,11 +707,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 39,
               "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Planeaux\\Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\Planeaux\\Create.cshtml",
               "RelativeDocumentMoniker": "PNE-admin\\Views\\Planeaux\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Planeaux\\Create.cshtml",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\Planeaux\\Create.cshtml",
               "RelativeToolTip": "PNE-admin\\Views\\Planeaux\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -200,11 +719,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 40,
               "Title": "Niveau.cs",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Enums\\Niveau.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Enums\\Niveau.cs",
               "RelativeDocumentMoniker": "PNE-core\\Enums\\Niveau.cs",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Enums\\Niveau.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Enums\\Niveau.cs",
               "RelativeToolTip": "PNE-core\\Enums\\Niveau.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -212,24 +731,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 41,
               "Title": "RoleService.cs",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Services\\RoleService.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Services\\RoleService.cs",
               "RelativeDocumentMoniker": "PNE-core\\Services\\RoleService.cs",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Services\\RoleService.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Services\\RoleService.cs",
               "RelativeToolTip": "PNE-core\\Services\\RoleService.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAMwBcAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T05:15:36.875Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T05:15:36.875Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 42,
               "Title": "AccueilAdminController.cs",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Controllers\\AccueilAdminController.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Controllers\\AccueilAdminController.cs",
               "RelativeDocumentMoniker": "PNE-admin\\Controllers\\AccueilAdminController.cs",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Controllers\\AccueilAdminController.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Controllers\\AccueilAdminController.cs",
               "RelativeToolTip": "PNE-admin\\Controllers\\AccueilAdminController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwCQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -237,11 +755,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 43,
               "Title": "UtilisateursController.cs",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Controllers\\UtilisateursController.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Controllers\\UtilisateursController.cs",
               "RelativeDocumentMoniker": "PNE-admin\\Controllers\\UtilisateursController.cs",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Controllers\\UtilisateursController.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Controllers\\UtilisateursController.cs",
               "RelativeToolTip": "PNE-admin\\Controllers\\UtilisateursController.cs",
               "ViewState": "AgIAAKgAAAAAAAAAAAAgwLIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -249,11 +767,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 44,
               "Title": "SignUpUserDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\DTO\\SignUpUserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\DTO\\SignUpUserDTO.cs",
               "RelativeDocumentMoniker": "PNE-core\\DTO\\SignUpUserDTO.cs",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\DTO\\SignUpUserDTO.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\DTO\\SignUpUserDTO.cs",
               "RelativeToolTip": "PNE-core\\DTO\\SignUpUserDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -261,24 +779,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 35,
               "Title": "_GerantLinks.cshtml",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Shared\\_GerantLinks.cshtml",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\Shared\\_GerantLinks.cshtml",
               "RelativeDocumentMoniker": "PNE-admin\\Views\\Shared\\_GerantLinks.cshtml",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Shared\\_GerantLinks.cshtml*",
-              "RelativeToolTip": "PNE-admin\\Views\\Shared\\_GerantLinks.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAGAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\Shared\\_GerantLinks.cshtml",
+              "RelativeToolTip": "PNE-admin\\Views\\Shared\\_GerantLinks.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAwwA8AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-22T04:35:39.864Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 45,
               "Title": "_AdminLinks.cshtml",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Shared\\_AdminLinks.cshtml",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\Shared\\_AdminLinks.cshtml",
               "RelativeDocumentMoniker": "PNE-admin\\Views\\Shared\\_AdminLinks.cshtml",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Shared\\_AdminLinks.cshtml",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\Shared\\_AdminLinks.cshtml",
               "RelativeToolTip": "PNE-admin\\Views\\Shared\\_AdminLinks.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -286,11 +804,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 46,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "PNE-admin\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "PNE-admin\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -298,11 +816,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 47,
               "Title": "20240714160535_DataSeed.cs",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-DataAccess\\Migrations\\20240714160535_DataSeed.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-DataAccess\\Migrations\\20240714160535_DataSeed.cs",
               "RelativeDocumentMoniker": "PNE-DataAccess\\Migrations\\20240714160535_DataSeed.cs",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-DataAccess\\Migrations\\20240714160535_DataSeed.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-DataAccess\\Migrations\\20240714160535_DataSeed.cs",
               "RelativeToolTip": "PNE-DataAccess\\Migrations\\20240714160535_DataSeed.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwCQAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -310,11 +828,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 48,
               "Title": "TypePneId.cs",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Enums\\TypePneId.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Enums\\TypePneId.cs",
               "RelativeDocumentMoniker": "PNE-core\\Enums\\TypePneId.cs",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Enums\\TypePneId.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Enums\\TypePneId.cs",
               "RelativeToolTip": "PNE-core\\Enums\\TypePneId.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -322,11 +840,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 49,
               "Title": "EnumExtension.cs",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Enums\\EnumExtension.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Enums\\EnumExtension.cs",
               "RelativeDocumentMoniker": "PNE-core\\Enums\\EnumExtension.cs",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Enums\\EnumExtension.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Enums\\EnumExtension.cs",
               "RelativeToolTip": "PNE-core\\Enums\\EnumExtension.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -334,11 +852,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 50,
               "Title": "TypeLavage.cs",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Enums\\TypeLavage.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Enums\\TypeLavage.cs",
               "RelativeDocumentMoniker": "PNE-core\\Enums\\TypeLavage.cs",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Enums\\TypeLavage.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Enums\\TypeLavage.cs",
               "RelativeToolTip": "PNE-core\\Enums\\TypeLavage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -346,23 +864,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 8,
               "Title": "Role.cs",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Models\\Role.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\Role.cs",
               "RelativeDocumentMoniker": "PNE-core\\Models\\Role.cs",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Models\\Role.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Models\\Role.cs",
               "RelativeToolTip": "PNE-core\\Models\\Role.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T03:47:12.98Z"
+              "WhenOpened": "2025-03-22T03:47:12.98Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 51,
               "Title": "RolesTests.cs",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-tests\\RolesTests.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-tests\\RolesTests.cs",
               "RelativeDocumentMoniker": "PNE-tests\\RolesTests.cs",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-tests\\RolesTests.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-tests\\RolesTests.cs",
               "RelativeToolTip": "PNE-tests\\RolesTests.cs",
               "ViewState": "AgIAAGMAAAAAAAAAAAAMwFYAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -370,24 +889,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 52,
               "Title": "RedirectMobileApp.cshtml",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\AccueilAdmin\\RedirectMobileApp.cshtml",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\AccueilAdmin\\RedirectMobileApp.cshtml",
               "RelativeDocumentMoniker": "PNE-admin\\Views\\AccueilAdmin\\RedirectMobileApp.cshtml",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\AccueilAdmin\\RedirectMobileApp.cshtml",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\AccueilAdmin\\RedirectMobileApp.cshtml",
               "RelativeToolTip": "PNE-admin\\Views\\AccueilAdmin\\RedirectMobileApp.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-22T03:16:26.983Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T03:16:26.983Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 53,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\AccueilAdmin\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\AccueilAdmin\\Index.cshtml",
               "RelativeDocumentMoniker": "PNE-admin\\Views\\AccueilAdmin\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\Views\\AccueilAdmin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\Views\\AccueilAdmin\\Index.cshtml",
               "RelativeToolTip": "PNE-admin\\Views\\AccueilAdmin\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -395,11 +913,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 54,
               "Title": "IRoleService.cs",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Services\\Interfaces\\IRoleService.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Services\\Interfaces\\IRoleService.cs",
               "RelativeDocumentMoniker": "PNE-core\\Services\\Interfaces\\IRoleService.cs",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Services\\Interfaces\\IRoleService.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Services\\Interfaces\\IRoleService.cs",
               "RelativeToolTip": "PNE-core\\Services\\Interfaces\\IRoleService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -407,11 +925,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 55,
               "Title": "IUtilisateurService.cs",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Services\\Interfaces\\IUtilisateurService.cs",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Services\\Interfaces\\IUtilisateurService.cs",
               "RelativeDocumentMoniker": "PNE-core\\Services\\Interfaces\\IUtilisateurService.cs",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-core\\Services\\Interfaces\\IUtilisateurService.cs",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-core\\Services\\Interfaces\\IUtilisateurService.cs",
               "RelativeToolTip": "PNE-core\\Services\\Interfaces\\IUtilisateurService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -419,11 +937,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 56,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-api\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-api\\appsettings.json",
               "RelativeDocumentMoniker": "PNE-api\\appsettings.json",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-api\\appsettings.json",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-api\\appsettings.json",
               "RelativeToolTip": "PNE-api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -431,15 +949,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 31,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\appsettings.json",
               "RelativeDocumentMoniker": "PNE-admin\\appsettings.json",
-              "ToolTip": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\appsettings.json",
+              "ToolTip": "C:\\Users\\yofra\\OneDrive\\Documents\\Cours\\Projet\\pne-webapp\\pne-database\\PNE-admin\\appsettings.json",
               "RelativeToolTip": "PNE-admin\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-08T23:12:40.118Z"
+              "WhenOpened": "2024-08-08T23:12:40.118Z",
+              "EditorCaption": ""
             }
           ]
         }

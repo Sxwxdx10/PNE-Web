@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using NetTopologySuite.Geometries;
 using PNE_core.Enums;
 using PNE_core.Models;
 using PNE_core.Services.Interfaces;
@@ -336,7 +337,6 @@ public partial class PneContext : DbContext, IPneDbContext
         modelBuilder.HasSequence("serial_mise_eau");
         modelBuilder.HasSequence("serial_note");
         modelBuilder.HasSequence("serial_plan_eau");
-
 
 
         OnModelCreatingPartial(modelBuilder);
