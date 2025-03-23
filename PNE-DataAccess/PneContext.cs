@@ -153,6 +153,9 @@ public partial class PneContext : DbContext, IPneDbContext
             entity.Property(e => e.Date)
                 .HasColumnType("timestamp without time zone")
                 .HasColumnName("date");
+            entity.Property(e => e.DureeEnJours)
+                .HasColumnName("duree_en_jours")
+                .HasColumnType("integer");
             entity.Property(e => e.IdEmbarcation)
                 .HasColumnName("id_embarcation");
             entity.Property(e => e.IdPlanEau)
@@ -226,7 +229,9 @@ public partial class PneContext : DbContext, IPneDbContext
             new Role { NomRole = "employe", Description = "personne qui travail a un plan d'eau" },
             new Role { NomRole = "chercheur", Description = "personne qui fait des recherche sur la propagation des EEE" },
             new Role { NomRole = "patrouilleur", Description = "Membre des forces de l'ordre" },
-            new Role { NomRole = "plaisancier", Description = "personne qui aime bien les bateaux" }
+            new Role { NomRole = "plaisancier", Description = "personne qui aime bien les bateaux" },
+            new Role { NomRole = "superadmin", Description = "Administrateur global du système avec tous les droits" },
+            new Role { NomRole = "supergerant", Description = "Gérant responsable de plusieurs plans d'eau" }
         );
 
         modelBuilder.Entity<Utilisateur>(entity =>
@@ -332,7 +337,16 @@ public partial class PneContext : DbContext, IPneDbContext
         modelBuilder.HasSequence("serial_note");
         modelBuilder.HasSequence("serial_plan_eau");
 
+
+
         OnModelCreatingPartial(modelBuilder);
+    }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=PNE;Username=pne_owner;Password=mJz7Re5jZVdl", o => o.UseNetTopologySuite());
+        }
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

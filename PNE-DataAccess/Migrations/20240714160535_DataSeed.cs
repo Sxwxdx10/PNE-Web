@@ -17,12 +17,14 @@ namespace PNE_DataAccess.Migrations
                 columns: new[] { "nom_role", "Description" },
                 values: new object[,]
                 {
-                    { "admin", "Administarteur, employe de la CREE" },
-                    { "chercheur", "personne qui fait des recherche sur la propagation des EEE" },
-                    { "employe", "personne qui travail a un plan d'eau" },
-                    { "gerant", "le gerant d'un plan d'eau" },
-                    { "patrouilleur", "Membre des forces de l'ordre" },
-                    { "plaisancier", "personne qui aime bien les bateaux" }
+        { "admin", "Administrateur, employé de la CREE" },
+        { "chercheur", "Personne qui fait des recherches sur la propagation des EEE" },
+        { "employe", "Personne qui travaille à un plan d'eau" },
+        { "gerant", "Le gérant d'un plan d'eau" },
+        { "patrouilleur", "Membre des forces de l'ordre" },
+        { "plaisancier", "Personne qui aime bien les bateaux" },
+        { "superadmin", "Administrateur global du système avec tous les droits" },
+        { "supergerant", "Gérant responsable de plusieurs plans d'eau" }
                 });
         }
 

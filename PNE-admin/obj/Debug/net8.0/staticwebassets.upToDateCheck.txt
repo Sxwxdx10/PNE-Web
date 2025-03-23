@@ -1,5 +1,8 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\Images\CREE_Logo_blanc.png
+wwwroot\Images\CREE_Logo_noir.png
+wwwroot\Images\CREE_Logo_vert.png
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

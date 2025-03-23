@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "v2bUL12X5TzHKtK8hjLQc4Cq7NK22okMGC1hpyXjhkk=",
+  "Hash": "9B49g79DyZZvvZ6kb+Sjmvexu8FbDD4ZRLvphwKnvHY=",
   "Source": "PNE-admin",
   "BasePath": "_content/PNE-admin",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "nvqbcy6oev",
-      "Integrity": "Le/Po+0HQ7G3lzySRfMi9iXe+8uNpz2Nn3ligqmAoCI=",
+      "Fingerprint": "5iji2mdobw",
+      "Integrity": "w6JQXdBSFF2bLGSOZZ7IRLdungEUlAyd/UbWMp7NCBU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -99,6 +99,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\Images\\CREE_Logo_blanc.png",
+      "SourceId": "PNE-admin",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\",
+      "BasePath": "_content/PNE-admin",
+      "RelativePath": "Images/CREE_Logo_blanc#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "o0h1lgvm0g",
+      "Integrity": "aPGhaiuMECIfuVMtM20ZQBmYCumCcI+bcc+0vJLQehc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\CREE_Logo_blanc.png"
+    },
+    {
+      "Identity": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\Images\\CREE_Logo_noir.png",
+      "SourceId": "PNE-admin",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\",
+      "BasePath": "_content/PNE-admin",
+      "RelativePath": "Images/CREE_Logo_noir#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3z58dtjr4g",
+      "Integrity": "wX5V9vbFKvqAW0gjcxRKVSrk+GXWSNxRG9AV5uAv+14=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\CREE_Logo_noir.png"
+    },
+    {
+      "Identity": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\Images\\CREE_Logo_vert.png",
+      "SourceId": "PNE-admin",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\",
+      "BasePath": "_content/PNE-admin",
+      "RelativePath": "Images/CREE_Logo_vert#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sneuw0pc3u",
+      "Integrity": "SKonGbaWfPGepdlnDogBM2AS0BrT3+afS0AHvfVYggg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\CREE_Logo_vert.png"
     },
     {
       "Identity": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\js\\site.js",
@@ -1321,6 +1384,51 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/site.5iji2mdobw.css",
+      "AssetFile": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"w6JQXdBSFF2bLGSOZZ7IRLdungEUlAyd/UbWMp7NCBU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Mar 2025 02:27:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5iji2mdobw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-w6JQXdBSFF2bLGSOZZ7IRLdungEUlAyd/UbWMp7NCBU="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1331,7 +1439,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1618"
+          "Value": "5111"
         },
         {
           "Name": "Content-Type",
@@ -1339,11 +1447,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Le/Po+0HQ7G3lzySRfMi9iXe+8uNpz2Nn3ligqmAoCI=\""
+          "Value": "\"w6JQXdBSFF2bLGSOZZ7IRLdungEUlAyd/UbWMp7NCBU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 28 Jan 2025 18:14:37 GMT"
+          "Value": "Sat, 22 Mar 2025 02:27:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1353,52 +1461,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Le/Po+0HQ7G3lzySRfMi9iXe+8uNpz2Nn3ligqmAoCI="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.nvqbcy6oev.css",
-      "AssetFile": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1618"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Le/Po+0HQ7G3lzySRfMi9iXe+8uNpz2Nn3ligqmAoCI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 28 Jan 2025 18:14:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "nvqbcy6oev"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Le/Po+0HQ7G3lzySRfMi9iXe+8uNpz2Nn3ligqmAoCI="
+          "Value": "sha256-w6JQXdBSFF2bLGSOZZ7IRLdungEUlAyd/UbWMp7NCBU="
         }
       ]
     },
@@ -1481,6 +1544,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "Images/CREE_Logo_blanc.o0h1lgvm0g.png",
+      "AssetFile": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\Images\\CREE_Logo_blanc.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "85773"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aPGhaiuMECIfuVMtM20ZQBmYCumCcI+bcc+0vJLQehc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Mar 2025 02:27:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "o0h1lgvm0g"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/CREE_Logo_blanc.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-aPGhaiuMECIfuVMtM20ZQBmYCumCcI+bcc+0vJLQehc="
+        }
+      ]
+    },
+    {
+      "Route": "Images/CREE_Logo_blanc.png",
+      "AssetFile": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\Images\\CREE_Logo_blanc.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "85773"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aPGhaiuMECIfuVMtM20ZQBmYCumCcI+bcc+0vJLQehc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Mar 2025 02:27:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aPGhaiuMECIfuVMtM20ZQBmYCumCcI+bcc+0vJLQehc="
+        }
+      ]
+    },
+    {
+      "Route": "Images/CREE_Logo_noir.3z58dtjr4g.png",
+      "AssetFile": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\Images\\CREE_Logo_noir.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "91300"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wX5V9vbFKvqAW0gjcxRKVSrk+GXWSNxRG9AV5uAv+14=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Mar 2025 02:27:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3z58dtjr4g"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/CREE_Logo_noir.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wX5V9vbFKvqAW0gjcxRKVSrk+GXWSNxRG9AV5uAv+14="
+        }
+      ]
+    },
+    {
+      "Route": "Images/CREE_Logo_noir.png",
+      "AssetFile": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\Images\\CREE_Logo_noir.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "91300"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wX5V9vbFKvqAW0gjcxRKVSrk+GXWSNxRG9AV5uAv+14=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Mar 2025 02:27:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wX5V9vbFKvqAW0gjcxRKVSrk+GXWSNxRG9AV5uAv+14="
+        }
+      ]
+    },
+    {
+      "Route": "Images/CREE_Logo_vert.png",
+      "AssetFile": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\Images\\CREE_Logo_vert.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "109535"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SKonGbaWfPGepdlnDogBM2AS0BrT3+afS0AHvfVYggg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Mar 2025 02:27:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SKonGbaWfPGepdlnDogBM2AS0BrT3+afS0AHvfVYggg="
+        }
+      ]
+    },
+    {
+      "Route": "Images/CREE_Logo_vert.sneuw0pc3u.png",
+      "AssetFile": "C:\\Users\\Franck\\Downloads\\pne-ete2024-final\\src\\PNE-admin\\wwwroot\\Images\\CREE_Logo_vert.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "109535"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SKonGbaWfPGepdlnDogBM2AS0BrT3+afS0AHvfVYggg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Mar 2025 02:27:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sneuw0pc3u"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/CREE_Logo_vert.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SKonGbaWfPGepdlnDogBM2AS0BrT3+afS0AHvfVYggg="
         }
       ]
     },

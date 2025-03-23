@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PNE-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5990f769f175200c67fc23d586e9843def742e1")]
 [assembly: System.Reflection.AssemblyProductAttribute("PNE-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PNE-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

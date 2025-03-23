@@ -32,6 +32,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbEFkbWluXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/AccueilAdmin/RedirectMobileApp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbEFkbWluXFJlZGlyZWN0TW9iaWxlQXBwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Admin/ConfirmationEEE.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ29uZmlybWF0aW9uRUVFLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -112,6 +116,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Home/Profil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9maWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Notedossiers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90ZWRvc3NpZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -158,6 +166,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Shared/unauthorized.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHVuYXV0aG9yaXplZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Shared/_AdminLinks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxpbmtzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Shared/_ChercheurLinks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DaGVyY2hldXJMaW5rcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Shared/_GerantLinks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9HZXJhbnRMaW5rcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Shared/_RoleBadges.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Sb2xlQmFkZ2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Franck/Downloads/pne-ete2024-final/src/PNE-admin/Views/Shared/_ValidationScriptsPartial.cshtml]

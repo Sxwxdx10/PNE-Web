@@ -8,6 +8,9 @@ using PNE_core.Models;
 using Newtonsoft.Json;
 using NetTopologySuite.Index.HPRtree;
 using PNE_core.Enums;
+using PNE_core.DTO;
+using PNE_core.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PNE_admin.Controllers
 {
@@ -17,18 +20,20 @@ namespace PNE_admin.Controllers
         //pour ajouter ses employes
         private readonly IFirebaseAuthService _authService;
         private readonly IUtilisateurService _userServices;
+        private readonly IRoleService _roleService;
 
         private readonly IPlanEauService _eauService;
         private readonly ICertificationService _certificationService;
         private readonly IMiseAEauService _miseAEauService;
 
-        public GerantController(IFirebaseAuthService authService, IUtilisateurService userService, IPlanEauService eauService, ICertificationService certificationService, IMiseAEauService miseAEauService)
+        public GerantController(IFirebaseAuthService authService, IUtilisateurService userService, IRoleService roleService, IPlanEauService eauService, ICertificationService certificationService, IMiseAEauService miseAEauService)
         {
             _authService = authService;
             _userServices = userService;
             _eauService = eauService;
             _certificationService = certificationService;
             _miseAEauService = miseAEauService;
+            _roleService = roleService;
         }
 
         /// <summary>
@@ -38,6 +43,41 @@ namespace PNE_admin.Controllers
         {
             ViewData["Title"] = "Inscription";
             return View();
+        }
+
+        /// <summary>
+        /// Retour de l'inscription, création de l'utilisateur et assignation du role
+        /// </summary>
+        /// <param name="user">utilisateur le gérant</param>
+        [Authorize(Roles =Roles.Gerant)]
+        [HttpPost]
+        public async Task<IActionResult> InscriptionEmployes(SignUpUserDTO userDTO)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            //ajout de l'employer dans firebase, get back le uid
+            UserBaseInfo? uInfo = await _authService.SignUp(userDTO.Email, userDTO.Password, userDTO.Username);
+            if (uInfo is not null)
+            {
+                //cree le user dans la bd avec le uid de firebase
+                Utilisateur user = new()
+                {
+                    Id = uInfo.Uid,
+                    Email = uInfo.Email!,
+                    DisplayName = uInfo.Name
+                };
+                await _userServices.CreateAsync(user);
+
+                //assigner le role "employe" au user
+                await _roleService.AddUserRole(uInfo.Uid, "employe");
+
+                return RedirectToAction("Index", "AccueilAdmin");
+            }
+
+            return BadRequest();
         }
 
         /// <summary>
@@ -94,7 +134,7 @@ namespace PNE_admin.Controllers
         /// </summary>
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> MiseAEau(string idEmbarcation, string IdPlanEau)
+        public async Task<IActionResult> MiseAEau(string idEmbarcation, string IdPlanEau, int dureeEnJours)
         {
             TempData["ErreurMiseEau"] = null;
             Miseaeau miseAEau = new Miseaeau();
@@ -102,6 +142,7 @@ namespace PNE_admin.Controllers
             miseAEau.IdPlanEau = IdPlanEau;
             miseAEau.IdMiseEau = Guid.NewGuid().ToString();
             miseAEau.Date = DateTime.Now;
+            miseAEau.DureeEnJours = dureeEnJours;
             if (miseAEau != null)
             {
                 try
@@ -140,5 +181,15 @@ namespace PNE_admin.Controllers
             ViewData["Title"] = "Statistiques";
             return View();
         }
+        /// <summary>
+        /// Creation plan d'eau
+        /// 
+        /// </summary>
+        public async Task<IActionResult> NouveauPlan()
+        {
+            ViewData["Title"] = "Nouveau Plan d'eau";
+            return View("Planeaux/Create");
+        }
+
     }
 }

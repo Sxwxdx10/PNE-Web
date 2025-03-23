@@ -10,6 +10,8 @@ public partial class Miseaeau
 
     public DateTime Date { get; set; }
 
+    public int? DureeEnJours { get; set; } // Duration of stay in days
+
     public string? IdPlanEau { get; set; }
 
     public string IdEmbarcation { get; set; } = null!;

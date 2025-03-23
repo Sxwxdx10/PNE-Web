@@ -32,6 +32,11 @@ namespace PNE_admin.Controllers
                 roles.Add(role.NomRole);
             }
 
+            if (roles.Contains("plaisancier") && roles.Count==1)
+            {
+                return View("RedirectMobileApp");
+            }
+
             HttpContext.Session.SetString("userRoles", roles.ToJson());
             ViewData["Title"] = "AccueilAdmin";
             return View();

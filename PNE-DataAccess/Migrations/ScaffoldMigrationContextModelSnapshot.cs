@@ -18,10 +18,11 @@ namespace PNE_DataAccess.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.5")
+                .HasAnnotation("ProductVersion", "9.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "niveau", "niveau", new[] { "vert", "jaune", "rouge" });
+            NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "station_personnel_status", "station_personnel_status", new[] { "aucun", "present", "certifie_decontamination" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "type_lavage", "type_lavage", new[] { "eau_chaude_avec_pression", "eau_froide_avec_pression", "eau_chaude_sans_pression", "eau_froide_sans_pression" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "type_pne_id", "type_pne_id", new[] { "serial_embarcation", "serial_lavage", "serial_embarcation_utilisateur", "serial_note", "serial_plan_eau", "serial_mise_eau" });
             NpgsqlModelBuilderExtensions.HasPostgresExtension(modelBuilder, "postgis");
@@ -100,7 +101,7 @@ namespace PNE_DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("EEEEs");
+                    b.ToTable("EEEs");
                 });
 
             modelBuilder.Entity("PNE_core.Models.EEEPlanEau", b =>
@@ -125,7 +126,7 @@ namespace PNE_DataAccess.Migrations
 
                     b.HasIndex("IdPlanEau");
 
-                    b.ToTable("EEEPlanEau");
+                    b.ToTable("EEEPlanEaus");
                 });
 
             modelBuilder.Entity("PNE_core.Models.Embarcation", b =>
@@ -255,6 +256,10 @@ namespace PNE_DataAccess.Migrations
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("date");
 
+                    b.Property<int?>("DureeEnJours")
+                        .HasColumnType("integer")
+                        .HasColumnName("duree_en_jours");
+
                     b.Property<string>("IdEmbarcation")
                         .IsRequired()
                         .HasColumnType("character varying")
@@ -315,11 +320,10 @@ namespace PNE_DataAccess.Migrations
                         .HasColumnName("id_plan_eau");
 
                     b.Property<Point>("Emplacement")
-                        .IsRequired()
                         .HasColumnType("geometry(Point)")
                         .HasColumnName("emplacement");
 
-                    b.Property<int>("NiveauCouleur")
+                    b.Property<int?>("NiveauCouleur")
                         .HasColumnType("niveau")
                         .HasColumnName("niveau_couleur");
 
@@ -379,6 +383,16 @@ namespace PNE_DataAccess.Migrations
                         {
                             NomRole = "plaisancier",
                             Description = "personne qui aime bien les bateaux"
+                        },
+                        new
+                        {
+                            NomRole = "superadmin",
+                            Description = "Administrateur global du système avec tous les droits"
+                        },
+                        new
+                        {
+                            NomRole = "supergerant",
+                            Description = "Gérant responsable de plusieurs plans d'eau"
                         });
                 });
 
@@ -411,7 +425,7 @@ namespace PNE_DataAccess.Migrations
             modelBuilder.Entity("PNE_core.Models.StationLavage", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("text");
+                        .HasColumnType("character varying");
 
                     b.Property<bool?>("BassePressionetAttaches")
                         .HasColumnType("boolean");
@@ -424,13 +438,19 @@ namespace PNE_DataAccess.Migrations
 
                     b.Property<string>("Nom")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("character varying")
+                        .HasColumnName("nom");
 
                     b.Property<bool?>("PeutDecontaminer")
                         .HasColumnType("boolean");
 
+                    b.Property<Point>("Position")
+                        .HasColumnType("geometry(Point)")
+                        .HasColumnName("position");
+
                     b.Property<int>("StationPersonnelStatus")
-                        .HasColumnType("integer");
+                        .HasColumnType("station_personnel_status")
+                        .HasColumnName("station_personnel_status");
 
                     b.Property<string>("planeauIdPlanEau")
                         .HasColumnType("character varying(10)");
@@ -643,9 +663,9 @@ namespace PNE_DataAccess.Migrations
 
             modelBuilder.Entity("PNE_core.Models.Planeau", b =>
                 {
-                    b.Navigation("EmployePlaneau");
-
                     b.Navigation("EEEPlanEau");
+
+                    b.Navigation("EmployePlaneau");
 
                     b.Navigation("Miseaeaus");
 
