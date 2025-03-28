@@ -13,11 +13,38 @@ namespace PNE_core.Models
     public class StationLavage
     {
         [Key]
-        public string? Id { get; set; }
+        public string Id { get; set; }
 
         public string Nom { get; set; } = null!;
 
-        public Point? Position { get; set; }
+        public StationPersonnelStatus StationPersonnelStatus { get; set; }
+
+        // Stockage en base de données
+        public string PositionString { get; set; }
+
+        // Propriété calculée pour l'utilisation dans le code
+        [NotMapped]
+        public Point Position
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(PositionString)) return null;
+                var coords = PositionString.Split(',');
+                if (coords.Length != 2) return null;
+                if (double.TryParse(coords[0], out double x) && double.TryParse(coords[1], out double y))
+                {
+                    return new Point(x, y) { SRID = 4326 };
+                }
+                return null;
+            }
+            set
+            {
+                if (value == null)
+                    PositionString = null;
+                else
+                    PositionString = $"{value.X},{value.Y}";
+            }
+        }
 
         public Planeau? planeau { get; set; }
 
@@ -25,7 +52,5 @@ namespace PNE_core.Models
         public bool? HautePression { get; set; }
         public bool? BassePressionetAttaches { get; set; }
         public bool? EauChaude { get; set; }
-
-        public StationPersonnelStatus StationPersonnelStatus { get; set; }
     }
 }

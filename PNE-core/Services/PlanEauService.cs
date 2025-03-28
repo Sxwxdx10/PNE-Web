@@ -1,11 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PNE_core.Models;
 using PNE_core.Services.Interfaces;
+using PNE_core.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NetTopologySuite.Geometries;
+using NetTopologySuite.IO;
 
 namespace PNE_core.Services
 {
@@ -22,6 +25,14 @@ namespace PNE_core.Services
 
         public async Task CreateAsync(Planeau entity)
         {
+            if (entity.Latitude.HasValue && entity.Longitude.HasValue)
+            {
+                var point = new Point(entity.Longitude.Value, entity.Latitude.Value) { SRID = 4326 };
+                var wkbWriter = new WKBWriter();
+                var bytes = wkbWriter.Write(point);
+                entity.EmplacementString = "0x" + BitConverter.ToString(bytes).Replace("-", "");
+            }
+            
             _dbSet.Add(entity);
             await _db.SaveChangesAsync();
         }
@@ -58,9 +69,15 @@ namespace PNE_core.Services
 
         public async Task UpdateAsync(Planeau entity)
         {
-            _dbSet.Update(entity);
-            await _db.SaveChangesAsync();
-        }
+            var existingEntity = await _dbSet.FindAsync(entity.IdPlanEau);
+            if (existingEntity != null)
+            {
+                // Mettre à jour les propriétés de base
+                existingEntity.Nom = entity.Nom;
+                existingEntity.NiveauCouleur = entity.NiveauCouleur;
 
+                await _db.SaveChangesAsync();
+            }
+        }
     }
 }

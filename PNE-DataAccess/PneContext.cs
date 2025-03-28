@@ -5,6 +5,9 @@ using NetTopologySuite.Geometries;
 using PNE_core.Enums;
 using PNE_core.Models;
 using PNE_core.Services.Interfaces;
+using System.ComponentModel;
+using System.Linq;
+using NetTopologySuite.IO;
 
 namespace PNE_DataAccess;
 
@@ -17,6 +20,17 @@ public partial class PneContext : DbContext, IPneDbContext
     public PneContext(DbContextOptions<PneContext> options)
         : base(options)
     {
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            optionsBuilder.UseNpgsql(
+                "Host=localhost;Port=5432;Database=PNE;Username=pne_owner;Password=mJz7Re5jZVdl",
+                x => x.UseNetTopologySuite()
+            );
+        }
     }
 
     #region tables
@@ -134,8 +148,12 @@ public partial class PneContext : DbContext, IPneDbContext
             entity.Property(e => e.SelfServe)
                 .HasColumnName("self_serve");
             entity.Property(e => e.TypeLavage)
-                .HasColumnType("type_lavage")
-                .HasColumnName("type_lavage");
+                .HasColumnType("character varying")
+                .HasColumnName("type_lavage")
+                .HasConversion(
+                    v => v.ToString().ToLower(),
+                    v => Enum.Parse<TypeLavage>(v, true)
+                );
 
             entity.HasOne(d => d.EmbarcationNavigation).WithMany(p => p.Lavages)
                 .HasForeignKey(d => d.IdEmbarcation)
@@ -154,7 +172,7 @@ public partial class PneContext : DbContext, IPneDbContext
             entity.Property(e => e.Date)
                 .HasColumnType("timestamp without time zone")
                 .HasColumnName("date");
-            entity.Property(e => e.DureeEnJours)
+            entity.Property(e => e.DureeSejourEnJours)
                 .HasColumnName("duree_en_jours")
                 .HasColumnType("integer");
             entity.Property(e => e.IdEmbarcation)
@@ -194,21 +212,23 @@ public partial class PneContext : DbContext, IPneDbContext
         modelBuilder.Entity<Planeau>(entity =>
         {
             entity.HasKey(e => e.IdPlanEau).HasName("planeau_pkey");
-
             entity.ToTable("planeau");
-
             entity.Property(e => e.IdPlanEau)
                 .HasMaxLength(10)
                 .HasColumnName("id_plan_eau");
-            entity.Property(e => e.Emplacement)
-                .HasColumnType("geometry(Point)")
+            entity.Property(e => e.EmplacementString)
+                .HasColumnType("character varying")
                 .HasColumnName("emplacement");
             entity.Property(e => e.Nom)
                 .HasColumnType("character varying")
                 .HasColumnName("nom");
             entity.Property(e => e.NiveauCouleur)
-                .HasColumnType("niveau")
-                .HasColumnName("niveau_couleur");
+                .HasColumnName("niveau_couleur")
+                .HasColumnType("character varying")
+                .HasConversion(
+                    v => v.ToString().ToLower(),
+                    v => Enum.Parse<Niveau>(v, true)
+                );
         });
 
         modelBuilder.Entity<Role>(entity =>
@@ -256,12 +276,16 @@ public partial class PneContext : DbContext, IPneDbContext
             entity.Property(e => e.Nom)
                 .HasColumnType("character varying")
                 .HasColumnName("nom");
-            entity.Property(e => e.Position)
-                .HasColumnType("geometry(Point)")
-                .HasColumnName("position");
+            entity.Property(e => e.PositionString)
+                .HasColumnType("character varying")
+                .HasColumnName("Position");
             entity.Property(e => e.StationPersonnelStatus)
-                .HasColumnType("station_personnel_status")
-                .HasColumnName("station_personnel_status");
+                .HasColumnType("character varying")
+                .HasColumnName("station_personnel_status")
+                .HasConversion(
+                    v => v.ToString().ToLower(),
+                    v => Enum.Parse<StationPersonnelStatus>(v, true)
+                );
         });
 
         modelBuilder.Entity<EEE>(entity =>
@@ -340,13 +364,6 @@ public partial class PneContext : DbContext, IPneDbContext
 
 
         OnModelCreatingPartial(modelBuilder);
-    }
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        if (!optionsBuilder.IsConfigured)
-        {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=PNE;Username=pne_owner;Password=mJz7Re5jZVdl", o => o.UseNetTopologySuite());
-        }
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

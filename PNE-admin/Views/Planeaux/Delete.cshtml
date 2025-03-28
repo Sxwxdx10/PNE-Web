@@ -24,6 +24,12 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.NiveauCouleur)
         </dd>
+        <dt class = "col-sm-2">
+            Emplacement
+        </dt>
+        <dd class = "col-sm-10">
+            <div id="map" style="height: 400px;"></div>
+        </dd>
     </dl>
     
     <form asp-action="Delete">
@@ -32,3 +38,23 @@
         <a asp-action="Index">Back to List</a>
     </form>
 </div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        @{
+            var lat = Model.Emplacement?.Y ?? 45.4;
+            var lng = Model.Emplacement?.X ?? -71.9;
+        }
+        var lat = @lat;
+        var lng = @lng;
+        
+        var map = L.map('map').setView([lat, lng], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+        
+        var marker = L.marker([lat, lng]).addTo(map);
+    </script>
+}

@@ -1,8 +1,17 @@
 ﻿@model PNE_core.Models.Planeau
+@using PNE_core.Enums
 
 @{
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var niveauItems = new List<SelectListItem>
+    {
+        new SelectListItem { Text = "-- Sélectionner un niveau --", Value = "" },
+        new SelectListItem { Text = "Vert", Value = "vert" },
+        new SelectListItem { Text = "Jaune", Value = "jaune" },
+        new SelectListItem { Text = "Rouge", Value = "rouge" }
+    };
 }
 
 <h1>Create</h1>
@@ -10,13 +19,27 @@
 <h4>Planeau</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
+    <div class="col-md-6">
+        <form asp-action="Create" id="createForm">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+            <div class="form-group mb-3">
                 <label asp-for="Nom" class="control-label"></label>
                 <input asp-for="Nom" class="form-control" />
                 <span asp-validation-for="Nom" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="NiveauCouleur" class="control-label"></label>
+                <select asp-for="NiveauCouleur" class="form-control" asp-items="niveauItems">
+                </select>
+                <span asp-validation-for="NiveauCouleur" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label class="control-label">Emplacement <span class="text-danger">*</span></label>
+                <div id="map" style="height: 400px;"></div>
+                <input type="hidden" asp-for="Latitude" id="latitude" />
+                <input type="hidden" asp-for="Longitude" id="longitude" />
+                <div id="coordinates" class="mt-2 text-muted"></div>
+                <span id="locationError" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -31,4 +54,54 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Initialiser la carte
+        var map = L.map('map').setView([45.4, -71.9], 8); // Centrer sur l'Estrie
+
+        // Ajouter la couche OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Variable pour stocker le marqueur
+        var marker = null;
+
+        // Gérer le clic sur la carte
+        map.on('click', function(e) {
+            // Supprimer le marqueur existant s'il y en a un
+            if (marker) {
+                map.removeLayer(marker);
+            }
+
+            // Créer un nouveau marqueur
+            marker = L.marker(e.latlng).addTo(map);
+
+            // Mettre à jour les champs cachés avec les coordonnées
+            document.getElementById('latitude').value = e.latlng.lat;
+            document.getElementById('longitude').value = e.latlng.lng;
+
+            // Afficher les coordonnées
+            document.getElementById('coordinates').textContent = 
+                `Coordonnées sélectionnées : ${e.latlng.lat.toFixed(6)}, ${e.latlng.lng.toFixed(6)}`;
+            
+            // Effacer le message d'erreur
+            document.getElementById('locationError').textContent = '';
+        });
+
+        // Validation du formulaire
+        document.getElementById('createForm').addEventListener('submit', function(e) {
+            var latitude = document.getElementById('latitude').value;
+            var longitude = document.getElementById('longitude').value;
+            var locationError = document.getElementById('locationError');
+
+            if (!latitude || !longitude) {
+                e.preventDefault();
+                locationError.textContent = 'Veuillez sélectionner un emplacement sur la carte';
+                return false;
+            }
+            return true;
+        });
+    </script>
 }
