@@ -1,36 +1,126 @@
 ﻿@model PNE_core.Models.StationLavage
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Nouvelle station de lavage";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var planEau = ViewBag.PlanEau as PNE_core.Models.Planeau;
 }
 
-<h1>Create</h1>
+<div class="container mt-4">
+    <h1>Nouvelle station de lavage</h1>
+    <h4>Pour le plan d'eau : @planEau.Nom</h4>
+    <hr />
 
-<h4>Station de Lavage</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Nom" class="control-label"></label>
-                <input asp-for="Nom" class="form-control" />
-                <span asp-validation-for="Nom" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="Create" id="createForm" onsubmit="return validateForm()">
+                <input type="hidden" name="idPlanEau" value="@planEau.IdPlanEau" />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                
+                <div class="form-group mb-3">
+                    <label asp-for="Nom" class="form-label">Nom de la station</label>
+                    <input asp-for="Nom" class="form-control" required />
+                    <span asp-validation-for="Nom" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label class="form-label">Caractéristiques</label>
+                    <div class="form-check mb-2">
+                        <input asp-for="PeutDecontaminer" class="form-check-input" type="checkbox" />
+                        <label class="form-check-label" asp-for="PeutDecontaminer">Peut décontaminer</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input asp-for="HautePression" class="form-check-input" type="checkbox" />
+                        <label class="form-check-label" asp-for="HautePression">Haute pression</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input asp-for="BassePressionetAttaches" class="form-check-input" type="checkbox" />
+                        <label class="form-check-label" asp-for="BassePressionetAttaches">Basse pression et attaches</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input asp-for="EauChaude" class="form-check-input" type="checkbox" />
+                        <label class="form-check-label" asp-for="EauChaude">Eau chaude</label>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label class="form-label">Position</label>
+                    <div id="map" style="height: 400px; margin-bottom: 1rem;"></div>
+                    <input type="hidden" asp-for="PositionString" id="positionString" required />
+                    <div class="text-muted">Cliquez sur la carte pour définir la position de la station</div>
+                    <div id="positionError" class="text-danger" style="display: none;">
+                        Veuillez sélectionner une position sur la carte
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Créer la station</button>
+                    <a asp-controller="Gerant" asp-action="GestionPlanEau" class="btn btn-secondary">Retour</a>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Initialiser la carte centrée sur le plan d'eau
+        var map = L.map('map').setView([@planEau.Emplacement.Y, @planEau.Emplacement.X], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Ajouter un marqueur pour le plan d'eau
+        var planEauMarker = L.marker([@planEau.Emplacement.Y, @planEau.Emplacement.X]).addTo(map);
+        planEauMarker.bindPopup('@planEau.Nom');
+
+        var stationMarker = null;
+        map.on('click', function(e) {
+            if (stationMarker) {
+                map.removeLayer(stationMarker);
+            }
+            stationMarker = L.marker(e.latlng).addTo(map);
+            // Stocker les coordonnées dans l'ordre lng,lat (X,Y)
+            var positionString = e.latlng.lng + ',' + e.latlng.lat;
+            document.getElementById('positionString').value = positionString;
+            console.log('Position sélectionnée :', positionString);
+        });
+
+        function validateForm() {
+            var form = document.getElementById('createForm');
+            var positionString = document.getElementById('positionString').value;
+            var positionError = document.getElementById('positionError');
+            var nom = document.getElementById('Nom').value;
+            
+            console.log('Validation du formulaire :');
+            console.log('- Nom :', nom);
+            console.log('- Position :', positionString);
+            console.log('- IdPlanEau :', '@planEau.IdPlanEau');
+            
+            if (!nom) {
+                alert('Le nom de la station est requis');
+                return false;
+            }
+            
+            if (!positionString) {
+                positionError.style.display = 'block';
+                alert('Veuillez sélectionner une position sur la carte');
+                return false;
+            }
+            
+            positionError.style.display = 'none';
+
+            // Log des données du formulaire avant l'envoi
+            var formData = new FormData(form);
+            console.log('Données du formulaire :');
+            for (var pair of formData.entries()) {
+                console.log(pair[0] + ': ' + pair[1]);
+            }
+
+            return true;
+        }
+    </script>
 }

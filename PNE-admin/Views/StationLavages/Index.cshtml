@@ -4,18 +4,33 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Liste des stations de lavage</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Nom)
             </th>
-            <th></th>
+            <th>
+                Plan d'eau
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PeutDecontaminer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HautePression)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BassePressionetAttaches)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EauChaude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StationPersonnelStatus)
+            </th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -26,9 +41,35 @@
                     @Html.DisplayFor(modelItem => item.Nom)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    @(item.planeau != null ? item.planeau.Nom : "Non assigné")
+                </td>
+                <td>
+                    @(item.PeutDecontaminer == true ? "Oui" : "Non")
+                </td>
+                <td>
+                    @(item.HautePression == true ? "Oui" : "Non")
+                </td>
+                <td>
+                    @(item.BassePressionetAttaches == true ? "Oui" : "Non")
+                </td>
+                <td>
+                    @(item.EauChaude == true ? "Oui" : "Non")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StationPersonnelStatus)
+                </td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm">
+                            <i class="bi bi-pencil"></i> Modifier
+                        </a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">
+                            <i class="bi bi-info-circle"></i> Détails
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i> Supprimer
+                        </a>
+                    </div>
                 </td>
             </tr>
         }

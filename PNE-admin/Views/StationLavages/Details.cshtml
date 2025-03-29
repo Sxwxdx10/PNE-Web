@@ -8,7 +8,7 @@
 <h1>Details</h1>
 
 <div>
-    <h4>Utilisateur</h4>
+    <h4>Station de Lavage</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -17,9 +17,68 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Nom)
         </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Position)
+        </dt>
+        <dd class="col-sm-10">
+            <div id="map" style="height: 300px;"></div>
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PeutDecontaminer)
+        </dt>
+        <dd class="col-sm-10">
+            @(Model.PeutDecontaminer == true ? "Oui" : "Non")
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HautePression)
+        </dt>
+        <dd class="col-sm-10">
+            @(Model.HautePression == true ? "Oui" : "Non")
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BassePressionetAttaches)
+        </dt>
+        <dd class="col-sm-10">
+            @(Model.BassePressionetAttaches == true ? "Oui" : "Non")
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EauChaude)
+        </dt>
+        <dd class="col-sm-10">
+            @(Model.EauChaude == true ? "Oui" : "Non")
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StationPersonnelStatus)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StationPersonnelStatus)
+        </dd>
     </dl>
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        @{
+            var latitude = Model.Position != null ? Model.Position.Y : 45.4;
+            var longitude = Model.Position != null ? Model.Position.X : -71.9;
+        }
+        
+        var lat = @latitude;
+        var lng = @longitude;
+        
+        var map = L.map('map').setView([lat, lng], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Ajouter le marqueur de la station
+        var marker = L.marker([lat, lng]).addTo(map);
+        marker.bindPopup('@Model.Nom<br>@(Model.PeutDecontaminer == true ? "Décontamination<br>" : "")@(Model.HautePression == true ? "Haute pression<br>" : "")@(Model.BassePressionetAttaches == true ? "Basse pression<br>" : "")@(Model.EauChaude == true ? "Eau chaude" : "")');
+    </script>
+}

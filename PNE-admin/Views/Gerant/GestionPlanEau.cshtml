@@ -14,39 +14,142 @@
         margin: 0;
         padding: 0;
     }
+
+    .main-content {
+        padding-bottom: 60px; /* Espace pour la barre du bas */
+    }
+
+    .stations-section {
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: #f8f9fa;
+        border-radius: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .station-card {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        background-color: white;
+    }
+
+    .station-features {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .feature-badge {
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        font-size: 0.875rem;
+        background-color: #e9ecef;
+    }
 </style>
 
-<script>
-    function initMap() {
-        var centerPoint = { lat: @point.X.ToString(System.Globalization.CultureInfo.InvariantCulture), lng: @point.Y.ToString(System.Globalization.CultureInfo.InvariantCulture) };
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 10,
-            center: centerPoint,
-            mapId: '3fa9003ef29d0abe'
-        });
+<div class="main-content">
+    <div class="text-center">
+        <h1 class="display-4">Gestion des plans d'eau</h1>
+        <h2>Gérez vos plans d'eau et leurs stations de lavage</h2>
+    </div>
 
-        const markerElement = document.createElement('div');
-        markerElement.textContent = 'Center Point';
-        markerElement.style.backgroundColor = 'blue';
-        markerElement.style.color = 'white';
-        markerElement.style.padding = '5px';
+    <div id="map"></div>
 
-        var marker = new google.maps.marker.AdvancedMarkerElement({
-            position: centerPoint,
-            map: map,
-            content: markerElement
-        });
+    <div class="stations-section">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3>Stations de lavage</h3>
+            <a asp-controller="StationLavages" asp-action="Create" asp-route-idPlanEau="@Model.IdPlanEau" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Nouvelle station
+            </a>
+        </div>
 
-        marker.addListener('gmp-click', function () {
-            alert('Marker clicked!');
-        });
-    }
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvd7KNxhKf1_MBVd8iL0iB0g6zeTwHAvQ&v=beta&libraries=marker&callback=initMap" async defer></script>
-
-<div class="text-center">
-    <h1 class="display-4">page pour Gerer son plan d'eau</h1>
-    <h2>ce sera ici que le gerant de plan d'eau pourra voir,ajouter et gerer ses stations de lavages</h2>
+        <div class="row">
+            @foreach (var station in ViewBag.Stations ?? new List<PNE_core.Models.StationLavage>())
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="station-card">
+                        <h5>@station.Nom</h5>
+                        <div class="station-features">
+                            @if (station.PeutDecontaminer == true)
+                            {
+                                <span class="feature-badge">Décontamination</span>
+                            }
+                            @if (station.HautePression == true)
+                            {
+                                <span class="feature-badge">Haute pression</span>
+                            }
+                            @if (station.BassePressionetAttaches == true)
+                            {
+                                <span class="feature-badge">Basse pression</span>
+                            }
+                            @if (station.EauChaude == true)
+                            {
+                                <span class="feature-badge">Eau chaude</span>
+                            }
+                        </div>
+                        <div class="mt-2">
+                            <small class="text-muted">Personnel: @station.StationPersonnelStatus</small>
+                        </div>
+                        <div class="mt-2">
+                            <a asp-controller="StationLavages" asp-action="Edit" asp-route-id="@station.Id" class="btn btn-sm btn-outline-primary">Modifier</a>
+                            <a asp-controller="StationLavages" asp-action="Details" asp-route-id="@station.Id" class="btn btn-sm btn-outline-info">Détails</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
 </div>
 
-<div id="map">c'est la carte</div>
+@section Scripts {
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Initialiser la carte avec une position par défaut
+        var defaultLat = 45.4;
+        var defaultLng = -71.9;
+        
+        @{
+            var latitude = Model.Emplacement != null ? Model.Emplacement.Y : 45.4;
+            var longitude = Model.Emplacement != null ? Model.Emplacement.X : -71.9;
+        }
+        
+        var lat = @latitude;
+        var lng = @longitude;
+        
+        var map = L.map('map').setView([lat, lng], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+        
+        // Ajouter un marqueur pour le plan d'eau actuel
+        var currentMarker = L.marker([lat, lng]).addTo(map);
+        currentMarker.bindPopup('@Model.Nom');
+
+        // Ajouter des marqueurs pour les stations de lavage avec vérification des coordonnées
+        @foreach (var station in ViewBag.Stations ?? new List<PNE_core.Models.StationLavage>())
+        {
+            if (station.Position != null)
+            {
+                <text>
+                var stationMarker = L.marker([@station.Position.Y, @station.Position.X]).addTo(map);
+                stationMarker.bindPopup('@Html.Raw(station.Nom)<br>@(station.PeutDecontaminer == true ? "Décontamination<br>" : "")@(station.HautePression == true ? "Haute pression<br>" : "")@(station.BassePressionetAttaches == true ? "Basse pression<br>" : "")@(station.EauChaude == true ? "Eau chaude" : "")');
+                </text>
+            }
+        }
+
+        // Ajuster la vue de la carte pour inclure tous les marqueurs
+        var markers = [];
+        map.eachLayer(function(layer) {
+            if (layer instanceof L.Marker) {
+                markers.push(layer.getLatLng());
+            }
+        });
+        if (markers.length > 0) {
+            var bounds = L.latLngBounds(markers);
+            map.fitBounds(bounds, { padding: [50, 50] });
+        }
+    </script>
+}

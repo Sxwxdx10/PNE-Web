@@ -6,6 +6,7 @@
         <ul class="list-unstyled">
             <li><i class="bi bi-people"></i> <a class="nav-link d-inline" asp-controller="Gerant" asp-action="InscriptionEmployes">Mes employés</a></li>
             <li><i class="bi bi-water"></i> <a class="nav-link d-inline" asp-controller="Gerant" asp-action="GestionPlanEau">Mon plan d'eau</a></li>
+            <li><i class="bi bi-droplet"></i> <a class="nav-link d-inline" asp-controller="StationLavages" asp-action="Index">Stations de lavage</a></li>
             <li>
                 <i class="bi bi-upload"></i> <a class="nav-link d-inline" asp-controller="Gerant" asp-action="MiseAEau">Mise à l'eau</a>
                 @if (TempData["Erreur"] != null)

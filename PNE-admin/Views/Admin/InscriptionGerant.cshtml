@@ -48,7 +48,17 @@
                         <span asp-validation-for="@Model.ConfirmPassword" class="text-danger"></span>
                     </div>
 
-                    <div class="d-grid gap-2">
+                    <div class="form-group mb-2">
+                <label class="control-label">Plans d'eau</label>
+                <select name="SelectedPlanEaux" class="form-control" multiple>
+                    @foreach (var planEau in ViewBag.PlanEaux)
+                    {
+                        <option value="@planEau.IdPlanEau">@planEau.Nom</option>
+                    }
+                </select>
+                <small class="form-text text-muted">Maintenez Ctrl (ou Cmd sur Mac) pour sélectionner plusieurs plans d'eau</small>
+            </div>
+            <div class="d-grid gap-2">
                         <button type="submit" class="btn btn-success btn-lg"><i class="bi bi-person-check"></i> Inscrire</button>
                     </div>
                 </form>

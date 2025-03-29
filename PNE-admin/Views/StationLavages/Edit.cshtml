@@ -7,7 +7,7 @@
 
 <h1>Edit</h1>
 
-<h4>Utilisateur</h4>
+<h4>Station de Lavage</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -20,18 +20,76 @@
                 <span asp-validation-for="Nom" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="PeutDecontaminer" class="control-label">Peut décontaminer</label>
+                <input asp-for="PeutDecontaminer" type="checkbox" class="form-check-input" />
+                <span asp-validation-for="PeutDecontaminer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HautePression" class="control-label">Haute pression</label>
+                <input asp-for="HautePression" type="checkbox" class="form-check-input" />
+                <span asp-validation-for="HautePression" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BassePressionetAttaches" class="control-label">Basse pression et attaches</label>
+                <input asp-for="BassePressionetAttaches" type="checkbox" class="form-check-input" />
+                <span asp-validation-for="BassePressionetAttaches" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EauChaude" class="control-label">Eau chaude</label>
+                <input asp-for="EauChaude" type="checkbox" class="form-check-input" />
+                <span asp-validation-for="EauChaude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Position</label>
+                <div id="map" style="height: 400px;"></div>
+                <input type="hidden" id="PositionString" name="PositionString" value="@Model.PositionString" />
+            </div>
+            <div class="form-group mt-3">
                 <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        @{
+            var latitude = Model.Position != null ? Model.Position.Y : 45.4;
+            var longitude = Model.Position != null ? Model.Position.X : -71.9;
+        }
+        
+        var lat = @latitude;
+        var lng = @longitude;
+        
+        var map = L.map('map').setView([lat, lng], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Ajouter le marqueur initial
+        var marker = L.marker([lat, lng], { draggable: true }).addTo(map);
+        marker.bindPopup('@Model.Nom');
+
+        // Mettre à jour la position quand le marqueur est déplacé
+        marker.on('dragend', function(event) {
+            var position = marker.getLatLng();
+            document.getElementById('PositionString').value = position.lat + ',' + position.lng;
+        });
+
+        // Permettre de cliquer sur la carte pour déplacer le marqueur
+        map.on('click', function(e) {
+            var newLatLng = e.latlng;
+            marker.setLatLng(newLatLng);
+            document.getElementById('PositionString').value = newLatLng.lat + ',' + newLatLng.lng;
+        });
+
+        // Initialiser la valeur du champ caché
+        document.getElementById('PositionString').value = lat + ',' + lng;
+    </script>
 }

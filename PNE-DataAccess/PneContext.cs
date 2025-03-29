@@ -18,7 +18,7 @@ public partial class PneContext : DbContext, IPneDbContext
     }
 
     public PneContext(DbContextOptions<PneContext> options)
-        : base(options)
+        :  base(options)
     {
     }
 
