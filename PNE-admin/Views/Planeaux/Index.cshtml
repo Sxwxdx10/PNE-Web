@@ -13,6 +13,16 @@
         </div>
     </div>
     <div class="card-body">
+        <div class="mb-3">
+            <div class="btn-group" role="group">
+                <a asp-action="Index" asp-route-sortOrder="alphabetique" class="btn btn-outline-primary @(ViewBag.CurrentSort == "alphabetique" ? "active" : "")">
+                    <i class="bi bi-sort-alpha-down"></i> Tri Alphabétique
+                </a>
+                <a asp-action="Index" asp-route-sortOrder="recent" class="btn btn-outline-primary @(ViewBag.CurrentSort == "recent" ? "active" : "")">
+                    <i class="bi bi-clock"></i> Plus Récents
+                </a>
+            </div>
+        </div>
         <table class="table table-striped table-hover table-bordered shadow-sm rounded bg-white text-dark">
             <thead class="bg-light">
                 <tr>

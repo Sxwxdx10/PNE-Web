@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
 namespace PNE_core.Services
 {
@@ -13,17 +14,32 @@ namespace PNE_core.Services
     {
         private readonly IPneDbContext _db;
         private readonly DbSet<StationLavage> _dbSet;
+        private readonly ILogger<StationLavageService> _logger;
 
-        public StationLavageService(IPneDbContext db)
+        public StationLavageService(IPneDbContext db, ILogger<StationLavageService> logger)
         {
             _db = db;
             _dbSet = _db.StationLavages;
+            _logger = logger;
         }
 
         public async Task CreateAsync(StationLavage entity)
         {
-            _dbSet.Add(entity);
-            await _db.SaveChangesAsync();
+            try
+            {
+                _logger.LogInformation($"Service - Création de la station : Id={entity.Id}, Position={entity.PositionString}");
+                _logger.LogInformation($"Service - Plan d'eau associé : {entity.planeau?.IdPlanEau} - {entity.planeau?.Nom}");
+
+                // Ajouter directement l'entité avec sa relation
+                _dbSet.Add(entity);
+                await _db.SaveChangesAsync();
+                _logger.LogInformation("Service - Station créée avec succès");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Service - Erreur lors de la création de la station");
+                throw;
+            }
         }
 
         public async Task DeleteAsync(string id)
@@ -38,17 +54,17 @@ namespace PNE_core.Services
 
         public async Task<List<StationLavage>> GetAllAsync()
         {
-            return await _dbSet.ToListAsync();
+            return await _dbSet.Include(s => s.planeau).ToListAsync();
         }
 
         public async Task<StationLavage?> GetByIdAsync(string id)
         {
-            return await _dbSet.FirstOrDefaultAsync(m => m.Id == id);
+            return await _dbSet.Include(s => s.planeau).FirstOrDefaultAsync(m => m.Id == id);
         }
 
         public async Task<StationLavage?> GetForDetailAsync(string id)
         {
-            return await _dbSet.FirstOrDefaultAsync(m => m.Id == id);
+            return await _dbSet.Include(s => s.planeau).FirstOrDefaultAsync(m => m.Id == id);
         }
 
         public async Task<bool> IsExist(string id)

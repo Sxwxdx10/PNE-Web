@@ -25,8 +25,9 @@ namespace PNE_admin.Controllers
         private readonly IPlanEauService _eauService;
         private readonly ICertificationService _certificationService;
         private readonly IMiseAEauService _miseAEauService;
+        private readonly IStationLavageService _stationLavageService;
 
-        public GerantController(IFirebaseAuthService authService, IUtilisateurService userService, IRoleService roleService, IPlanEauService eauService, ICertificationService certificationService, IMiseAEauService miseAEauService)
+        public GerantController(IFirebaseAuthService authService, IUtilisateurService userService, IRoleService roleService, IPlanEauService eauService, ICertificationService certificationService, IMiseAEauService miseAEauService, IStationLavageService stationLavageService)
         {
             _authService = authService;
             _userServices = userService;
@@ -34,6 +35,7 @@ namespace PNE_admin.Controllers
             _certificationService = certificationService;
             _miseAEauService = miseAEauService;
             _roleService = roleService;
+            _stationLavageService = stationLavageService;
         }
 
         /// <summary>
@@ -88,11 +90,19 @@ namespace PNE_admin.Controllers
             var serialisedUser = HttpContext.Session.GetString("currentUser")!;
             Utilisateur utilisateur = JsonConvert.DeserializeObject<Utilisateur>(serialisedUser)!;
 
-            await _userServices.LinkUserPlanEau(utilisateur.Id, "213");
             try
             {
-
                 var plansDeau = await _userServices.GetUserPlanEau(utilisateur.Id, true);
+                ViewBag.PlanEaux = plansDeau;
+
+                // Récupérer les stations de lavage pour chaque plan d'eau
+                var stations = new List<PNE_core.Models.StationLavage>();
+                foreach (var planEau in plansDeau)
+                {
+                    var stationsDuPlan = await _stationLavageService.GetAllAsync();
+                    stations.AddRange(stationsDuPlan.Where(s => s.planeau?.IdPlanEau == planEau.IdPlanEau));
+                }
+                ViewBag.Stations = stations;
 
                 //si plansDeau a eu un plan d'eau, alors on retourne un point vers celui-ci
                 ViewData["Title"] = "Mon plan d'eau";
@@ -107,7 +117,6 @@ namespace PNE_admin.Controllers
                     Emplacement = new NetTopologySuite.Geometries.Point(new NetTopologySuite.Geometries.Coordinate(48.587, -72.04))
                 }); 
             }
-
         }
         
          public async Task<IActionResult> MiseAEau()

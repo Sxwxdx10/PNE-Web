@@ -30,9 +30,10 @@ namespace PNE_admin.Controllers
         /// <summary>
         /// inscription de gerants de plans d'eau.
         /// </summary>
-        public IActionResult InscriptionGerant()
+        public async Task<IActionResult> InscriptionGerant()
         {
             ViewData["Title"] = "Inscription";
+            ViewBag.PlanEaux = await _eauService.GetAllAsync();
             return View();
         }
 
@@ -41,19 +42,21 @@ namespace PNE_admin.Controllers
         /// </summary>
         /// <param name="user">utilisateur cree par l'admin</param>
         [HttpPost]
-        public async Task<IActionResult> InscriptionGerant(SignUpUserDTO userDTO)
+        public async Task<IActionResult> InscriptionGerant(SignUpUserDTO userDTO, List<string> SelectedPlanEaux)
         {
             if (!ModelState.IsValid)
             {
+                ViewBag.PlanEaux = await _eauService.GetAllAsync();
                 return View();
             }
 
-            //ajout du gerant dans firebase, get back le uid
+            //ajout du user dans firebase, get back le uid
             UserBaseInfo? uInfo = await _authService.SignUp(userDTO.Email, userDTO.Password, userDTO.Username);
             if (uInfo is not null)
             {
                 //cree le user dans la bd avec le uid de firebase
-                Utilisateur user = new() {
+                Utilisateur user = new()
+                {
                     Id = uInfo.Uid,
                     Email = uInfo.Email!,
                     DisplayName = uInfo.Name
@@ -63,10 +66,17 @@ namespace PNE_admin.Controllers
                 //assigner le role "gerant" au user
                 await _roleService.AddUserRole(uInfo.Uid, "gerant");
 
-                return RedirectToAction("Index","AccueilAdmin");
+                // Lier l'utilisateur aux plans d'eau sélectionnés
+                foreach (var planEauId in SelectedPlanEaux)
+                {
+                    await _userServices.LinkUserPlanEau(uInfo.Uid, planEauId);
+                }
+
+                return RedirectToAction("Index", "AccueilAdmin");
             }
 
-            return BadRequest();
+            ViewBag.PlanEaux = await _eauService.GetAllAsync();
+            return View();
         }
 
         /// <summary>

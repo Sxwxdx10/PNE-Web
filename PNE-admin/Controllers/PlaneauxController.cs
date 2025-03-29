@@ -27,9 +27,27 @@ namespace PNE_admin.Controllers
         }
 
         // GET: Planeaux
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder = "alphabetique")
         {
-            return View(await _eauService.GetAllAsync());
+            var planeaux = await _eauService.GetAllAsync();
+            
+            switch (sortOrder)
+            {
+                case "alphabetique":
+                    planeaux = planeaux.OrderBy(p => p.Nom).ToList();
+                    break;
+                case "recent":
+                    // Pour le moment, on utilise l'ID comme proxy pour la date de création
+                    // car il n'y a pas de champ de date dans le modèle
+                    planeaux = planeaux.OrderByDescending(p => p.IdPlanEau).ToList();
+                    break;
+                default:
+                    planeaux = planeaux.OrderBy(p => p.Nom).ToList();
+                    break;
+            }
+
+            ViewBag.CurrentSort = sortOrder;
+            return View(planeaux);
         }
 
         // GET: Planeaux/Details/5
