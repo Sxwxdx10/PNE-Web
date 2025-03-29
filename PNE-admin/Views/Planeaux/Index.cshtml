@@ -1,42 +1,48 @@
 ﻿@model IEnumerable<PNE_core.Models.Planeau>
-
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Gestion des Plans d'Eau";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nom)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NiveauCouleur)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nom)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NiveauCouleur)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdPlanEau">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdPlanEau">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdPlanEau">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="card border-0 shadow-sm mb-4">
+    <div class="card-header bg-light">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="mb-0">Liste des Plans d'Eau</h2>
+            <a asp-action="Create" class="btn btn-outline-secondary text-purple" style="border-color: #6f42c1; color: #6f42c1;">
+                <i class="bi bi-plus-circle"></i> ➕ Ajouter Plan d'Eau
+            </a>
+        </div>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped table-hover table-bordered shadow-sm rounded bg-white text-dark">
+            <thead class="bg-light">
+                <tr>
+                    <th>Nom</th>
+                    <th>Niveau de Couleur</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Nom)</td>
+                        <td>
+                            <span class="badge bg-info text-dark">@Html.DisplayFor(modelItem => item.NiveauCouleur)</span>
+                        </td>
+                        <td class="text-center">
+                            <a asp-action="Edit" asp-route-id="@item.IdPlanEau" class="btn btn-outline-warning btn-sm me-1">
+                                <i class="bi bi-pencil-square"></i> Modifier
+                            </a>
+                            <a asp-action="Details" asp-route-id="@item.IdPlanEau" class="btn btn-outline-info btn-sm me-1">
+                                <i class="bi bi-eye"></i> Détails
+                            </a>
+                            <a asp-action="Delete" asp-route-id="@item.IdPlanEau" class="btn btn-outline-danger btn-sm" onclick="return confirm('Êtes-vous sûr ?');">
+                                <i class="bi bi-trash"></i> Supprimer
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

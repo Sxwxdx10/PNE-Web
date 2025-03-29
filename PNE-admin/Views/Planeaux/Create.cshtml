@@ -2,7 +2,7 @@
 @using PNE_core.Enums
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Ajouter un Plan d'Eau";
     Layout = "~/Views/Shared/_Layout.cshtml";
 
     var niveauItems = new List<SelectListItem>
@@ -14,46 +14,46 @@
     };
 }
 
-<h1>Create</h1>
-
-<h4>Planeau</h4>
-<hr />
-<div class="row">
-    <div class="col-md-6">
+<div class="card border-0 shadow-sm mb-4">
+    <div class="card-header bg-light">
+        <h2 class="mb-0">Ajouter un Plan d'Eau</h2>
+    </div>
+    <div class="card-body">
         <form asp-action="Create" id="createForm">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group mb-3">
-                <label asp-for="Nom" class="control-label"></label>
-                <input asp-for="Nom" class="form-control" />
-                <span asp-validation-for="Nom" class="text-danger"></span>
+                <label asp-for="Nom" class="form-label">Nom</label>
+                <input asp-for="Nom" class="form-control" placeholder="Entrez le nom du plan d'eau" />
+                <span asp-validation-for="Nom" class="text-danger small"></span>
             </div>
             <div class="form-group mb-3">
-                <label asp-for="NiveauCouleur" class="control-label"></label>
+                <label asp-for="NiveauCouleur" class="form-label">Niveau de Couleur</label>
                 <select asp-for="NiveauCouleur" class="form-control" asp-items="niveauItems">
                 </select>
-                <span asp-validation-for="NiveauCouleur" class="text-danger"></span>
+                <span asp-validation-for="NiveauCouleur" class="text-danger small"></span>
             </div>
             <div class="form-group mb-3">
-                <label class="control-label">Emplacement <span class="text-danger">*</span></label>
-                <div id="map" style="height: 400px;"></div>
+                <label class="form-label">Emplacement <span class="text-danger">*</span></label>
+                <div id="map" style="height: 400px; border-radius: 8px;"></div>
                 <input type="hidden" asp-for="Latitude" id="latitude" />
                 <input type="hidden" asp-for="Longitude" id="longitude" />
-                <div id="coordinates" class="mt-2 text-muted"></div>
-                <span id="locationError" class="text-danger"></span>
+                <div id="coordinates" class="mt-2 text-muted small"></div>
+                <span id="locationError" class="text-danger small"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <div class="d-flex justify-content-between align-items-center">
+                <a asp-action="Index" class="btn btn-outline-secondary">
+                    ← Retour à la liste
+                </a>
+                <input type="submit" value="Créer" class="btn" style="background-color: #3F796A; color: white;" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
@@ -83,9 +83,9 @@
             document.getElementById('longitude').value = e.latlng.lng;
 
             // Afficher les coordonnées
-            document.getElementById('coordinates').textContent = 
+            document.getElementById('coordinates').textContent =
                 `Coordonnées sélectionnées : ${e.latlng.lat.toFixed(6)}, ${e.latlng.lng.toFixed(6)}`;
-            
+
             // Effacer le message d'erreur
             document.getElementById('locationError').textContent = '';
         });
