@@ -24,16 +24,3 @@ C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-core\obj\Debug\net8.0\PNE-co
 C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-core\obj\Debug\net8.0\refint\PNE-core.dll
 C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-core\obj\Debug\net8.0\PNE-core.pdb
 C:\Users\Franck\Downloads\pne-ete2024-final\src\PNE-core\obj\Debug\net8.0\ref\PNE-core.dll
-C:\Users\yofra\OneDrive\Documents\Cours\Projet\pne-webapp\pne-database\PNE-core\bin\Debug\net8.0\PNE-core.deps.json
-C:\Users\yofra\OneDrive\Documents\Cours\Projet\pne-webapp\pne-database\PNE-core\bin\Debug\net8.0\PNE-core.dll
-C:\Users\yofra\OneDrive\Documents\Cours\Projet\pne-webapp\pne-database\PNE-core\bin\Debug\net8.0\PNE-core.pdb
-C:\Users\yofra\OneDrive\Documents\Cours\Projet\pne-webapp\pne-database\PNE-core\obj\Debug\net8.0\PNE-core.csproj.AssemblyReference.cache
-C:\Users\yofra\OneDrive\Documents\Cours\Projet\pne-webapp\pne-database\PNE-core\obj\Debug\net8.0\PNE-core.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\yofra\OneDrive\Documents\Cours\Projet\pne-webapp\pne-database\PNE-core\obj\Debug\net8.0\PNE-core.AssemblyInfoInputs.cache
-C:\Users\yofra\OneDrive\Documents\Cours\Projet\pne-webapp\pne-database\PNE-core\obj\Debug\net8.0\PNE-core.AssemblyInfo.cs
-C:\Users\yofra\OneDrive\Documents\Cours\Projet\pne-webapp\pne-database\PNE-core\obj\Debug\net8.0\PNE-core.csproj.CoreCompileInputs.cache
-C:\Users\yofra\OneDrive\Documents\Cours\Projet\pne-webapp\pne-database\PNE-core\obj\Debug\net8.0\EFCoreNpgsqlNetTopologySuite.cs
-C:\Users\yofra\OneDrive\Documents\Cours\Projet\pne-webapp\pne-database\PNE-core\obj\Debug\net8.0\PNE-core.dll
-C:\Users\yofra\OneDrive\Documents\Cours\Projet\pne-webapp\pne-database\PNE-core\obj\Debug\net8.0\refint\PNE-core.dll
-C:\Users\yofra\OneDrive\Documents\Cours\Projet\pne-webapp\pne-database\PNE-core\obj\Debug\net8.0\PNE-core.pdb
-C:\Users\yofra\OneDrive\Documents\Cours\Projet\pne-webapp\pne-database\PNE-core\obj\Debug\net8.0\ref\PNE-core.dll

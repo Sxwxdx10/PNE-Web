@@ -48,9 +48,9 @@ namespace PNE_core.Models
 
         public Planeau? planeau { get; set; }
 
-        public bool? PeutDecontaminer { get; set; }
-        public bool? HautePression { get; set; }
-        public bool? BassePressionetAttaches { get; set; }
-        public bool? EauChaude { get; set; }
+        public bool PeutDecontaminer { get; set; } = false;
+        public bool HautePression { get; set; } = false;
+        public bool BassePressionetAttaches { get; set; } = false;
+        public bool EauChaude { get; set; } = false;
     }
 }
