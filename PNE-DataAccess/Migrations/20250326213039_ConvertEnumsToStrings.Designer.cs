@@ -2,7 +2,9 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using NetTopologySuite.Geometries;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PNE_DataAccess;
 
@@ -11,9 +13,11 @@ using PNE_DataAccess;
 namespace PNE_DataAccess.Migrations
 {
     [DbContext(typeof(ScaffoldMigrationContext))]
-    partial class ScaffoldMigrationContextModelSnapshot : ModelSnapshot
+    [Migration("20250326213039_ConvertEnumsToStrings")]
+    partial class ConvertEnumsToStrings
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -315,9 +319,8 @@ namespace PNE_DataAccess.Migrations
                         .HasColumnType("character varying(10)")
                         .HasColumnName("id_plan_eau");
 
-                    b.Property<string>("EmplacementString")
-                        .IsRequired()
-                        .HasColumnType("character varying")
+                    b.Property<Point>("Emplacement")
+                        .HasColumnType("geometry(Point)")
                         .HasColumnName("emplacement");
 
                     b.Property<string>("NiveauCouleur")
@@ -441,10 +444,9 @@ namespace PNE_DataAccess.Migrations
                     b.Property<bool?>("PeutDecontaminer")
                         .HasColumnType("boolean");
 
-                    b.Property<string>("PositionString")
-                        .IsRequired()
-                        .HasColumnType("character varying")
-                        .HasColumnName("Position");
+                    b.Property<Point>("Position")
+                        .HasColumnType("geometry(Point)")
+                        .HasColumnName("position");
 
                     b.Property<string>("StationPersonnelStatus")
                         .IsRequired()

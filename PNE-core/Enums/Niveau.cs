@@ -10,11 +10,11 @@ namespace PNE_core.Enums
     public enum Niveau
     {
         [Description("vert")]
-        Vert,
+        Vert = 0,
         [Description("jaune")]
-        Jaune,
+        Jaune = 1,
         [Description("rouge")]
-        Rouge
+        Rouge = 2
     }
 
 }

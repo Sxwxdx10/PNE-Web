@@ -142,7 +142,7 @@ namespace PNE_admin.Controllers
             miseAEau.IdPlanEau = IdPlanEau;
             miseAEau.IdMiseEau = Guid.NewGuid().ToString();
             miseAEau.Date = DateTime.Now;
-            miseAEau.DureeEnJours = dureeEnJours;
+            miseAEau.DureeSejourEnJours = dureeEnJours;
             if (miseAEau != null)
             {
                 try

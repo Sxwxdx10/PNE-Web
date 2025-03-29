@@ -1,8 +1,17 @@
 ﻿@model PNE_core.Models.Planeau
+@using PNE_core.Enums
 
 @{
     ViewData["Title"] = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var niveauItems = new List<SelectListItem>
+    {
+        new SelectListItem { Text = "-- Sélectionner un niveau --", Value = "" },
+        new SelectListItem { Text = "Vert", Value = "vert" },
+        new SelectListItem { Text = "Jaune", Value = "jaune" },
+        new SelectListItem { Text = "Rouge", Value = "rouge" }
+    };
 }
 
 <h1>Edit</h1>
@@ -10,14 +19,24 @@
 <h4>Planeau</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
+    <div class="col-md-6">
+        <form asp-action="Edit" id="editForm">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="IdPlanEau" />
-            <div class="form-group">
+            <div class="form-group mb-3">
                 <label asp-for="Nom" class="control-label"></label>
                 <input asp-for="Nom" class="form-control" />
                 <span asp-validation-for="Nom" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="NiveauCouleur" class="control-label"></label>
+                <select asp-for="NiveauCouleur" class="form-control" asp-items="niveauItems">
+                </select>
+                <span asp-validation-for="NiveauCouleur" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label class="control-label">Emplacement</label>
+                <div id="map" style="height: 400px;"></div>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -32,4 +51,34 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Initialiser la carte avec les coordonnées existantes ou par défaut
+        @{
+            var lat = Model.Emplacement?.Y ?? 45.4;
+            var lng = Model.Emplacement?.X ?? -71.9;
+        }
+        var lat = @lat;
+        var lng = @lng;
+
+        // Initialiser la carte
+        var map = L.map('map', {
+            dragging: false,    // Désactiver le déplacement de la carte
+            touchZoom: false,   // Désactiver le zoom tactile
+            scrollWheelZoom: false, // Désactiver le zoom avec la molette
+            doubleClickZoom: false, // Désactiver le zoom double-clic
+            boxZoom: false,     // Désactiver le zoom avec boîte
+            keyboard: false,    // Désactiver les contrôles clavier
+            zoomControl: false  // Masquer les boutons de zoom
+        }).setView([lat, lng], 13);
+
+        // Ajouter la couche OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Ajouter le marqueur
+        L.marker([lat, lng]).addTo(map);
+    </script>
 }

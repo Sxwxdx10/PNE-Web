@@ -67,7 +67,7 @@ namespace PNE_core.Services
             if (existingMiseAEau != null)
             {
                 existingMiseAEau.Date = entity.Date;
-                existingMiseAEau.DureeEnJours = entity.DureeEnJours;  // ✅ Update DureeEnJours
+                existingMiseAEau.DureeSejourEnJours = entity.DureeSejourEnJours;  // ✅ Update DureeEnJours
                 existingMiseAEau.IdPlanEau = entity.IdPlanEau;
                 existingMiseAEau.IdEmbarcation = entity.IdEmbarcation;
 

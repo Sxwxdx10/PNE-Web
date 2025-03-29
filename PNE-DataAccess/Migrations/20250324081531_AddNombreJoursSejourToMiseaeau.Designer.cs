@@ -2,7 +2,9 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using NetTopologySuite.Geometries;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PNE_DataAccess;
 
@@ -11,9 +13,11 @@ using PNE_DataAccess;
 namespace PNE_DataAccess.Migrations
 {
     [DbContext(typeof(ScaffoldMigrationContext))]
-    partial class ScaffoldMigrationContextModelSnapshot : ModelSnapshot
+    [Migration("20250324081531_AddNombreJoursSejourToMiseaeau")]
+    partial class AddNombreJoursSejourToMiseaeau
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -229,9 +233,8 @@ namespace PNE_DataAccess.Migrations
                         .HasColumnType("boolean")
                         .HasColumnName("self_serve");
 
-                    b.Property<string>("TypeLavage")
-                        .IsRequired()
-                        .HasColumnType("character varying")
+                    b.Property<int>("TypeLavage")
+                        .HasColumnType("type_lavage")
                         .HasColumnName("type_lavage");
 
                     b.HasKey("IdLavage")
@@ -252,7 +255,7 @@ namespace PNE_DataAccess.Migrations
                         .HasColumnType("timestamp without time zone")
                         .HasColumnName("date");
 
-                    b.Property<int?>("DureeSejourEnJours")
+                    b.Property<int?>("DureeEnJours")
                         .HasColumnType("integer")
                         .HasColumnName("duree_en_jours");
 
@@ -315,13 +318,12 @@ namespace PNE_DataAccess.Migrations
                         .HasColumnType("character varying(10)")
                         .HasColumnName("id_plan_eau");
 
-                    b.Property<string>("EmplacementString")
-                        .IsRequired()
-                        .HasColumnType("character varying")
+                    b.Property<Point>("Emplacement")
+                        .HasColumnType("geometry(Point)")
                         .HasColumnName("emplacement");
 
-                    b.Property<string>("NiveauCouleur")
-                        .HasColumnType("character varying")
+                    b.Property<int?>("NiveauCouleur")
+                        .HasColumnType("niveau")
                         .HasColumnName("niveau_couleur");
 
                     b.Property<string>("Nom")
@@ -441,14 +443,12 @@ namespace PNE_DataAccess.Migrations
                     b.Property<bool?>("PeutDecontaminer")
                         .HasColumnType("boolean");
 
-                    b.Property<string>("PositionString")
-                        .IsRequired()
-                        .HasColumnType("character varying")
-                        .HasColumnName("Position");
+                    b.Property<Point>("Position")
+                        .HasColumnType("geometry(Point)")
+                        .HasColumnName("position");
 
-                    b.Property<string>("StationPersonnelStatus")
-                        .IsRequired()
-                        .HasColumnType("character varying")
+                    b.Property<int>("StationPersonnelStatus")
+                        .HasColumnType("station_personnel_status")
                         .HasColumnName("station_personnel_status");
 
                     b.Property<string>("planeauIdPlanEau")
