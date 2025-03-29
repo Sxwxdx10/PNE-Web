@@ -1,37 +1,59 @@
 ﻿@model PNE_core.DTO.SignUpUserDTO
 
-<div class="text-center">
-    <h1 class="display-4">Inscription d'un employer</h1>
+<div class="text-center mb-4">
+    <h1 class="display-5 fw-bold">Inscription d'un employé</h1>
+    <p class="text-muted">Veuillez remplir les informations ci-dessous pour inscrire un employé.</p>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="InscriptionEmployes">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group mb-2">
-                <label asp-for="@Model.Username" class="control-label"></label>
-                <input asp-for="@Model.Username" class="form-control" type="text" />
-                <span asp-validation-for="@Model.Username" class="text-danger"></span>
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-lg p-4">
+            <div class="card-body">
+                <form asp-action="InscriptionEmployes">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                    <div class="mb-3">
+                        <label asp-for="@Model.Username" class="form-label fw-bold">Nom d'utilisateur</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-person"></i></span>
+                            <input asp-for="@Model.Username" class="form-control" type="text" placeholder="Nom d'utilisateur" />
+                        </div>
+                        <span asp-validation-for="@Model.Username" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="@Model.Email" class="form-label fw-bold">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                            <input asp-for="@Model.Email" class="form-control" type="email" placeholder="Email" />
+                        </div>
+                        <span asp-validation-for="@Model.Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="@Model.Password" class="form-label fw-bold">Mot de passe</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                            <input asp-for="@Model.Password" class="form-control" type="password" placeholder="Mot de passe" />
+                        </div>
+                        <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="@Model.ConfirmPassword" class="form-label fw-bold">Confirmer le mot de passe</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                            <input asp-for="@Model.ConfirmPassword" class="form-control" type="password" placeholder="Confirmer votre mot de passe" />
+                        </div>
+                        <span asp-validation-for="@Model.ConfirmPassword" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg"><i class="bi bi-person-plus"></i> Inscrire</button>
+                    </div>
+                </form>
             </div>
-            <div class="form-group mb-2">
-                <label asp-for="@Model.Email" class="control-label"></label>
-                <input asp-for="@Model.Email" class="form-control" type="email" />
-                <span asp-validation-for="@Model.Email" class="text-danger"></span>
-            </div>
-            <div class="form-group mb-2">
-                <label asp-for="@Model.Password" class="control-label"></label>
-                <input asp-for="@Model.Password" class="form-control" type="password" />
-                <span asp-validation-for="@Model.Password" class="text-danger"></span>
-            </div>
-            <div class="form-group mb-2">
-                <label asp-for="@Model.ConfirmPassword" class="control-label"></label>
-                <input asp-for="@Model.ConfirmPassword" class="form-control" type="password" />
-                <span asp-validation-for="@Model.ConfirmPassword" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Inscrire" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
