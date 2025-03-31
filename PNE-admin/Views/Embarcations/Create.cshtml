@@ -5,56 +5,55 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container">
-    <h2 class="mb-4">➕ Ajouter une nouvelle embarcation</h2>
+<div class="card border-0 shadow-sm mb-4">
+    <div class="card-header bg-light">
+        <h2 class="mb-0">Ajouter une embarcation</h2>
+    </div>
+    <div class="card-body">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
-    <div class="row">
-        <div class="col-md-6">
-            <form asp-action="Create" class="shadow-sm p-4 rounded bg-light">
-                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+            <div class="form-group mb-3">
+                <label asp-for="IdEmbarcation" class="form-label">ID Embarcation</label>
+                <input asp-for="IdEmbarcation" class="form-control" placeholder="Entrez l'ID de l'embarcation" />
+                <span asp-validation-for="IdEmbarcation" class="text-danger small"></span>
+            </div>
 
-                <div class="form-group mb-3">
-                    <label asp-for="IdEmbarcation" class="form-label fw-semibold">ID Embarcation</label>
-                    <input asp-for="IdEmbarcation" class="form-control" placeholder="Ex : 101" />
-                    <span asp-validation-for="IdEmbarcation" class="text-danger small"></span>
-                </div>
+            <div class="form-group mb-3">
+                <label asp-for="Description" class="form-label">Description</label>
+                <input asp-for="Description" class="form-control" placeholder="Entrez la description" />
+                <span asp-validation-for="Description" class="text-danger small"></span>
+            </div>
 
-                <div class="form-group mb-3">
-                    <label asp-for="Description" class="form-label fw-semibold">Description</label>
-                    <input asp-for="Description" class="form-control" placeholder="Ex : Bateau de pêche rapide" />
-                    <span asp-validation-for="Description" class="text-danger small"></span>
-                </div>
+            <div class="form-group mb-3">
+                <label asp-for="Marque" class="form-label">Marque</label>
+                <input asp-for="Marque" class="form-control" placeholder="Entrez la marque" />
+                <span asp-validation-for="Marque" class="text-danger small"></span>
+            </div>
 
-                <div class="form-group mb-3">
-                    <label asp-for="Marque" class="form-label fw-semibold">Marque</label>
-                    <input asp-for="Marque" class="form-control" placeholder="Ex : Yamaha" />
-                    <span asp-validation-for="Marque" class="text-danger small"></span>
-                </div>
+            <div class="form-group mb-3">
+                <label asp-for="Longueur" class="form-label">Longueur (mètres)</label>
+                <input asp-for="Longueur" class="form-control" type="number" step="0.1" placeholder="Entrez la longueur" />
+                <span asp-validation-for="Longueur" class="text-danger small"></span>
+            </div>
 
-                <div class="form-group mb-3">
-                    <label asp-for="Longueur" class="form-label fw-semibold">Longueur (en mètres)</label>
-                    <input asp-for="Longueur" class="form-control" type="number" step="0.1" placeholder="Ex : 5.5" />
-                    <span asp-validation-for="Longueur" class="text-danger small"></span>
-                </div>
+            <div class="form-group mb-3">
+                <label asp-for="Photo" class="form-label">URL de la photo</label>
+                <input asp-for="Photo" class="form-control" placeholder="Entrez l'URL de la photo" />
+                <span asp-validation-for="Photo" class="text-danger small"></span>
+            </div>
 
-                <div class="form-group mb-3">
-                    <label asp-for="Photo" class="form-label fw-semibold">URL de la photo</label>
-                    <input asp-for="Photo" class="form-control" placeholder="Ex : http://image.com/bateau.jpg" />
-                    <span asp-validation-for="Photo" class="text-danger small"></span>
-                </div>
+            <div class="form-group mb-5">
+                <label asp-for="codeQR" class="form-label">Code QR</label>
+                <input asp-for="codeQR" class="form-control" placeholder="Entrez le code QR" />
+                <span asp-validation-for="codeQR" class="text-danger small"></span>
+            </div>
 
-                <div class="form-group mb-4">
-                    <label asp-for="codeQR" class="form-label fw-semibold">Code QR (texte)</label>
-                    <input asp-for="codeQR" class="form-control" placeholder="Ex : QR123456789" />
-                    <span asp-validation-for="codeQR" class="text-danger small"></span>
-                </div>
-
-                <div class="d-flex justify-content-between">
-                    <a asp-action="Index" class="btn btn-outline-secondary">⬅ Retour à la liste</a>
-                    <input type="submit" value="Enregistrer" class="btn btn-primary px-4" />
-                </div>
-            </form>
-        </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <a asp-action="Index" class="btn btn-outline-secondary">Retour à la liste</a>
+                <input type="submit" value="Créer" class="btn btn-primary" />
+            </div>
+        </form>
     </div>
 </div>
 
