@@ -290,7 +290,27 @@ public partial class PneContext : DbContext, IPneDbContext
 
         modelBuilder.Entity<EEE>(entity =>
         {
+            entity.ToTable("EEEEs");
+            
+            entity.Property(e => e.Id)
+                .HasColumnType("text");
+            entity.Property(e => e.Name)
+                .HasColumnType("text")
+                .IsRequired();
+            entity.Property(e => e.Description)
+                .HasColumnType("text")
+                .IsRequired();
+            entity.Property(e => e.NiveauCouleur)
+                .HasColumnType("integer");
+            entity.Property(e => e.IdSignaleur)
+                .HasColumnType("text")
+                .IsRequired();
 
+            entity.HasOne(e => e.Signaleur)
+                .WithMany()
+                .HasForeignKey(e => e.IdSignaleur)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_EEE_IdSignaleur");
         });
 
         #endregion
@@ -343,14 +363,32 @@ public partial class PneContext : DbContext, IPneDbContext
                 .HasForeignKey(d => d.IdPlaneau).HasConstraintName("FK_EmployePlaneau_IdPlaneau");
         });
 
-        modelBuilder.Entity<EEEPlanEau>(entity => 
+        modelBuilder.Entity<EEEPlanEau>(entity =>
         {
+            entity.ToTable("EEEPlanEau");
+            
+            entity.HasKey(e => new { e.IdEEE, e.IdPlanEau });
+
+            entity.Property(e => e.IdEEE)
+                .HasColumnType("text")
+                .IsRequired();
+            entity.Property(e => e.IdPlanEau)
+                .HasColumnType("character varying(10)")
+                .IsRequired();
+            entity.Property(e => e.Validated)
+                .HasColumnType("boolean");
+
             entity.HasOne(d => d.EEE)
                 .WithMany(p => p.EEEPlanEau)
-                .HasForeignKey(d => d.IdEEE).HasConstraintName("FK_EEEPlanEau_IdEEE");
+                .HasForeignKey(d => d.IdEEE)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_EEEPlanEau_IdEEE");
+
             entity.HasOne(d => d.PlanEauNavigation)
                 .WithMany(p => p.EEEPlanEau)
-                .HasForeignKey(d => d.IdPlanEau).HasConstraintName("FK_EEEPlanEau_IdPlanEau");
+                .HasForeignKey(d => d.IdPlanEau)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_EEEPlanEau_IdPlanEau");
         });
 
         #endregion

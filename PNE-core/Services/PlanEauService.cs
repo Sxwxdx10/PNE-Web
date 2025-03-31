@@ -54,7 +54,10 @@ namespace PNE_core.Services
 
         public async Task<Planeau?> GetByIdAsync(string id)
         {
-            return await _dbSet.FirstOrDefaultAsync(m => m.IdPlanEau == id);
+            return await _dbSet
+                .Include(p => p.EEEPlanEau)
+                    .ThenInclude(e => e.EEE)
+                .FirstOrDefaultAsync(m => m.IdPlanEau == id);
         }
 
         public async Task<Planeau?> GetForDetailAsync(string id)

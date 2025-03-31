@@ -20,6 +20,11 @@ namespace PNE_core.Models
 
         public Niveau NiveauCouleur { get; set; }
 
+        public string IdSignaleur { get; set; }
+
+        [ForeignKey("IdSignaleur")]
+        public virtual Utilisateur Signaleur { get; set; }
+
         [InverseProperty("EEE")]
         public virtual ICollection<EEEPlanEau> EEEPlanEau { get; set; }
     }

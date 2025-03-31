@@ -1,4 +1,110 @@
-﻿
-<div class="text-center">
-    <h1 class="display-4">page pour signaler une EEE dans son plan d'eau</h1>
+﻿@model PNE_core.Models.Planeau
+
+<div class="container mt-4">
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="display-4 text-center mb-4">Gestion des Espèces Exotiques Envahissantes</h1>
+            <h2 class="h4 mb-3">Plan d'eau : @Model.Nom</h2>
+        </div>
+    </div>
+
+    <!-- Formulaire de signalement -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3 class="h5 mb-0">Signaler une nouvelle EEE</h3>
+        </div>
+        <div class="card-body">
+            <form asp-action="SignalerEEE" method="post">
+                <input type="hidden" name="IdPlanEau" value="@Model.IdPlanEau" />
+                <div class="mb-3">
+                    <label for="Name" class="form-label">Nom de l'EEE</label>
+                    <input type="text" class="form-control" id="Name" name="Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="Description" class="form-label">Description</label>
+                    <textarea class="form-control" id="Description" name="Description" rows="3" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="NiveauCouleur" class="form-label">Niveau de risque</label>
+                    <select class="form-select" id="NiveauCouleur" name="NiveauCouleur" required>
+                        <option value="">Choisir un niveau...</option>
+                        <option value="0">Vert</option>
+                        <option value="1">Jaune</option>
+                        <option value="2">Rouge</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Signaler l'EEE</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Liste des EEE signalées -->
+    <div class="card">
+        <div class="card-header">
+            <h3 class="h5 mb-0">EEE signalées dans ce plan d'eau</h3>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nom de l'EEE</th>
+                            <th>Description</th>
+                            <th>Niveau de risque</th>
+                            <th>Statut</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var eeePlanEau in Model.EEEPlanEau)
+                        {
+                            <tr>
+                                <td>@eeePlanEau.EEE.Name</td>
+                                <td>@eeePlanEau.EEE.Description</td>
+                                <td>
+                                    @switch (eeePlanEau.EEE.NiveauCouleur)
+                                    {
+                                        case PNE_core.Enums.Niveau.Vert:
+                                            <span class="badge bg-success">Vert</span>
+                                            break;
+                                        case PNE_core.Enums.Niveau.Jaune:
+                                            <span class="badge bg-warning">Jaune</span>
+                                            break;
+                                        case PNE_core.Enums.Niveau.Rouge:
+                                            <span class="badge bg-danger">Rouge</span>
+                                            break;
+                                    }
+                                </td>
+                                <td>
+                                    @if (eeePlanEau.Validated)
+                                    {
+                                        <span class="badge bg-success">Validé</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-warning">En attente</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>

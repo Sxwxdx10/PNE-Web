@@ -5,6 +5,7 @@ using PNE_admin.Annotations;
 using PNE_core.DTO;
 using PNE_core.Models;
 using PNE_core.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace PNE_admin.Controllers
 {
@@ -16,15 +17,20 @@ namespace PNE_admin.Controllers
         private readonly IRoleService _roleService;
         private readonly IPlanEauService _eauService;
         private readonly ICertificationService _certificationService;
+        private readonly IPneDbContext _db;
+        private readonly IEEEService _eeeService;
 
         public AdminController(IFirebaseAuthService authService, IUtilisateurService userService, 
-            IPlanEauService eauService, ICertificationService certificationService, IRoleService roleService)
+            IPlanEauService eauService, ICertificationService certificationService, IRoleService roleService,
+            IPneDbContext db, IEEEService eeeService)
         {
             _authService = authService;
             _userServices = userService;
             _eauService = eauService;
             _certificationService = certificationService;
             _roleService = roleService;
+            _db = db;
+            _eeeService = eeeService;
         }
 
         /// <summary>
@@ -87,7 +93,43 @@ namespace PNE_admin.Controllers
         public async Task<IActionResult> ConfirmationEEE()
         {
             ViewData["Title"] = "Confirmation EEEs";
-            return View();
+            var eeePlanEaux = await _db.EEEPlanEaus
+                .Include(e => e.EEE)
+                    .ThenInclude(e => e.Signaleur)
+                .Include(e => e.PlanEauNavigation)
+                .OrderByDescending(e => !e.Validated)
+                .ToListAsync();
+            return View(eeePlanEaux);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ConfirmerEEE(string IdEEE, string IdPlanEau)
+        {
+            try
+            {
+                await _eeeService.ConfirmerEEE(IdEEE, IdPlanEau);
+                TempData["SuccessMessage"] = "EEE confirmée avec succès.";
+            }
+            catch (InvalidOperationException ex)
+            {
+                TempData["ErrorMessage"] = ex.Message;
+            }
+            return RedirectToAction(nameof(ConfirmationEEE));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RetirerEEE(string IdEEE, string IdPlanEau)
+        {
+            try
+            {
+                await _eeeService.RetirerEEE(IdEEE, IdPlanEau);
+                TempData["SuccessMessage"] = "EEE retirée avec succès.";
+            }
+            catch (InvalidOperationException ex)
+            {
+                TempData["ErrorMessage"] = ex.Message;
+            }
+            return RedirectToAction(nameof(ConfirmationEEE));
         }
 
         /// <summary>
