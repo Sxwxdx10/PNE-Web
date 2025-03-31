@@ -12,9 +12,10 @@ namespace PNE_core.Models
     public class EEEPlanEau
     {
         [Key]
-        public string Id { get; set; }
+        public string Id { get; set; } = null!;
 
         public string IdEEE { get; set; } = null!;
+
         public string IdPlanEau { get; set; } = null!;
 
         public bool Validated { get; set; }

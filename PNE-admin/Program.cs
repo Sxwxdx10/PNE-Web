@@ -63,7 +63,8 @@ npgsqlDataSourceBuilder.UseNetTopologySuite(
     new DotSpatialAffineCoordinateSequenceFactory(Ordinates.XYM));
 var npgsqlSetup = npgsqlDataSourceBuilder.Build();
 
-builder.Services.AddDbContext<IPneDbContext, PneContext>(opt =>
+// Configuration du DbContext avec pooling
+builder.Services.AddDbContextPool<PneContext>(opt =>
     opt.UseNpgsql(
         npgsqlSetup,
         o => {
@@ -71,10 +72,13 @@ builder.Services.AddDbContext<IPneDbContext, PneContext>(opt =>
             o.MigrationsHistoryTable("__EFMigrationsHistory", $"{config["DB_NAME"]}");
             o.UseNetTopologySuite(new DotSpatialAffineCoordinateSequenceFactory(Ordinates.XYM));
         }
-    )
+    ).EnableSensitiveDataLogging()
 );
 
-builder.Services.AddDbContext<NeonContext>(options =>
+// Enregistrement de l'interface avec l'implémentation
+builder.Services.AddScoped<IPneDbContext>(provider => provider.GetService<PneContext>());
+
+builder.Services.AddDbContextPool<NeonContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("NeonConnection")));
 
 builder.Services.AddScoped<EmbarcationNeonService>();
@@ -122,6 +126,7 @@ builder.Services.AddScoped<IStationLavageService, StationLavageService>();
 builder.Services.AddScoped<IPlanEauService, PlanEauService>();
 builder.Services.AddScoped<ICertificationService, CertificationService>();
 builder.Services.AddScoped<IMiseAEauService, MiseAEauService>();
+builder.Services.AddScoped<IEEEService, EEEService>();
 
 var app = builder.Build();
 

@@ -11,6 +11,7 @@ using PNE_core.Enums;
 using PNE_core.DTO;
 using PNE_core.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 namespace PNE_admin.Controllers
 {
@@ -26,8 +27,9 @@ namespace PNE_admin.Controllers
         private readonly ICertificationService _certificationService;
         private readonly IMiseAEauService _miseAEauService;
         private readonly IStationLavageService _stationLavageService;
+        private readonly IEEEService _eeeService;
 
-        public GerantController(IFirebaseAuthService authService, IUtilisateurService userService, IRoleService roleService, IPlanEauService eauService, ICertificationService certificationService, IMiseAEauService miseAEauService, IStationLavageService stationLavageService)
+        public GerantController(IFirebaseAuthService authService, IUtilisateurService userService, IRoleService roleService, IPlanEauService eauService, ICertificationService certificationService, IMiseAEauService miseAEauService, IStationLavageService stationLavageService, IEEEService eeeService)
         {
             _authService = authService;
             _userServices = userService;
@@ -36,6 +38,7 @@ namespace PNE_admin.Controllers
             _miseAEauService = miseAEauService;
             _roleService = roleService;
             _stationLavageService = stationLavageService;
+            _eeeService = eeeService;
         }
 
         /// <summary>
@@ -175,10 +178,67 @@ namespace PNE_admin.Controllers
         /// Page pour signaler a un administrateur de la CREE que son plan d'eau a une EEE
         /// L'EEE sera en attente de confirmation
         /// </summary>
+        [HttpGet]
         public async Task<IActionResult> SignalisationEEE()
         {
-            ViewData["Title"] = "Signaler une EEE";
-            return View();
+            var serialisedUser = HttpContext.Session.GetString("currentUser")!;
+            Utilisateur utilisateur = JsonConvert.DeserializeObject<Utilisateur>(serialisedUser)!;
+
+            try
+            {
+                var plansEau = await _userServices.GetUserPlanEau(utilisateur.Id, true);
+                ViewData["Title"] = "Signaler une EEE";
+                ViewData["PlanEaux"] = new SelectList(plansEau, "IdPlanEau", "Nom");
+                return View("SelectPlanEau");
+            }
+            catch (InvalidOperationException ex)
+            {
+                TempData["ErrorMessage"] = "Vous n'avez pas de plans d'eau assignés";
+                return RedirectToAction("Index", "AccueilAdmin");
+            }
+        }
+
+        [HttpGet]
+        [Route("Gerant/SignalisationEEE/{id}")]
+        public async Task<IActionResult> SignalisationEEEDetail(string id)
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                TempData["ErrorMessage"] = "Veuillez sélectionner un plan d'eau";
+                return RedirectToAction("SignalisationEEE");
+            }
+
+            var serialisedUser = HttpContext.Session.GetString("currentUser")!;
+            Utilisateur utilisateur = JsonConvert.DeserializeObject<Utilisateur>(serialisedUser)!;
+
+            try
+            {
+                var plansEau = await _userServices.GetUserPlanEau(utilisateur.Id, true);
+                var planEau = plansEau.FirstOrDefault(p => p.IdPlanEau == id);
+
+                if (planEau == null)
+                {
+                    TempData["ErrorMessage"] = "Plan d'eau non trouvé ou non autorisé";
+                    return RedirectToAction("SignalisationEEE");
+                }
+
+                // Inclure les EEE associées au plan d'eau avec leurs relations
+                planEau = await _eauService.GetByIdAsync(id);
+                if (planEau == null)
+                {
+                    TempData["ErrorMessage"] = "Plan d'eau non trouvé";
+                    return RedirectToAction("SignalisationEEE");
+                }
+
+                ViewBag.EEEs = await _eeeService.GetAllAsync();
+                ViewData["Title"] = "Signaler une EEE";
+                return View("SignalisationEEE", planEau);
+            }
+            catch (InvalidOperationException ex)
+            {
+                TempData["ErrorMessage"] = "Vous n'avez pas accès à ce plan d'eau";
+                return RedirectToAction("Index", "AccueilAdmin");
+            }
         }
 
         /// <summary>
@@ -200,5 +260,37 @@ namespace PNE_admin.Controllers
             return View("Planeaux/Create");
         }
 
+        [HttpPost]
+        public async Task<IActionResult> SignalerEEE(string Name, string Description, Niveau NiveauCouleur, string IdPlanEau)
+        {
+            try
+            {
+                var serialisedUser = HttpContext.Session.GetString("currentUser")!;
+                Utilisateur utilisateur = JsonConvert.DeserializeObject<Utilisateur>(serialisedUser)!;
+
+                // Créer une nouvelle EEE
+                var eee = new EEE
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Name = Name,
+                    Description = Description,
+                    NiveauCouleur = NiveauCouleur,
+                    IdSignaleur = utilisateur.Id
+                };
+
+                // Sauvegarder l'EEE
+                await _eeeService.CreateAsync(eee);
+
+                // Associer l'EEE au plan d'eau
+                await _eeeService.SignalerEEE(eee.Id, IdPlanEau);
+                TempData["SuccessMessage"] = "EEE créée et signalée avec succès.";
+            }
+            catch (InvalidOperationException ex)
+            {
+                TempData["ErrorMessage"] = ex.Message;
+            }
+
+            return RedirectToAction(nameof(SignalisationEEEDetail), new { id = IdPlanEau });
+        }
     }
 }

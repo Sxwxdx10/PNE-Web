@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PNE_DataAccess;
@@ -11,9 +12,11 @@ using PNE_DataAccess;
 namespace PNE_DataAccess.Migrations
 {
     [DbContext(typeof(ScaffoldMigrationContext))]
-    partial class ScaffoldMigrationContextModelSnapshot : ModelSnapshot
+    [Migration("20250331084324_AddSignaleurToEEE")]
+    partial class AddSignaleurToEEE
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

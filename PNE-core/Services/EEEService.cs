@@ -32,6 +32,7 @@ namespace PNE_core.Services
 
             var signal = new EEEPlanEau()
             {
+                Id = $"{IdEEE}_{IdPlanEau}",
                 IdEEE = IdEEE,
                 IdPlanEau = IdPlanEau,
                 Validated = false

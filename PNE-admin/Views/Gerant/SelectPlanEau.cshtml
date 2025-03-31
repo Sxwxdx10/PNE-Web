@@ -1,0 +1,47 @@
+@{
+    ViewData["Title"] = "Sélection du plan d'eau";
+}
+
+<div class="container mt-4">
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Sélectionnez un plan d'eau</h3>
+                </div>
+                <div class="card-body">
+                    <form method="get" id="planEauForm">
+                        <div class="mb-3">
+                            <label for="planEauSelect" class="form-label">Plan d'eau</label>
+                            <select id="planEauSelect" class="form-select" required onchange="navigateToEEE(this.value)">
+                                <option value="">Choisir un plan d'eau...</option>
+                                @foreach (var item in (SelectList)ViewData["PlanEaux"])
+                                {
+                                    <option value="@item.Value">@item.Text</option>
+                                }
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function navigateToEEE(planEauId) {
+            if (planEauId) {
+                window.location.href = '/Gerant/SignalisationEEE/' + planEauId;
+            }
+        }
+    </script>
+} 

@@ -1,4 +1,98 @@
-﻿
-<div class="text-center">
-    <h1 class="display-4">page pour confirmer les EEE signales par les gerants de plans d'eau</h1>
+﻿@model List<PNE_core.Models.EEEPlanEau>
+
+<div class="container mt-4">
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="display-4 text-center mb-4">Confirmation des EEE signalées</h1>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3 class="h5 mb-0">EEE en attente de confirmation</h3>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Plan d'eau</th>
+                            <th>Nom de l'EEE</th>
+                            <th>Description</th>
+                            <th>Niveau de risque</th>
+                            <th>Statut</th>
+                            <th>Signalé par</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var eeePlanEau in Model)
+                        {
+                            <tr>
+                                <td>@eeePlanEau.PlanEauNavigation.Nom</td>
+                                <td>@eeePlanEau.EEE.Name</td>
+                                <td>@eeePlanEau.EEE.Description</td>
+                                <td>
+                                    @switch (eeePlanEau.EEE.NiveauCouleur)
+                                    {
+                                        case PNE_core.Enums.Niveau.Vert:
+                                            <span class="badge bg-success">Vert</span>
+                                            break;
+                                        case PNE_core.Enums.Niveau.Jaune:
+                                            <span class="badge bg-warning">Jaune</span>
+                                            break;
+                                        case PNE_core.Enums.Niveau.Rouge:
+                                            <span class="badge bg-danger">Rouge</span>
+                                            break;
+                                    }
+                                </td>
+                                <td>
+                                    @if (eeePlanEau.Validated)
+                                    {
+                                        <span class="badge bg-success">Validé</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-warning">En attente</span>
+                                    }
+                                </td>
+                                <td>@eeePlanEau.EEE.Signaleur?.DisplayName</td>
+                                <td>
+                                    @if (!eeePlanEau.Validated)
+                                    {
+                                        <form asp-action="ConfirmerEEE" method="post" class="d-inline">
+                                            <input type="hidden" name="IdEEE" value="@eeePlanEau.IdEEE" />
+                                            <input type="hidden" name="IdPlanEau" value="@eeePlanEau.IdPlanEau" />
+                                            <button type="submit" class="btn btn-success btn-sm">Confirmer</button>
+                                        </form>
+                                    }
+                                    <form asp-action="RetirerEEE" method="post" class="d-inline" onsubmit="return confirm('Êtes-vous sûr de vouloir retirer cette EEE ? Cette action est irréversible.');">
+                                        <input type="hidden" name="IdEEE" value="@eeePlanEau.IdEEE" />
+                                        <input type="hidden" name="IdPlanEau" value="@eeePlanEau.IdPlanEau" />
+                                        <button type="submit" class="btn btn-danger btn-sm">Retirer</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
