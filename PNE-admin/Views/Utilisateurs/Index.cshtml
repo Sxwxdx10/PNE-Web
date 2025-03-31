@@ -7,8 +7,8 @@
 
 <div class="d-flex justify-content-between align-items-center mb-3">
     <h1 class="mb-0">Liste des utilisateurs</h1>
-    <a asp-action="Create" class="btn btn-outline-secondary">
-        ➕ Créer un utilisateur
+    <a asp-action="Create" class="btn text-white" style="background-color: #198754; border-color: #198754;">
+        <i class="bi bi-plus-circle"></i> Créer un utilisateur
     </a>
 </div>
 
@@ -33,12 +33,14 @@
                             </span>
                         </td>
                         <td class="text-end">
-                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary me-1">✏️ Modifier</a>
-                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary me-1">ℹ️ Détails</a>
-                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">🗑️ Supprimer</a>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-secondary btn-sm me-1">Détails</a>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-primary btn-sm me-1"> Modifier</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger btn-sm"> Supprimer</a>
                         </td>
                     </tr>
                 }
+
+
             </tbody>
         </table>
     </div>
