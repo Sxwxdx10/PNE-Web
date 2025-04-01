@@ -1,63 +1,45 @@
 ﻿@model PNE_core.Models.StationLavage
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Détails de la station de lavage";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+<div class="user-card">
+    <div class="user-card-header">
+        <h2>Détails de la station de lavage</h2>
+    </div>
+    <div class="user-card-body">
+        <dl class="row">
+            <dt class="col-sm-3 text-muted">Nom</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Nom)</dd>
 
-<div>
-    <h4>Station de Lavage</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Nom)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Nom)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Position)
-        </dt>
-        <dd class="col-sm-10">
-            <div id="map" style="height: 300px;"></div>
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.PeutDecontaminer)
-        </dt>
-        <dd class="col-sm-10">
-            @(Model.PeutDecontaminer == true ? "Oui" : "Non")
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.HautePression)
-        </dt>
-        <dd class="col-sm-10">
-            @(Model.HautePression == true ? "Oui" : "Non")
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.BassePressionetAttaches)
-        </dt>
-        <dd class="col-sm-10">
-            @(Model.BassePressionetAttaches == true ? "Oui" : "Non")
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.EauChaude)
-        </dt>
-        <dd class="col-sm-10">
-            @(Model.EauChaude == true ? "Oui" : "Non")
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.StationPersonnelStatus)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.StationPersonnelStatus)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+            <dt class="col-sm-3 text-muted">Position</dt>
+            <dd class="col-sm-9">
+                <div id="map" style="height: 300px; border-radius: 8px;"></div>
+            </dd>
+
+            <dt class="col-sm-3 text-muted">Peut décontaminer</dt>
+            <dd class="col-sm-9">@((Model.PeutDecontaminer ? "Oui" : "Non"))</dd>
+
+            <dt class="col-sm-3 text-muted">Haute pression</dt>
+            <dd class="col-sm-9">@((Model.HautePression ? "Oui" : "Non"))</dd>
+
+            <dt class="col-sm-3 text-muted">Basse pression et attaches</dt>
+            <dd class="col-sm-9">@((Model.BassePressionetAttaches ? "Oui" : "Non"))</dd>
+
+            <dt class="col-sm-3 text-muted">Eau chaude</dt>
+            <dd class="col-sm-9">@((Model.EauChaude ? "Oui" : "Non"))</dd>
+
+            <dt class="col-sm-3 text-muted">Statut</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.StationPersonnelStatus)</dd>
+        </dl>
+
+        <div class="form-actions text-center">
+            <a asp-action="Index" class="btn-secondary-outline">Retour</a>
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn-primary-outline">Modifier</a>
+        </div>
+    </div>
 </div>
 
 @section Scripts {
@@ -65,20 +47,87 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         @{
-            var latitude = Model.Position != null ? Model.Position.Y : 45.4;
-            var longitude = Model.Position != null ? Model.Position.X : -71.9;
+            var latitude = Model.Position?.Y ?? 45.4;
+            var longitude = Model.Position?.X ?? -71.9;
         }
-        
+
         var lat = @latitude;
         var lng = @longitude;
-        
+
         var map = L.map('map').setView([lat, lng], 13);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors'
         }).addTo(map);
 
-        // Ajouter le marqueur de la station
         var marker = L.marker([lat, lng]).addTo(map);
-        marker.bindPopup('@Model.Nom<br>@(Model.PeutDecontaminer == true ? "Décontamination<br>" : "")@(Model.HautePression == true ? "Haute pression<br>" : "")@(Model.BassePressionetAttaches == true ? "Basse pression<br>" : "")@(Model.EauChaude == true ? "Eau chaude" : "")');
+        marker.bindPopup('@Model.Nom<br>@((Model.PeutDecontaminer ? "Décontamination<br>" : ""))@((Model.HautePression ? "Haute pression<br>" : ""))@((Model.BassePressionetAttaches ? "Basse pression<br>" : ""))@((Model.EauChaude ? "Eau chaude" : ""))');
     </script>
 }
+
+<style>
+    .user-card {
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+        padding: 30px;
+        background: #f9f9f9;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .user-card-header {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #4A4A4A;
+    }
+
+    dl.row dt {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    dl.row dd {
+        margin-bottom: 15px;
+        font-size: 1rem;
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .btn-secondary-outline {
+        border: 3px solid #6c757d;
+        color: #6c757d;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: all 0.3s;
+    }
+
+        .btn-secondary-outline:hover {
+            background-color: #6c757d;
+            color: white;
+        }
+
+    .btn-primary-outline {
+        border: 3px solid #007bff;
+        color: #007bff;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: all 0.3s;
+    }
+
+        .btn-primary-outline:hover {
+            background-color: #007bff;
+            color: white;
+        }
+</style>

@@ -1,78 +1,131 @@
 ﻿@model IEnumerable<PNE_core.Models.StationLavage>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Liste des stations de lavage";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="container-stations">
+    <div class="header-stations">
+        <h1>Liste des stations de lavage</h1>
+    </div>
+    <div class="station-card">
+        <div class="station-card-body">
+            <table class="station-table">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Plan d'eau</th>
+                        <th>Décontamination</th>
+                        <th>Haute pression</th>
+                        <th>Basse pression</th>
+                        <th>Eau chaude</th>
+                        <th>Statut personnel</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Nom)</td>
+                            <td>@(item.planeau != null ? item.planeau.Nom : "Non assigné")</td>
+                            <td>@(item.PeutDecontaminer == true ? "Oui" : "Non")</td>
+                            <td>@(item.HautePression == true ? "Oui" : "Non")</td>
+                            <td>@(item.BassePressionetAttaches == true ? "Oui" : "Non")</td>
+                            <td>@(item.EauChaude == true ? "Oui" : "Non")</td>
+                            <td>@Html.DisplayFor(modelItem => item.StationPersonnelStatus)</td>
+                            <td class="text-center">
+                                <div class="action-buttons">
+                                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-detail">Détails</a>
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-edit">Modifier</a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-delete">Supprimer</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<style>
+    .container-stations {
+        padding: 20px;
+    }
 
-<h1>Liste des stations de lavage</h1>
+    .header-stations {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nom)
-            </th>
-            <th>
-                Plan d'eau
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PeutDecontaminer)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HautePression)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BassePressionetAttaches)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EauChaude)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StationPersonnelStatus)
-            </th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nom)
-                </td>
-                <td>
-                    @(item.planeau != null ? item.planeau.Nom : "Non assigné")
-                </td>
-                <td>
-                    @(item.PeutDecontaminer == true ? "Oui" : "Non")
-                </td>
-                <td>
-                    @(item.HautePression == true ? "Oui" : "Non")
-                </td>
-                <td>
-                    @(item.BassePressionetAttaches == true ? "Oui" : "Non")
-                </td>
-                <td>
-                    @(item.EauChaude == true ? "Oui" : "Non")
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.StationPersonnelStatus)
-                </td>
-                <td>
-                    <div class="btn-group" role="group">
-                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm">
-                            <i class="bi bi-pencil"></i> Modifier
-                        </a>
-                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">
-                            <i class="bi bi-info-circle"></i> Détails
-                        </a>
-                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
-                            <i class="bi bi-trash"></i> Supprimer
-                        </a>
-                    </div>
-                </td>
-            </tr>
+    .station-card {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .station-card-body {
+        padding: 15px;
+    }
+
+    .station-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .station-table th, .station-table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
         }
-    </tbody>
-</table>
 
+    .text-center {
+        text-align: center;
+    }
+
+    .action-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+        border: 2px solid;
+    }
+
+    .btn-detail {
+        border-color: #6c757d;
+        color: #6c757d;
+    }
+
+    .btn-edit {
+        border-color: #007bff;
+        color: #007bff;
+    }
+
+    .btn-delete {
+        border-color: #dc3545;
+        color: #dc3545;
+    }
+
+    .btn-detail:hover {
+        background-color: #6c757d;
+        color: white;
+    }
+
+    .btn-edit:hover {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .btn-delete:hover {
+        background-color: #dc3545;
+        color: white;
+    }
+</style>
