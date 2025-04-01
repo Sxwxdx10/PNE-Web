@@ -5,62 +5,39 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Delete</h1>
+<div class="station-container">
+    <div class="station-header text-danger">
+        <h2>⚠️ Suppression d'une station de lavage</h2>
+    </div>
 
-<h3>Êtes-vous sûr de vouloir supprimer cette station de lavage ?</h3>
-<div>
-    <h4>Station de Lavage</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Nom)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Nom)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Position)
-        </dt>
-        <dd class="col-sm-10">
-            <div id="map" style="height: 300px;"></div>
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.PeutDecontaminer)
-        </dt>
-        <dd class="col-sm-10">
-            @(Model.PeutDecontaminer == true ? "Oui" : "Non")
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.HautePression)
-        </dt>
-        <dd class="col-sm-10">
-            @(Model.HautePression == true ? "Oui" : "Non")
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.BassePressionetAttaches)
-        </dt>
-        <dd class="col-sm-10">
-            @(Model.BassePressionetAttaches == true ? "Oui" : "Non")
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.EauChaude)
-        </dt>
-        <dd class="col-sm-10">
-            @(Model.EauChaude == true ? "Oui" : "Non")
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.StationPersonnelStatus)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.StationPersonnelStatus)
-        </dd>
-    </dl>
-
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
+    <div class="station-info-card alert-warning">
+        <div class="station-info-body">
+            <h5>Es-tu sûr de vouloir supprimer cette station ? Cette action est <strong>irréversible</strong>.</h5>
+            <dl class="row station-details">
+                <dt class="col-sm-4 fw-bold">Nom :</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.Nom)</dd>
+                <dt class="col-sm-4 fw-bold">Position :</dt>
+                <dd class="col-sm-8">
+                    <div id="map" style="height: 300px;"></div>
+                </dd>
+                <dt class="col-sm-4 fw-bold">Décontamination possible :</dt>
+                <dd class="col-sm-8">@(Model.PeutDecontaminer == true ? "Oui" : "Non")</dd>
+                <dt class="col-sm-4 fw-bold">Haute pression :</dt>
+                <dd class="col-sm-8">@(Model.HautePression == true ? "Oui" : "Non")</dd>
+                <dt class="col-sm-4 fw-bold">Basse pression :</dt>
+                <dd class="col-sm-8">@(Model.BassePressionetAttaches == true ? "Oui" : "Non")</dd>
+                <dt class="col-sm-4 fw-bold">Eau chaude :</dt>
+                <dd class="col-sm-8">@(Model.EauChaude == true ? "Oui" : "Non")</dd>
+            </dl>
+            <form asp-action="Delete" class="station-actions">
+                <input type="hidden" asp-for="Id" />
+                <div class="d-flex justify-content-between">
+                    <a asp-action="Index" class="btn-secondary-outline">Annuler</a>
+                    <input type="submit" value="Supprimer" class="btn-danger-outline" />
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 
 @section Scripts {
@@ -71,10 +48,10 @@
             var latitude = Model.Position != null ? Model.Position.Y : 45.4;
             var longitude = Model.Position != null ? Model.Position.X : -71.9;
         }
-        
+
         var lat = @latitude;
         var lng = @longitude;
-        
+
         var map = L.map('map').setView([lat, lng], 13);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors'
@@ -85,3 +62,70 @@
         marker.bindPopup('@Model.Nom<br>@(Model.PeutDecontaminer == true ? "Décontamination<br>" : "")@(Model.HautePression == true ? "Haute pression<br>" : "")@(Model.BassePressionetAttaches == true ? "Basse pression<br>" : "")@(Model.EauChaude == true ? "Eau chaude" : "")');
     </script>
 }
+
+<style>
+    .station-container {
+        padding: 40px;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .station-header {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+    }
+
+    .station-info-card {
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+        padding: 30px;
+        background: #fff;
+    }
+
+    .station-details dt {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .station-details dd {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .station-actions {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    .btn-secondary-outline, .btn-danger-outline {
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: all 0.3s;
+        border: 2px solid;
+        font-size: 1.1rem;
+    }
+
+    .btn-secondary-outline {
+        border-color: #6c757d;
+        color: #6c757d;
+    }
+
+        .btn-secondary-outline:hover {
+            background-color: #6c757d;
+            color: white;
+        }
+
+    .btn-danger-outline {
+        border-color: #dc3545;
+        color: #dc3545;
+    }
+
+        .btn-danger-outline:hover {
+            background-color: #dc3545;
+            color: white;
+        }
+</style>

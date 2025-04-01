@@ -19,29 +19,29 @@
 
     <div class="row">
         <div class="col-md-12">
-            <h1 class="display-4 text-center mb-4">Gestion des Espèces Exotiques Envahissantes</h1>
-            <h2 class="h4 mb-3">Plan d'eau : @Model.Nom</h2>
+            <h1 class="display-4 text-center mb-4 fw-bold">Gestion des Espèces Exotiques Envahissantes</h1>
+            <h2 class="h4 mb-3 fw-bold">Plan d'eau : @Model.Nom</h2>
         </div>
     </div>
 
     <!-- Formulaire de signalement -->
     <div class="card mb-4">
         <div class="card-header">
-            <h3 class="h5 mb-0">Signaler une nouvelle EEE</h3>
+            <h3 class="h5 mb-0 fw-bold">Signaler une nouvelle EEE</h3>
         </div>
         <div class="card-body">
             <form asp-action="SignalerEEE" method="post">
                 <input type="hidden" name="IdPlanEau" value="@Model.IdPlanEau" />
                 <div class="mb-3">
-                    <label for="Name" class="form-label">Nom de l'EEE</label>
+                    <label for="Name" class="form-label fw-bold">Nom de l'EEE</label>
                     <input type="text" class="form-control" id="Name" name="Name" required>
                 </div>
                 <div class="mb-3">
-                    <label for="Description" class="form-label">Description</label>
+                    <label for="Description" class="form-label fw-bold">Description</label>
                     <textarea class="form-control" id="Description" name="Description" rows="3" required></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="NiveauCouleur" class="form-label">Niveau de risque</label>
+                    <label for="NiveauCouleur" class="form-label fw-bold">Niveau de risque</label>
                     <select class="form-select" id="NiveauCouleur" name="NiveauCouleur" required>
                         <option value="">Choisir un niveau...</option>
                         <option value="0">Vert</option>
@@ -49,7 +49,9 @@
                         <option value="2">Rouge</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary">Signaler l'EEE</button>
+                <div class="text-end mt-4 mb-4">
+                    <button type="submit" class="btn btn-green-outline">Signaler l'EEE</button>
+                </div>
             </form>
         </div>
     </div>
@@ -57,7 +59,7 @@
     <!-- Liste des EEE signalées -->
     <div class="card">
         <div class="card-header">
-            <h3 class="h5 mb-0">EEE signalées dans ce plan d'eau</h3>
+            <h3 class="h5 mb-0 fw-bold">EEE signalées dans ce plan d'eau</h3>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -108,3 +110,53 @@
         </div>
     </div>
 </div>
+
+<style>
+    .btn-green-outline {
+        background-color: #198754;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: all 0.3s;
+    }
+
+        .btn-green-outline:hover {
+            background-color: #145c32;
+            color: white;
+        }
+
+    .fw-bold {
+        font-weight: bold;
+    }
+
+    .alert {
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    .card {
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+        background-color: #f8f9fa; /* Gris clair */
+        border-bottom: 1px solid #ddd;
+        padding: 15px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .table-responsive {
+        margin-top: 15px;
+    }
+</style>

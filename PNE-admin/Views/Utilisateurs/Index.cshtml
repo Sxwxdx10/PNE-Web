@@ -1,10 +1,8 @@
 ﻿@model IEnumerable<PNE_core.Models.Utilisateur>
-
 @{
     ViewData["Title"] = "Utilisateurs";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <div class="container-users">
     <div class="header-users">
         <h1>Liste des utilisateurs</h1>
@@ -12,7 +10,6 @@
             Créer un utilisateur
         </a>
     </div>
-
     <div class="user-card">
         <div class="user-card-body">
             <table class="user-table">
@@ -20,7 +17,7 @@
                     <tr>
                         <th>@Html.DisplayNameFor(model => model.First().DisplayName)</th>
                         <th>@Html.DisplayNameFor(model => model.First().DateCreation)</th>
-                        <th class="text-end">Actions</th>
+                        <th class="text-center">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,10 +30,12 @@
                                     @item.DateCreation.ToString("dd/MM/yyyy")
                                 </span>
                             </td>
-                            <td class="text-end">
-                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-detail">Détails</a>
-                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-edit">Modifier</a>
-                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-delete">Supprimer</a>
+                            <td class="text-center">
+                                <div class="action-buttons">
+                                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-detail">Détails</a>
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-edit">Modifier</a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-delete">Supprimer</a>
+                                </div>
                             </td>
                         </tr>
                     }
@@ -45,7 +44,6 @@
         </div>
     </div>
 </div>
-
 <style>
     .container-users {
         padding: 20px;
@@ -94,6 +92,16 @@
             text-align: left;
         }
 
+    .text-center {
+        text-align: center;
+    }
+
+    .action-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+    }
+
     .badge-date {
         background-color: #e0e7ff;
         color: #374151;
@@ -104,7 +112,6 @@
 
     .btn {
         padding: 6px 12px;
-        margin: 0 4px;
         text-decoration: none;
         border-radius: 6px;
         font-weight: bold;
