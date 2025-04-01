@@ -1,44 +1,105 @@
 ﻿@model IEnumerable<PNE_core.Models.Embarcation>
 
 @{
-    ViewData["Title"] = "Liste des embarcations";
+    ViewData["Title"] = "Embarcations";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="d-flex justify-content-between align-items-center mb-3">
-    <h2 class="mb-0">Liste des embarcations</h2>
-    <a asp-action="Create" class="btn text-white" style="background-color: #198754; border-color: #198754;">
-        <i class="bi bi-plus-circle"></i> Nouvelle embarcation
-    </a>
+<div class="container-embarcations">
+    <div class="header-embarcations">
+        <h1>Liste des embarcations</h1>
+        <a asp-action="Create" class="btn-create-embarcation">
+            Créer une embarcation
+        </a>
+    </div>
+
+    <div class="embarcation-card">
+        <div class="embarcation-card-body">
+            <table class="embarcation-table">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.First().Description)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().Marque)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().Longueur)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().Photo)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Marque)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Longueur) m</td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(item.Photo))
+                                {
+                                    <img src="@item.Photo" alt="Photo" class="embarcation-photo" />
+                                }
+                                else
+                                {
+                                    <span class="text-muted fst-italic">Aucune image</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 
-<table class="table table-hover table-bordered shadow-sm bg-white">
-    <thead class="table-light">
-        <tr>
-            <th>@Html.DisplayNameFor(model => model.Description)</th>
-            <th>@Html.DisplayNameFor(model => model.Marque)</th>
-            <th>@Html.DisplayNameFor(model => model.Longueur)</th>
-            <th>@Html.DisplayNameFor(model => model.Photo)</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@Html.DisplayFor(modelItem => item.Description)</td>
-                <td>@Html.DisplayFor(modelItem => item.Marque)</td>
-                <td>@Html.DisplayFor(modelItem => item.Longueur) m</td>
-                <td>
-                    @if (!string.IsNullOrEmpty(item.Photo))
-                    {
-                        <img src="@item.Photo" alt="Photo" style="width: 80px; height: auto; border-radius: 4px;" />
-                    }
-                    else
-                    {
-                        <span class="text-muted fst-italic">Aucune image</span>
-                    }
-                </td>
-            </tr>
+<style>
+    .container-embarcations {
+        padding: 20px;
+    }
+
+    .header-embarcations {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .btn-create-embarcation {
+        border: 2px solid #3F796A;
+        color: #3F796A;
+        padding: 8px 14px;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+        .btn-create-embarcation:hover {
+            background-color: #3F796A;
+            color: white;
         }
-    </tbody>
-</table>
+
+    .embarcation-card {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .embarcation-card-body {
+        padding: 15px;
+    }
+
+    .embarcation-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .embarcation-table th, .embarcation-table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+    .embarcation-photo {
+        width: 80px;
+        height: auto;
+        border-radius: 4px;
+    }
+</style>

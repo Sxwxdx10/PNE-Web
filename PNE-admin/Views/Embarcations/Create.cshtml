@@ -5,53 +5,47 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="card border-0 shadow-sm mb-4">
-    <div class="card-header bg-light">
-        <h2 class="mb-0">Ajouter une embarcation</h2>
+<div class="user-card">
+    <div class="user-card-header">
+        <h2>Ajouter une embarcation</h2>
     </div>
-    <div class="card-body">
+    <div class="user-card-body">
         <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            <div class="form-group mb-3">
-                <label asp-for="IdEmbarcation" class="form-label">ID Embarcation</label>
+            <div class="form-group">
+                <label asp-for="IdEmbarcation">ID Embarcation</label>
                 <input asp-for="IdEmbarcation" class="form-control" placeholder="Entrez l'ID de l'embarcation" />
-                <span asp-validation-for="IdEmbarcation" class="text-danger small"></span>
+                <span asp-validation-for="IdEmbarcation" class="text-danger"></span>
             </div>
 
-            <div class="form-group mb-3">
-                <label asp-for="Description" class="form-label">Description</label>
+            <div class="form-group">
+                <label asp-for="Description">Description</label>
                 <input asp-for="Description" class="form-control" placeholder="Entrez la description" />
-                <span asp-validation-for="Description" class="text-danger small"></span>
+                <span asp-validation-for="Description" class="text-danger"></span>
             </div>
 
-            <div class="form-group mb-3">
-                <label asp-for="Marque" class="form-label">Marque</label>
+            <div class="form-group">
+                <label asp-for="Marque">Marque</label>
                 <input asp-for="Marque" class="form-control" placeholder="Entrez la marque" />
-                <span asp-validation-for="Marque" class="text-danger small"></span>
+                <span asp-validation-for="Marque" class="text-danger"></span>
             </div>
 
-            <div class="form-group mb-3">
-                <label asp-for="Longueur" class="form-label">Longueur (mètres)</label>
+            <div class="form-group">
+                <label asp-for="Longueur">Longueur (mètres)</label>
                 <input asp-for="Longueur" class="form-control" type="number" step="0.1" placeholder="Entrez la longueur" />
-                <span asp-validation-for="Longueur" class="text-danger small"></span>
+                <span asp-validation-for="Longueur" class="text-danger"></span>
             </div>
 
-            <div class="form-group mb-3">
-                <label asp-for="Photo" class="form-label">URL de la photo</label>
+            <div class="form-group">
+                <label asp-for="Photo">URL de la photo</label>
                 <input asp-for="Photo" class="form-control" placeholder="Entrez l'URL de la photo" />
-                <span asp-validation-for="Photo" class="text-danger small"></span>
+                <span asp-validation-for="Photo" class="text-danger"></span>
             </div>
 
-            <div class="form-group mb-5">
-                <label asp-for="codeQR" class="form-label">Code QR</label>
-                <input asp-for="codeQR" class="form-control" placeholder="Entrez le code QR" />
-                <span asp-validation-for="codeQR" class="text-danger small"></span>
-            </div>
-
-            <div class="d-flex justify-content-between align-items-center">
-                <a asp-action="Index" class="btn btn-outline-secondary">Retour à la liste</a>
-                <input type="submit" value="Créer" class="btn btn-primary" />
+            <div class="form-actions text-center">
+                <a asp-action="Index" class="btn-back">Retour à la liste</a>
+                <input type="submit" value="Créer" class="btn-create" />
             </div>
         </form>
     </div>
@@ -62,3 +56,69 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 }
+
+<style>
+    .user-card {
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+        padding: 30px;
+        background: #fff;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .user-card-header {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .btn-back,
+    .btn-create {
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: all 0.3s;
+        font-size: 1.1rem;
+    }
+
+    .btn-back {
+        border: 2px solid #6c757d;
+        color: #6c757d;
+    }
+
+        .btn-back:hover {
+            background-color: #6c757d;
+            color: white;
+        }
+
+    .btn-create {
+        border: 2px solid #198754;
+        background-color: #198754;
+        color: white;
+    }
+
+        .btn-create:hover {
+            background-color: #145c32;
+        }
+</style>
