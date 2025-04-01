@@ -3,32 +3,30 @@
     ViewData["Title"] = "Gestion des Plans d'Eau";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="card border-0 shadow-sm mb-4">
-    <div class="card-header bg-light">
-        <div class="d-flex justify-content-between align-items-center">
-            <h2 class="mb-0">Liste des Plans d'Eau</h2>
-            <a asp-action="Create" class="btn btn-outline-secondary text-purple" style="border-color: #6f42c1; color: #6f42c1;">
-                <i class="bi bi-plus-circle"></i> ➕ Ajouter Plan d'Eau
-            </a>
+
+<div class="container">
+    <div class="header">
+        <h1>Gestion des Plans d'Eau</h1>
+        <div class="header-actions">
+            <div class="dropdown">
+                <button class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    Trier
+                </button>
+                <ul class="dropdown-menu dropdown-menu-styled" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" asp-action="Index" asp-route-sortOrder="alphabetique">Tri Alphabétique</a></li>
+                    <li><a class="dropdown-item" asp-action="Index" asp-route-sortOrder="recent">Plus Récents</a></li>
+                </ul>
+            </div>
+            <a asp-action="Create" class="btn-add">Ajouter Plan d'Eau</a>
         </div>
     </div>
-    <div class="card-body">
-        <div class="mb-3">
-            <div class="btn-group" role="group">
-                <a asp-action="Index" asp-route-sortOrder="alphabetique" class="btn btn-outline-primary @(ViewBag.CurrentSort == "alphabetique" ? "active" : "")">
-                    <i class="bi bi-sort-alpha-down"></i> Tri Alphabétique
-                </a>
-                <a asp-action="Index" asp-route-sortOrder="recent" class="btn btn-outline-primary @(ViewBag.CurrentSort == "recent" ? "active" : "")">
-                    <i class="bi bi-clock"></i> Plus Récents
-                </a>
-            </div>
-        </div>
-        <table class="table table-striped table-hover table-bordered shadow-sm rounded bg-white text-dark">
-            <thead class="bg-light">
+    <div class="card">
+        <table class="table">
+            <thead>
                 <tr>
                     <th>Nom</th>
                     <th>Niveau de Couleur</th>
-                    <th class="text-center">Actions</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,18 +35,12 @@
                     <tr>
                         <td>@Html.DisplayFor(modelItem => item.Nom)</td>
                         <td>
-                            <span class="badge bg-info text-dark">@Html.DisplayFor(modelItem => item.NiveauCouleur)</span>
+                            <span class="badge">@Html.DisplayFor(modelItem => item.NiveauCouleur)</span>
                         </td>
                         <td class="text-center">
-                            <a asp-action="Edit" asp-route-id="@item.IdPlanEau" class="btn btn-outline-warning btn-sm me-1">
-                                <i class="bi bi-pencil-square"></i> Modifier
-                            </a>
-                            <a asp-action="Details" asp-route-id="@item.IdPlanEau" class="btn btn-outline-info btn-sm me-1">
-                                <i class="bi bi-eye"></i> Détails
-                            </a>
-                            <a asp-action="Delete" asp-route-id="@item.IdPlanEau" class="btn btn-outline-danger btn-sm" onclick="return confirm('Êtes-vous sûr ?');">
-                                <i class="bi bi-trash"></i> Supprimer
-                            </a>
+                            <a asp-action="Edit" asp-route-id="@item.IdPlanEau" class="btn btn-edit">Modifier</a>
+                            <a asp-action="Details" asp-route-id="@item.IdPlanEau" class="btn btn-detail">Détails</a>
+                            <a asp-action="Delete" asp-route-id="@item.IdPlanEau" class="btn btn-delete">Supprimer</a>
                         </td>
                     </tr>
                 }
@@ -56,3 +48,119 @@
         </table>
     </div>
 </div>
+
+<style>
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .header-actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .dropdown-toggle {
+        color: #6c757d;
+        padding: 10px 16px;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dropdown-menu-styled {
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        border-radius: 6px;
+    }
+
+    .dropdown-item {
+        padding: 8px 14px;
+        color: #374151;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .btn-add {
+        border: 2px solid #3F796A;
+        color: #3F796A;
+        padding: 10px 16px;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+        .btn-add:hover {
+            background-color: #3F796A;
+            color: white;
+        }
+
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .table th, .table td {
+            padding: 14px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+    .badge {
+        background-color: #e0e7ff;
+        color: #374151;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-weight: bold;
+    }
+
+    .btn {
+        padding: 8px 14px;
+        margin: 0 4px;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn-edit {
+        border-color: #007bff;
+        color: #007bff;
+    }
+
+    .btn-detail {
+        border-color: #6c757d;
+        color: #6c757d;
+    }
+
+    .btn-delete {
+        border-color: #dc3545;
+        color: #dc3545;
+    }
+
+    .btn-edit:hover {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .btn-detail:hover {
+        background-color: #6c757d;
+        color: white;
+    }
+
+    .btn-delete:hover {
+        background-color: #dc3545;
+        color: white;
+    }
+</style>

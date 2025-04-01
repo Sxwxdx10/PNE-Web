@@ -1,98 +1,199 @@
 ﻿@model List<PNE_core.Models.EEEPlanEau>
 
-<div class="container mt-4">
+<div class="confirmation-container">
     @if (TempData["SuccessMessage"] != null)
     {
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <div class="confirmation-alert success">
             @TempData["SuccessMessage"]
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <button type="button" class="close-btn" data-bs-dismiss="alert">&times;</button>
         </div>
     }
 
     @if (TempData["ErrorMessage"] != null)
     {
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <div class="confirmation-alert error">
             @TempData["ErrorMessage"]
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <button type="button" class="close-btn" data-bs-dismiss="alert">&times;</button>
         </div>
     }
 
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="display-4 text-center mb-4">Confirmation des EEE signalées</h1>
-        </div>
-    </div>
+    <h1 class="confirmation-title">Confirmation des EEE signalées</h1>
 
-    <div class="card">
-        <div class="card-header">
-            <h3 class="h5 mb-0">EEE en attente de confirmation</h3>
+    <div class="confirmation-card">
+        <div class="confirmation-card-header">
+            <h3>EEE en attente de confirmation</h3>
         </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
+        <div class="confirmation-card-body">
+            <table class="confirmation-table">
+                <thead>
+                    <tr>
+                        <th>Plan d'eau</th>
+                        <th>Nom de l'EEE</th>
+                        <th>Description</th>
+                        <th>Niveau de risque</th>
+                        <th>Statut</th>
+                        <th>Signalé par</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var eeePlanEau in Model)
+                    {
                         <tr>
-                            <th>Plan d'eau</th>
-                            <th>Nom de l'EEE</th>
-                            <th>Description</th>
-                            <th>Niveau de risque</th>
-                            <th>Statut</th>
-                            <th>Signalé par</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var eeePlanEau in Model)
-                        {
-                            <tr>
-                                <td>@eeePlanEau.PlanEauNavigation.Nom</td>
-                                <td>@eeePlanEau.EEE.Name</td>
-                                <td>@eeePlanEau.EEE.Description</td>
-                                <td>
-                                    @switch (eeePlanEau.EEE.NiveauCouleur)
-                                    {
-                                        case PNE_core.Enums.Niveau.Vert:
-                                            <span class="badge bg-success">Vert</span>
-                                            break;
-                                        case PNE_core.Enums.Niveau.Jaune:
-                                            <span class="badge bg-warning">Jaune</span>
-                                            break;
-                                        case PNE_core.Enums.Niveau.Rouge:
-                                            <span class="badge bg-danger">Rouge</span>
-                                            break;
-                                    }
-                                </td>
-                                <td>
-                                    @if (eeePlanEau.Validated)
-                                    {
-                                        <span class="badge bg-success">Validé</span>
-                                    }
-                                    else
-                                    {
-                                        <span class="badge bg-warning">En attente</span>
-                                    }
-                                </td>
-                                <td>@eeePlanEau.EEE.Signaleur?.DisplayName</td>
-                                <td>
-                                    @if (!eeePlanEau.Validated)
-                                    {
-                                        <form asp-action="ConfirmerEEE" method="post" class="d-inline">
-                                            <input type="hidden" name="IdEEE" value="@eeePlanEau.IdEEE" />
-                                            <input type="hidden" name="IdPlanEau" value="@eeePlanEau.IdPlanEau" />
-                                            <button type="submit" class="btn btn-success btn-sm">Confirmer</button>
-                                        </form>
-                                    }
-                                    <form asp-action="RetirerEEE" method="post" class="d-inline" onsubmit="return confirm('Êtes-vous sûr de vouloir retirer cette EEE ? Cette action est irréversible.');">
+                            <td>@eeePlanEau.PlanEauNavigation.Nom</td>
+                            <td>@eeePlanEau.EEE.Name</td>
+                            <td>@eeePlanEau.EEE.Description</td>
+                            <td>
+                                @switch (eeePlanEau.EEE.NiveauCouleur)
+                                {
+                                    case PNE_core.Enums.Niveau.Vert:
+                                        <span class="risk-level green">Vert</span>
+                                        break;
+                                    case PNE_core.Enums.Niveau.Jaune:
+                                        <span class="risk-level yellow">Jaune</span>
+                                        break;
+                                    case PNE_core.Enums.Niveau.Rouge:
+                                        <span class="risk-level red">Rouge</span>
+                                        break;
+                                }
+                            </td>
+                            <td>
+                                @if (eeePlanEau.Validated)
+                                {
+                                    <span class="status-badge validated">Validé</span>
+                                }
+                                else
+                                {
+                                    <span class="status-badge pending">En attente</span>
+                                }
+                            </td>
+                            <td>@eeePlanEau.EEE.Signaleur?.DisplayName</td>
+                            <td>
+                                @if (!eeePlanEau.Validated)
+                                {
+                                    <form asp-action="ConfirmerEEE" method="post" class="inline-form">
                                         <input type="hidden" name="IdEEE" value="@eeePlanEau.IdEEE" />
                                         <input type="hidden" name="IdPlanEau" value="@eeePlanEau.IdPlanEau" />
-                                        <button type="submit" class="btn btn-danger btn-sm">Retirer</button>
+                                        <button type="submit" class="confirm-btn">Confirmer</button>
                                     </form>
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
+                                }
+                                <form asp-action="RetirerEEE" method="post" class="inline-form" onsubmit="return confirm('Êtes-vous sûr de vouloir retirer cette EEE ? Cette action est irréversible.');">
+                                    <input type="hidden" name="IdEEE" value="@eeePlanEau.IdEEE" />
+                                    <input type="hidden" name="IdPlanEau" value="@eeePlanEau.IdPlanEau" />
+                                    <button type="submit" class="remove-btn">Retirer</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
+
+<style>
+    .confirmation-container {
+        padding: 40px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .confirmation-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .confirmation-alert {
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    .success {
+        background-color: #d4edda;
+        color: #155724;
+    }
+
+    .error {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+
+    .confirmation-card {
+        border-radius: 12px;
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+        background: #fff;
+        padding: 20px;
+    }
+
+    .confirmation-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .confirmation-table th, .confirmation-table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+    .risk-level {
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+
+    .green {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .yellow {
+        background-color: #ffc107;
+        color: black;
+    }
+
+    .red {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .status-badge {
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+
+    .validated {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .pending {
+        background-color: #ffc107;
+        color: black;
+    }
+
+    .inline-form {
+        display: inline;
+    }
+
+    .confirm-btn, .remove-btn {
+        padding: 6px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .confirm-btn {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .remove-btn {
+        background-color: #dc3545;
+        color: white;
+    }
+</style>
