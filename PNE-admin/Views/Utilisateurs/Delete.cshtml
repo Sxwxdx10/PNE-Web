@@ -5,30 +5,94 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container">
-    <h2 class="text-danger mb-4">⚠️ Suppression d'un utilisateur</h2>
-
-    <div class="alert alert-warning shadow-sm">
-        <h5 class="mb-3">Es-tu sûr de vouloir supprimer cet utilisateur ? Cette action est <strong>irréversible</strong>.</h5>
-        <div class="row">
-            <div class="col-md-8">
-                <dl class="row">
-                    <dt class="col-sm-4 fw-bold">Nom d’affichage :</dt>
-                    <dd class="col-sm-8">@Html.DisplayFor(model => model.DisplayName)</dd>
-
-                    <dt class="col-sm-4 fw-bold">Date de création :</dt>
-                    <dd class="col-sm-8">@Html.DisplayFor(model => model.DateCreation)</dd>
-                </dl>
-            </div>
-        </div>
+<div class="user-container">
+    <div class="user-header text-danger">
+        <h2>⚠️ Suppression d'un utilisateur</h2>
     </div>
 
-    <form asp-action="Delete" class="mt-4">
-        <input type="hidden" asp-for="Id" />
-
-        <div class="d-flex gap-3">
-            <input type="submit" value="🗑 Supprimer" class="btn btn-danger px-4" />
-            <a asp-action="Index" class="btn btn-secondary">⬅ Annuler</a>
+    <div class="user-info-card alert-warning">
+        <div class="user-info-body">
+            <h5>Es-tu sûr de vouloir supprimer cet utilisateur ? Cette action est <strong>irréversible</strong>.</h5>
+            <dl class="row user-details">
+                <dt class="col-sm-4 fw-bold">Nom d’affichage :</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.DisplayName)</dd>
+                <dt class="col-sm-4 fw-bold">Date de création :</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.DateCreation)</dd>
+            </dl>
+            <form asp-action="Delete" class="user-actions">
+                <input type="hidden" asp-for="Id" />
+                <div class="d-flex justify-content-between">
+                    <a asp-action="Index" class="btn-secondary-outline">Annuler</a>
+                    <input type="submit" value="Supprimer" class="btn-danger-outline" />
+                </div>
+            </form>
         </div>
-    </form>
+    </div>
 </div>
+
+<style>
+    .user-container {
+        padding: 40px;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .user-header {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+    }
+
+    .user-info-card {
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+        padding: 30px;
+        background: #fff;
+    }
+
+    .user-details dt {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .user-details dd {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .user-actions {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    .btn-secondary-outline, .btn-danger-outline {
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: all 0.3s;
+        border: 2px solid;
+        font-size: 1.1rem;
+    }
+
+    .btn-secondary-outline {
+        border-color: #6c757d;
+        color: #6c757d;
+    }
+
+        .btn-secondary-outline:hover {
+            background-color: #6c757d;
+            color: white;
+        }
+
+    .btn-danger-outline {
+        border-color: #dc3545;
+        color: #dc3545;
+    }
+
+        .btn-danger-outline:hover {
+            background-color: #dc3545;
+            color: white;
+        }
+</style>

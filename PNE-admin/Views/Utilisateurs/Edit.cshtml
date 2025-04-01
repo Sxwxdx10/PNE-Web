@@ -6,53 +6,108 @@
     var roleUser = ViewBag.Roles as List<string>;
 }
 
-<h1 class="mb-4">Modifier l’utilisateur</h1>
+<div class="user-container">
+    <div class="user-header">
+        <h2>Modifier l’utilisateur</h2>
+    </div>
 
-<div class="card shadow-sm border-0">
-    <div class="card-body">
-        <form asp-action="Edit">
-            <input type="hidden" asp-for="Id" />
+    <div class="user-info-card">
+        <div class="user-info-body">
+            <form asp-action="Edit">
+                <input type="hidden" asp-for="Id" />
 
-            <div class="mb-3">
-                <label asp-for="DisplayName" class="form-label">Nom d’affichage</label>
-                <input asp-for="DisplayName" class="form-control" placeholder="Ex: Felix Tremblay" />
-                <span asp-validation-for="DisplayName" class="text-danger small"></span>
-            </div>
-
-            <div class="mb-3">
-                <label asp-for="Email" class="form-label">Email</label>
-                <input asp-for="Email" class="form-control" placeholder="Ex: user@gmail.com" />
-                <span asp-validation-for="Email" class="text-danger small"></span>
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label">Rôles</label>
-                <div class="row">
-                    @foreach (var item in (MultiSelectList)ViewBag.Items)
-                    {
-                        var check = roleUser != null && roleUser.Contains(item.Value);
-                        <div class="col-6 col-md-4">
-                            <div class="form-check form-switch mb-2">
-                                <input class="form-check-input" type="checkbox" value="@item.Value" id="role_@item.Value" name="RolesUtilisateurs" @(check ? "checked" : "") />
-                                <label class="form-check-label" for="role_@item.Value">@item.Text</label>
-                            </div>
-                        </div>
-                    }
+                <div class="user-form-group">
+                    <label asp-for="DisplayName" class="form-label">Nom d’affichage</label>
+                    <input asp-for="DisplayName" class="form-control" placeholder="Ex: Felix Tremblay" />
+                    <span asp-validation-for="DisplayName" class="text-danger small"></span>
                 </div>
-                <span asp-validation-for="RolesUtilisateurs" class="text-danger small"></span>
-            </div>
 
-            <div class="d-flex justify-content-between align-items-center">
-                <a asp-action="Index" class="btn btn-outline-secondary">
-                    ← Retour à la liste
-                </a>
-                <button type="submit" class="btn btn-success">
-                    💾 Sauvegarder
-                </button>
-            </div>
-        </form>
+                <div class="user-form-group">
+                    <label asp-for="Email" class="form-label">Email</label>
+                    <input asp-for="Email" class="form-control" placeholder="Ex: user@gmail.com" />
+                    <span asp-validation-for="Email" class="text-danger small"></span>
+                </div>
+
+                <div class="user-form-group">
+                    <label class="form-label">Rôles</label>
+                    <div class="row">
+                        @foreach (var item in (MultiSelectList)ViewBag.Items)
+                        {
+                            var check = roleUser != null && roleUser.Contains(item.Value);
+                            <div class="col-6 col-md-4">
+                                <div class="form-check form-switch mb-2">
+                                    <input class="form-check-input" type="checkbox" value="@item.Value" id="role_@item.Value" name="RolesUtilisateurs" @(check ? "checked" : "") />
+                                    <label class="form-check-label" for="role_@item.Value">@item.Text</label>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <span asp-validation-for="RolesUtilisateurs" class="text-danger small"></span>
+                </div>
+
+                <div class="user-actions d-flex justify-content-between">
+                    <a asp-action="Index" class="btn-secondary-outline">Retour à la liste</a>
+                    <button type="submit" class="btn-primary-outline">Sauvegarder</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
+
+<style>
+    .user-container {
+        padding: 20px;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .user-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .user-info-card {
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        background: white;
+        padding: 30px;
+    }
+
+    .user-form-group {
+        margin-bottom: 15px;
+    }
+
+    .btn-secondary-outline, .btn-primary-outline {
+        padding: 8px 14px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: all 0.3s;
+        border: 2px solid;
+    }
+
+    .btn-secondary-outline {
+        border-color: #6c757d;
+        color: #6c757d;
+    }
+
+        .btn-secondary-outline:hover {
+            background-color: #6c757d;
+            color: white;
+        }
+
+    .btn-primary-outline {
+        border-color: #3F796A;
+        color: #3F796A;
+    }
+
+        .btn-primary-outline:hover {
+            background-color: #3F796A;
+            color: white;
+        }
+</style>
 
 @section Scripts {
     @{
