@@ -40,15 +40,18 @@
                 <!-- Menu -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link text-light-color" asp-controller="Home" asp-action="Privacy">À propos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light-color" asp-controller="Utilisateurs" asp-action="Index">Utilisateurs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light-color" asp-controller="Embarcations" asp-action="Index">Embarcations</a>
-                        </li>
+                        @if (userName is not null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-light-color" asp-controller="Home" asp-action="Privacy">À propos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light-color" asp-controller="Utilisateurs" asp-action="Index">Utilisateurs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light-color" asp-controller="Embarcations" asp-action="Index">Embarcations</a>
+                            </li>
+                        }
                     </ul>
 
                     <!-- Menu utilisateur -->
@@ -77,7 +80,7 @@
                         else
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-light-color" asp-controller="Authentification" asp-action="Login">Connexion</a>
+                                <a class="nav-link text-light-color" asp-controller="Home" asp-action="Privacy">À propos</a>
                             </li>
                         }
                     </ul>
@@ -109,3 +112,23 @@
 
 </body>
 </html>
+<style>
+
+.navbar {
+    padding: 1rem 2rem; 
+}
+
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 1.25rem; 
+    font-weight: 600; 
+}
+
+.navbar-nav .nav-item .dropdown-toggle {
+    font-size: 1.25rem;
+}
+
+footer a {
+    font-size: 1.2rem; 
+}
+</style>
