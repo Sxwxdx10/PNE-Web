@@ -6,12 +6,13 @@
     var planEau = ViewBag.PlanEau as PNE_core.Models.Planeau;
 }
 
-<div class="user-card">
-    <div class="user-card-header">
-        <h2>Nouvelle station de lavage</h2>
+<div class="container">
+    <div class="header">
+        <h1>Nouvelle station de lavage</h1>
         <h4>Pour le plan d'eau : @planEau.Nom</h4>
     </div>
-    <div class="user-card-body">
+
+    <div class="card">
         <form asp-action="Create" id="createForm" onsubmit="return validateForm()">
             <input type="hidden" name="idPlanEau" value="@planEau.IdPlanEau" />
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -50,9 +51,9 @@
                 <div id="positionError" class="text-danger" style="display: none;">Veuillez sélectionner une position</div>
             </div>
 
-            <div class="form-actions text-center">
-                <a asp-controller="Gerant" asp-action="GestionPlanEau" class="btn-back">Retour</a>
-                <input type="submit" value="Créer la station" class="btn-create" />
+            <div class="form-actions">
+                <a asp-controller="Gerant" asp-action="GestionPlanEau" class="btn btn-detail">Retour</a>
+                <input type="submit" value="Créer la station" class="btn btn-edit" />
             </div>
         </form>
     </div>
@@ -85,32 +86,34 @@
 
         function validateForm() {
             var positionString = document.getElementById('positionString').value;
+            var nom = document.getElementById('Nom').value;
+
             if (!positionString) {
                 document.getElementById('positionError').style.display = 'block';
                 return false;
             }
-            document.getElementById('positionError').style.display = 'none';
+            if (!nom) {
+                return false;
+            }
+
             return true;
         }
     </script>
 }
 
 <style>
-    .user-card {
-        border: none;
-        border-radius: 12px;
-        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
-        padding: 30px;
-        background: #fff;
-        max-width: 600px;
-        margin: auto;
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
     }
 
-    .user-card-header {
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 1.8rem;
-        font-weight: bold;
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
     }
 
     .form-group {
@@ -120,7 +123,7 @@
     .form-control {
         width: 100%;
         padding: 10px;
-        border: 1px solid #ccc;
+        border: 1px solid #ddd;
         border-radius: 6px;
     }
 
@@ -130,33 +133,31 @@
         margin-top: 20px;
     }
 
-    .btn-back,
-    .btn-create {
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 8px;
+    .btn {
+        padding: 8px 14px;
+        margin: 0 4px;
+        border-radius: 6px;
         font-weight: bold;
-        transition: all 0.3s;
-        font-size: 1.1rem;
+        transition: background-color 0.3s, color 0.3s;
     }
 
-    .btn-back {
-        border: 2px solid #6c757d;
+    .btn-edit {
+        border-color: #007bff;
+        color: #007bff;
+    }
+
+    .btn-detail {
+        border-color: #6c757d;
         color: #6c757d;
     }
 
-        .btn-back:hover {
-            background-color: #6c757d;
-            color: white;
-        }
-
-    .btn-create {
-        border: 2px solid #198754;
-        background-color: #198754;
+    .btn-edit:hover {
+        background-color: #007bff;
         color: white;
     }
 
-        .btn-create:hover {
-            background-color: #145c32;
-        }
+    .btn-detail:hover {
+        background-color: #6c757d;
+        color: white;
+    }
 </style>

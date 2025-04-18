@@ -43,7 +43,7 @@ namespace PNE_core.Services
             var user = await _db.Utilisateurs.FindAsync(idUtilisateur);
             var role = await _db.Roles.FindAsync(nomRole);
 
-            if (role == null && user == null)
+            if (role == null || user == null)
                 throw new InvalidOperationException("utilisateur ou role introuvable");
 
             var link = await _db.RolesUtilisateurs.Where(u => u.IdUtilisateur == idUtilisateur)

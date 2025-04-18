@@ -65,7 +65,8 @@ namespace PNE_admin.Controllers
                 {
                     Id = uInfo.Uid,
                     Email = uInfo.Email!,
-                    DisplayName = uInfo.Name
+                    DisplayName = uInfo.Name,
+                    DateCreation = DateTime.Now
                 };
                 await _userServices.CreateAsync(user);
 

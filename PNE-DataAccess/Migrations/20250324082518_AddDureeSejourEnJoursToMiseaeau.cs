@@ -11,7 +11,7 @@ namespace PNE_DataAccess.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<int>(
-                name: "NombreJoursSejour",
+                name: "duree_en_jours",
                 table: "miseaeau",
                 type: "integer",
                 nullable: true); 
@@ -21,7 +21,7 @@ namespace PNE_DataAccess.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "NombreJoursSejour",
+                name: "duree_en_jours",
                 table: "miseaeau");
         }
     }

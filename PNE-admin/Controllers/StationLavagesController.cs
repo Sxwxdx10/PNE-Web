@@ -60,7 +60,7 @@ namespace PNE_admin.Controllers
                 return NotFound();
             }
 
-            var planEau = await _planEauService.GetByIdAsync(idPlanEau);
+            var planEau = await _planEauService.GetForDetailAsync(idPlanEau);
             if (planEau == null)
             {
                 return NotFound();
@@ -79,17 +79,21 @@ namespace PNE_admin.Controllers
             {
                 // Générer un ID unique dans le même format que les plans d'eau
                 station.Id = $"S{DateTime.Now:yyMMdd}{new Random().Next(10, 99)}";
-                System.Diagnostics.Debug.WriteLine($"=== Début de la création de la station de lavage ===");
-                System.Diagnostics.Debug.WriteLine($"Id généré: {station.Id}");
-                System.Diagnostics.Debug.WriteLine($"Nom: {station.Nom}");
-                System.Diagnostics.Debug.WriteLine($"Position: {station.PositionString}");
-                System.Diagnostics.Debug.WriteLine($"IdPlanEau: {idPlanEau}");
+                _logger.LogInformation($"=== Début de la création de la station de lavage ===");
+                _logger.LogInformation($"Id généré: {station.Id}");
+                _logger.LogInformation($"Nom: {station.Nom}");
+                _logger.LogInformation($"Position: {station.PositionString}");
+                _logger.LogInformation($"IdPlanEau: {idPlanEau}");
+                _logger.LogInformation($"PeutDecontaminer: {station.PeutDecontaminer}");
+                _logger.LogInformation($"HautePression: {station.HautePression}");
+                _logger.LogInformation($"BassePressionetAttaches: {station.BassePressionetAttaches}");
+                _logger.LogInformation($"EauChaude: {station.EauChaude}");
 
                 // Récupérer le plan d'eau
-                var planEau = await _planEauService.GetByIdAsync(idPlanEau);
+                var planEau = await _planEauService.GetForDetailAsync(idPlanEau);
                 if (planEau == null)
                 {
-                    System.Diagnostics.Debug.WriteLine("Erreur: Plan d'eau non trouvé");
+                    _logger.LogError("Erreur: Plan d'eau non trouvé");
                     return NotFound("Plan d'eau non trouvé");
                 }
 
@@ -101,10 +105,10 @@ namespace PNE_admin.Controllers
                 ModelState.Clear();
                 if (!TryValidateModel(station))
                 {
-                    System.Diagnostics.Debug.WriteLine("Validation du modèle échouée après mise à jour");
+                    _logger.LogError("Validation du modèle échouée après mise à jour");
                     foreach (var modelError in ModelState.Values.SelectMany(v => v.Errors))
                     {
-                        System.Diagnostics.Debug.WriteLine($"Erreur de validation: {modelError.ErrorMessage}");
+                        _logger.LogError($"Erreur de validation: {modelError.ErrorMessage}");
                     }
                     ViewBag.PlanEau = planEau;
                     return View(station);
@@ -114,33 +118,33 @@ namespace PNE_admin.Controllers
                 {
                     try
                     {
-                        System.Diagnostics.Debug.WriteLine("Appel de CreateAsync");
+                        _logger.LogInformation("Appel de CreateAsync");
                         await _services.CreateAsync(station);
-                        System.Diagnostics.Debug.WriteLine("CreateAsync terminé avec succès");
+                        _logger.LogInformation("CreateAsync terminé avec succès");
                         return RedirectToAction("GestionPlanEau", "Gerant", new { idPlanEau = planEau.IdPlanEau });
                     }
                     catch (Exception ex)
                     {
-                        System.Diagnostics.Debug.WriteLine($"Erreur lors de la création: {ex.Message}");
-                        System.Diagnostics.Debug.WriteLine($"StackTrace: {ex.StackTrace}");
+                        _logger.LogError($"Erreur lors de la création: {ex.Message}");
+                        _logger.LogError($"StackTrace: {ex.StackTrace}");
                         ModelState.AddModelError("", $"Erreur lors de la création: {ex.Message}");
                         ViewBag.PlanEau = planEau;
                         return View(station);
                     }
                 }
 
-                System.Diagnostics.Debug.WriteLine("ModelState invalide");
+                _logger.LogError("ModelState invalide");
                 foreach (var modelError in ModelState.Values.SelectMany(v => v.Errors))
                 {
-                    System.Diagnostics.Debug.WriteLine($"Erreur de validation: {modelError.ErrorMessage}");
+                    _logger.LogError($"Erreur de validation: {modelError.ErrorMessage}");
                 }
                 ViewBag.PlanEau = planEau;
                 return View(station);
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"Exception lors de la création: {ex.Message}");
-                System.Diagnostics.Debug.WriteLine($"StackTrace: {ex.StackTrace}");
+                _logger.LogError($"Exception lors de la création: {ex.Message}");
+                _logger.LogError($"StackTrace: {ex.StackTrace}");
                 ModelState.AddModelError("", "Une erreur s'est produite lors de la création : " + ex.Message);
                 return View(station);
             }

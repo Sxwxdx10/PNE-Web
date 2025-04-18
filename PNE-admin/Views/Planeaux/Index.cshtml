@@ -35,7 +35,16 @@
                     <tr>
                         <td>@Html.DisplayFor(modelItem => item.Nom)</td>
                         <td>
-                            <span class="badge">@Html.DisplayFor(modelItem => item.NiveauCouleur)</span>
+                            <span class="badge">
+                                @if (item.NiveauCouleur == PNE_core.Enums.Niveau.Vert)
+                                {
+                                    @:"Pas d'occurence confirmée d'EAE"
+                                }
+                                else
+                                {
+                                    @Html.DisplayFor(modelItem => item.NiveauCouleur)
+                                }
+                            </span>
                         </td>
                         <td class="text-center">
                             <a asp-action="Edit" asp-route-id="@item.IdPlanEau" class="btn btn-edit">Modifier</a>

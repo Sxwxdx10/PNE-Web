@@ -10,7 +10,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="MiseAEau" method="post">
+        <form asp-action="MiseAEau" method="post" id="miseAEauForm">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             @if (TempData["ErreurMiseEau"] != null)
             {
@@ -18,14 +18,21 @@
                     @TempData["ErreurMiseEau"]
                 </div>
             }
-            <div class="form-group mb-2">
-                <label asp-for="@Model.IdEmbarcation" class="control-label"></label>
-                <input asp-for="@Model.IdEmbarcation" class="form-control" type="text" />
-                <span asp-validation-for="@Model.IdEmbarcation" class="text-danger"></span>
-            </div>
+            @if (ViewData["embarcations"] != null)
+            {
+                <div class="form-group mb-2">
+                    @Html.LabelFor(model => model.IdEmbarcation, htmlAttributes: new { @class = "control-label" })
+                    @Html.DropDownListFor(model => model.IdEmbarcation, (SelectList)ViewData["embarcations"], "Sélectionner une embarcation", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.IdEmbarcation, "", new { @class = "text-danger" })
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-warning">Aucune embarcation disponible</div>
+            }
             @if (ViewData["planeau"] != null)
             {
-                <div class="form-group">
+                <div class="form-group mb-2">
                     @Html.LabelFor(model => model.IdPlanEau, htmlAttributes: new { @class = "control-label" })
                     @Html.DropDownListFor(model => model.IdPlanEau, (SelectList)ViewData["planeau"], "Sélectionner un plan d'eau", new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.IdPlanEau, "", new { @class = "text-danger" })
@@ -35,6 +42,20 @@
             {
                 <div class="alert alert-warning">Vous n'avez pas de plan d'eau</div>
             }
+            <div class="form-group mb-2">
+                <label class="control-label">Date de début</label>
+                <input type="date" id="dateDebut" name="Date" class="form-control" value="@DateTime.Now.ToString("yyyy-MM-dd")" readonly />
+            </div>
+            <div class="form-group mb-2">
+                <label class="control-label">Date de fin</label>
+                <input type="date" id="dateFin" class="form-control" min="@DateTime.Now.ToString("yyyy-MM-dd")" />
+            </div>
+            <input type="hidden" name="dureeEnJours" id="dureeSejour" />
+            <div class="form-group mb-2">
+                <label class="control-label">Durée du séjour (en jours)</label>
+                <input type="text" id="dureeAffichee" class="form-control" readonly />
+            </div>
+            
             <div class="form-group">
                 <input type="submit" value="Mettre à l'eau" class="btn btn-primary" />
             </div>
@@ -50,4 +71,47 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script>
+        function calculerDuree() {
+            const dateDebutInput = document.getElementById('dateDebut').value;
+            const dateFinInput = document.getElementById('dateFin').value;
+            
+            if (!dateFinInput) {
+                document.getElementById('dureeAffichee').value = "Veuillez sélectionner une date de fin";
+                document.getElementById('dureeSejour').value = "0";
+                return;
+            }
+
+            const [anneeDebut, moisDebut, jourDebut] = dateDebutInput.split('-').map(Number);
+            const [anneeFin, moisFin, jourFin] = dateFinInput.split('-').map(Number);
+            
+            const dateDebut = new Date(anneeDebut, moisDebut - 1, jourDebut);
+            const dateFin = new Date(anneeFin, moisFin - 1, jourFin);
+            
+            if (dateFin < dateDebut) {
+                document.getElementById('dureeAffichee').value = "La date de fin doit être postérieure à la date de début";
+                document.getElementById('dureeSejour').value = "0";
+                return;
+            }
+
+            const diffTime = dateFin.getTime() - dateDebut.getTime();
+            const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
+            
+            document.getElementById('dureeAffichee').value = diffDays + " jours";
+            document.getElementById('dureeSejour').value = diffDays.toString();
+        }
+
+        window.addEventListener('load', calculerDuree);
+        document.getElementById('dateFin').addEventListener('change', calculerDuree);
+        
+        document.getElementById('miseAEauForm').addEventListener('submit', function(e) {
+            calculerDuree();
+            const duree = parseInt(document.getElementById('dureeSejour').value);
+            
+            if (duree <= 0) {
+                e.preventDefault();
+                alert("Veuillez sélectionner une date de fin valide");
+            }
+        });
+    </script>
 }

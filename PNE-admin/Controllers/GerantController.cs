@@ -28,8 +28,18 @@ namespace PNE_admin.Controllers
         private readonly IMiseAEauService _miseAEauService;
         private readonly IStationLavageService _stationLavageService;
         private readonly IEEEService _eeeService;
+        private readonly IEmbarcationService _embarcationService;
 
-        public GerantController(IFirebaseAuthService authService, IUtilisateurService userService, IRoleService roleService, IPlanEauService eauService, ICertificationService certificationService, IMiseAEauService miseAEauService, IStationLavageService stationLavageService, IEEEService eeeService)
+        public GerantController(
+            IFirebaseAuthService authService, 
+            IUtilisateurService userService, 
+            IRoleService roleService, 
+            IPlanEauService eauService, 
+            ICertificationService certificationService, 
+            IMiseAEauService miseAEauService, 
+            IStationLavageService stationLavageService, 
+            IEEEService eeeService,
+            IEmbarcationService embarcationService)
         {
             _authService = authService;
             _userServices = userService;
@@ -39,6 +49,7 @@ namespace PNE_admin.Controllers
             _roleService = roleService;
             _stationLavageService = stationLavageService;
             _eeeService = eeeService;
+            _embarcationService = embarcationService;
         }
 
         /// <summary>
@@ -54,7 +65,6 @@ namespace PNE_admin.Controllers
         /// Retour de l'inscription, création de l'utilisateur et assignation du role
         /// </summary>
         /// <param name="user">utilisateur le gérant</param>
-        [Authorize(Roles =Roles.Gerant)]
         [HttpPost]
         public async Task<IActionResult> InscriptionEmployes(SignUpUserDTO userDTO)
         {
@@ -72,12 +82,22 @@ namespace PNE_admin.Controllers
                 {
                     Id = uInfo.Uid,
                     Email = uInfo.Email!,
-                    DisplayName = uInfo.Name
+                    DisplayName = uInfo.Name,
+                    DateCreation = DateTime.Now
                 };
                 await _userServices.CreateAsync(user);
 
                 //assigner le role "employe" au user
                 await _roleService.AddUserRole(uInfo.Uid, "employe");
+
+                // Récupérer et stocker les rôles dans la session
+                var roleList = await _roleService.GetUserRoles(uInfo.Uid);
+                List<string> roles = [];
+                foreach(var role in roleList)
+                {
+                    roles.Add(role.NomRole);
+                }
+                HttpContext.Session.SetString("userRoles", JsonConvert.SerializeObject(roles));
 
                 return RedirectToAction("Index", "AccueilAdmin");
             }
@@ -130,7 +150,10 @@ namespace PNE_admin.Controllers
             try
             {
                 var planeaux = await _userServices.GetUserPlanEau(utilisateur.Id, true);
+                var embarcations = await _embarcationService.GetAllAsync();
+                
                 ViewData["planeau"] = new SelectList(planeaux, "IdPlanEau", "Nom");
+                ViewData["embarcations"] = new SelectList(embarcations, "IdEmbarcation", "Description");
                 ViewData["Title"] = "Mise a l'eau";
                 return View();
             }
@@ -149,29 +172,51 @@ namespace PNE_admin.Controllers
         public async Task<IActionResult> MiseAEau(string idEmbarcation, string IdPlanEau, int dureeEnJours)
         {
             TempData["ErreurMiseEau"] = null;
-            Miseaeau miseAEau = new Miseaeau();
-            miseAEau.IdEmbarcation = idEmbarcation;
-            miseAEau.IdPlanEau = IdPlanEau;
-            miseAEau.IdMiseEau = Guid.NewGuid().ToString();
-            miseAEau.Date = DateTime.Now;
-            miseAEau.DureeSejourEnJours = dureeEnJours;
-            if (miseAEau != null)
+            
+            if (string.IsNullOrEmpty(idEmbarcation))
             {
-                try
-                {
-                    await _miseAEauService.CreateAsync(miseAEau);
-                }
-                catch (Exception ex)
-                {
-                    if (IdPlanEau == null) 
-                        TempData["ErreurMiseEau"] = "Sélectionnez un plan d'eau";
-                    else
-                        TempData["ErreurMiseEau"] = "Cette embarcation n'existe pas";
-                    return RedirectToAction("MiseAEau");
-                }
-            }    
-            ViewData["Title"] = "Mise a l'eau";
-            return RedirectToAction("Index", "AccueilAdmin");
+                TempData["ErreurMiseEau"] = "Veuillez sélectionner une embarcation";
+                return RedirectToAction("MiseAEau");
+            }
+
+            if (string.IsNullOrEmpty(IdPlanEau))
+            {
+                TempData["ErreurMiseEau"] = "Veuillez sélectionner un plan d'eau";
+                return RedirectToAction("MiseAEau");
+            }
+
+            if (dureeEnJours <= 0)
+            {
+                TempData["ErreurMiseEau"] = "La durée du séjour doit être supérieure à 0 jours";
+                return RedirectToAction("MiseAEau");
+            }
+
+            var embarcation = await _embarcationService.GetByIdAsync(idEmbarcation);
+            if (embarcation == null)
+            {
+                TempData["ErreurMiseEau"] = "L'embarcation sélectionnée n'existe pas";
+                return RedirectToAction("MiseAEau");
+            }
+
+            Miseaeau miseAEau = new Miseaeau
+            {
+                IdEmbarcation = idEmbarcation,
+                IdPlanEau = IdPlanEau,
+                IdMiseEau = Guid.NewGuid().ToString(),
+                Date = DateTime.Now,
+                DureeSejourEnJours = dureeEnJours
+            };
+
+            try
+            {
+                await _miseAEauService.CreateAsync(miseAEau);
+                return RedirectToAction("Index", "AccueilAdmin");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErreurMiseEau"] = "Une erreur est survenue lors de la création de la mise à l'eau";
+                return RedirectToAction("MiseAEau");
+            }
         }
 
         /// <summary>

@@ -44,7 +44,7 @@
                     <label for="NiveauCouleur" class="form-label fw-bold">Niveau de risque</label>
                     <select class="form-select" id="NiveauCouleur" name="NiveauCouleur" required>
                         <option value="">Choisir un niveau...</option>
-                        <option value="0">Vert</option>
+                        <option value="0">Pas d'occurence confirmée d'EAE</option>
                         <option value="1">Jaune</option>
                         <option value="2">Rouge</option>
                     </select>
@@ -82,7 +82,7 @@
                                     @switch (eeePlanEau.EEE.NiveauCouleur)
                                     {
                                         case PNE_core.Enums.Niveau.Vert:
-                                            <span class="badge bg-success">Vert</span>
+                                            <span class="badge bg-success">Pas d'occurence confirmée d'EAE</span>
                                             break;
                                         case PNE_core.Enums.Niveau.Jaune:
                                             <span class="badge bg-warning">Jaune</span>
